@@ -1,0 +1,21 @@
+body{
+    background-color: yellowgreen;
+}
+.get{
+    background-color: rgb(14, 59, 59);
+    color: white;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 1.6em;
+    font-weight: bold;
+    max-width: 500px;
+    padding: 10px;
+    margin: 20px auto;
+
+}
+.get a {
+    color: white;
+}
+.get a:hover {
+    color: rgb(172, 190, 69);
+}
