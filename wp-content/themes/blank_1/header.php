@@ -25,7 +25,7 @@
   <div class="nav">
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
-	    	<img src="<?= get_template_directory_uri();?>\assets\image\naruto.jpg" alt="">
+	    
 		</div><!-- .site-branding -->
         
 			<nav id="site-navigation" class="main-navigation">
