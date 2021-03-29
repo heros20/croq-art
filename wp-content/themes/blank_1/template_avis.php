@@ -1,5 +1,5 @@
 <?php
-/* Template Name: avis  */
+/* Template Name: avis */
 
 get_header();
 ?>

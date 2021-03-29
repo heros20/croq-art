@@ -33,11 +33,11 @@
 				<nav id="site-navigation" class="main-navigation">
 					<ul>
 						<li><a href="<?= esc_url(home_url('/')) ?>">Acceuil</a></li>
-						<li><a href="<?= esc_url(home_url('carte')) ?>">La carte</a></li>
 						<li><a href="<?= esc_url(home_url('reservation')) ?>">Réservation</a></li>
 						<li><a href="<?= esc_url(home_url('click-and-collect')) ?>">Click and colect</a></li>
 						<li><a href="<?= esc_url(home_url('contact')) ?>">Contact</a></li>
 						<li><a href="<?= esc_url(home_url('avis')) ?>">Avis</a></li>
+						<li><a href="<?= esc_url(home_url('menu')) ?>">Menu</a></li>
 						<li><a href="<?= esc_url(home_url('presentation')) ?>">Presentation</a></li>
 					</ul>
 				</nav><!-- #site-navigation -->
