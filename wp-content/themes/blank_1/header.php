@@ -31,10 +31,6 @@
 			<nav id="site-navigation" class="main-navigation">
 				<ul>
 					<li><a href="<?= esc_url(home_url('/')) ?>">Home</a></li>
-					<li><a href="<?= esc_url(home_url('blog')) ?>">Blog</a></li>
-					<li><a href="<?= esc_url(home_url('contact')) ?>">Contact</a></li>
-					<li><a href="<?= esc_url(home_url('page')) ?>">Liste Page</a></li>
-					<li><a href="<?= esc_url(home_url('livre')) ?>">Livres</a></li>
 				</ul>
 			</nav><!-- #site-navigation -->
 		
