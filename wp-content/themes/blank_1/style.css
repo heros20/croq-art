@@ -124,11 +124,12 @@ a { text-decoration:none;color: black;font-weight: bold;}
 }
 #masthead .main-navigation ul{
     display: flex;
+    flex-flow: row wrap ;
 }
 
 #masthead .main-navigation a{
-    font-size: 1.4em;
-    margin: 0 10px;
+    font-size: 1.1em;
+    margin: 0 30px;
 }
 #masthead .main-navigation a:hover{
    color: rgb(88, 76, 67);
