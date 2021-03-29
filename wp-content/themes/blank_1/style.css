@@ -85,7 +85,7 @@ body { font:500 15px/1.4 'Montserrat', sans-serif;color:#3b3b3b; background-colo
 a { text-decoration:none;color: black;font-weight: bold;}
                                                               /* mets le text en gris et retire les decoration des liens */
 .home{
-    background-color: black;
+    background-color: lime;
     /* background-image:url("assets/image/nature.jpg"); */
     color: rgb(245, 245, 245);
     font-size: 1.5em;
