@@ -82,9 +82,11 @@ body { font:500 15px/1.4 'Montserrat', sans-serif;color:#3b3b3b; background-colo
 .wrap4 {max-width: 785px;width:100%;margin: 0 auto;padding: 0 15px;}
 .fontAlfa {font-family: 'Alfa Slab One', cursive; }                                                          /* permet d'ajouter cette police d'écriture */
 .fontBebas {font-family: 'Bebas Neue', cursive; }                                                                       
-a { text-decoration:none;color: black;font-weight: bold;}                                                                /* mets le text en gris et retire les decoration des liens */
+a { text-decoration:none;color: black;font-weight: bold;}
+                                                              /* mets le text en gris et retire les decoration des liens */
 .home{
-    background-image:url("assets/image/nature.jpg");
+    background-color: black;
+    /* background-image:url("assets/image/nature.jpg"); */
     color: rgb(245, 245, 245);
     font-size: 1.5em;
     font-weight: bold;
