@@ -1,5 +1,5 @@
 <?php
-/* Template Name: carte  */
+/* Template Name: carte */
 
 get_header();
 ?>

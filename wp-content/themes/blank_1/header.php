@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The header for our theme
  *
@@ -12,31 +13,34 @@
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
+
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
-<div id="page" class="site">
-  <div class="nav">
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-	    	<img src="<?= get_template_directory_uri(); ?>/assets/images/Plan_de_travail.png" alt="logo du site">
-		</div><!-- .site-branding -->
-        
-			<nav id="site-navigation" class="main-navigation">
-				<ul>
-					<li><a href="<?= esc_url(home_url('/')) ?>">Acceuil</a></li>
-					<li><a href="<?= esc_url(home_url('/')) ?>">La carte</a></li>
-					<li><a href="<?= esc_url(home_url('/')) ?>">Réservation</a></li>
-					<li><a href="<?= esc_url(home_url('/')) ?>">Clicl and colect</a></li>
-					<li><a href="<?= esc_url(home_url('/')) ?>">Contact</a></li>
-				</ul>
-			</nav><!-- #site-navigation -->
-		
-	</header><!-- #masthead -->
-  </div> <!-- .nav -->
+	<?php wp_body_open(); ?>
+	<div id="page" class="site">
+		<div class="nav">
+			<header id="masthead" class="site-header">
+				<div class="site-branding">
+					<img src="<?= get_template_directory_uri(); ?>/assets/images/Plan_de_travail.png" alt="logo du site">
+				</div><!-- .site-branding -->
+
+				<nav id="site-navigation" class="main-navigation">
+					<ul>
+						<li><a href="<?= esc_url(home_url('/')) ?>">Acceuil</a></li>
+						<li><a href="<?= esc_url(home_url('carte')) ?>">La carte</a></li>
+						<li><a href="<?= esc_url(home_url('reservation')) ?>">Réservation</a></li>
+						<li><a href="<?= esc_url(home_url('click-and-collect')) ?>">Click and colect</a></li>
+						<li><a href="<?= esc_url(home_url('contact')) ?>">Contact</a></li>
+						<li><a href="<?= esc_url(home_url('avis')) ?>">Avis</a></li>
+						<li><a href="<?= esc_url(home_url('presentation')) ?>">Presentation</a></li>
+					</ul>
+				</nav><!-- #site-navigation -->
+
+			</header><!-- #masthead -->
+		</div> <!-- .nav -->
