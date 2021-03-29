@@ -30,7 +30,11 @@
         
 			<nav id="site-navigation" class="main-navigation">
 				<ul>
-					<li><a href="<?= esc_url(home_url('/')) ?>">Home</a></li>
+					<li><a href="<?= esc_url(home_url('/')) ?>">Acceuil</a></li>
+					<li><a href="<?= esc_url(home_url('/')) ?>">La carte</a></li>
+					<li><a href="<?= esc_url(home_url('/')) ?>">Réservation</a></li>
+					<li><a href="<?= esc_url(home_url('/')) ?>">Clicl and colect</a></li>
+					<li><a href="<?= esc_url(home_url('/')) ?>">Contact</a></li>
 				</ul>
 			</nav><!-- #site-navigation -->
 		
