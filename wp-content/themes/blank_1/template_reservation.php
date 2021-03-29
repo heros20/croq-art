@@ -1,11 +1,11 @@
 <?php
-/* Template Name: home  */
+/* Template Name: reservation  */
 
 get_header();
 ?>
 <div class="B">
     <h1>BIENVENUE</h1>
-    <p>Sur la page Home</p>
+    <p>Sur la page reservation</p>
 </div>
 
 <?php
