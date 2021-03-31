@@ -1,3 +1,5 @@
+/* Généralité */
+
 .page_menu {
     width: 100%;
     margin: 0 auto;
@@ -7,18 +9,46 @@
     justify-content: center;
     align-items: center;
 }
+h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.section_menus {
+    padding: 20px 0;
+}
+.section {
+    padding: 20px 0;
+}
+.menu {
+    padding: 10px;
+}
+
+
+
 .blanc {
     border-top: 7px solid #fff;
     border-bottom: 7px solid #fff;
-    border-left: 7px solid #fff;
     width: 45%;
+}
+.blanc1{
+    border-left: 7px solid #fff;
+}
+.blanc2 {
+    border-right: 7px solid #fff;
 }
 .marge_grullo {
     border-top: 30px solid #AD9677;
     border-bottom: 30px solid #AD9677;
-    border-left: 30px solid #AD9677;
     background-color: #fff;
 }
+.marge_grullo1 {
+    border-left: 30px solid #AD9677;
+}
+.marge_grullo2 {
+    border-right: 30px solid #AD9677; 
+}
+
+
 .logo {
     width: 100%;
 }
@@ -28,16 +58,26 @@
 .grullo {
     border-top: 7px solid #AD9677;
     border-bottom: 7px solid #AD9677;
-    border-right: 7px solid #AD9677;
     width: 45%;
+}
+.grullo1 {
+    border-right: 7px solid #AD9677;
+}
+.grullo2{
+    border-left: 7px solid #AD9677;
+ 
 }
 .marge_blanc {
     border-top: 30px solid #FFF;
     border-bottom: 30px solid #FFF;
-    border-right: 30px solid #FFF;
     background-color: #AD9677;
 }
-
+.marge_blanc1 {
+    border-right: 30px solid #FFF;
+}
+.marge_blanc2 {
+    border-right: 30px solid #FFF;
+}
 .titres_plats1 {
     background-color: #AD9677;
 }
