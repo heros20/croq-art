@@ -13,6 +13,12 @@ h3 {
     font-size: 1.5em;
     font-weight: bold;
 }
+h4 {
+    font-size: 1.3em;
+}
+h5 {
+    font-size: 1.4em;
+}
 .section_menus {
     padding: 20px 0;
 }
@@ -89,4 +95,12 @@ h3 {
     display: flex;
     flex-flow: wrap row;
     align-items: center;
+}
+
+.section_special {
+    padding: 20px;
+    margin: 20px;
+    background-color: #434343;
+    border: #fff solid 2px;
+    color: #fff;
 }

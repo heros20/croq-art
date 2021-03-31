@@ -57,6 +57,21 @@ get_header();
         <div class="section_menus grullo grullo1">
             <div class="marge_blanc marge_blanc1">
                 <div class="menus">
+                    <div class="section_special">
+                        <div class="title">
+                            <h5>Formule viande ou poisson</h5>
+                        </div>
+                        <div class="separteurs">
+                            <div class="separteur"></div>
+                            <div class="separteur"></div>
+                        </div>
+                        <div class="menu menu1">
+                            <div class="text">
+                                <p>Descripton</p>
+                            </div>
+                            <div class="price">Prix</div>
+                        </div>  
+                    </div>
                     <div class="section section4">
                         <div class="titres_plats2">
                             <h3>Planches</h3>
