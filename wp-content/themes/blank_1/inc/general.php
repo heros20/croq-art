@@ -42,7 +42,5 @@ function blank_1_scripts() {
 		
 	}
 	
-	
-	
 }
 add_action( 'wp_enqueue_scripts', 'blank_1_scripts' );
