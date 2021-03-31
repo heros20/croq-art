@@ -213,15 +213,8 @@ a {
 body {
   font-family: "Annabelle JF Regular", sans-serif;
 }
-.home {
-  background-color: lime;
-  /* background-image:url("assets/image/nature.jpg"); */
-  font-size: 1.5em;
-  font-weight: bold;
-}
-.flexslider {
-  width: 25%;
-}
+
+
 .bigflex {
   margin: 50px 0;
   display: flex;
@@ -233,29 +226,25 @@ body {
 #masthead {
   background-color: #fff;
   display: flex;
-  flex-flow: row wrap;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   padding: 20px;
   margin: 0 auto;
   border-radius: 5px;
-  font-size: .8em;
+  font-size: 1.1em;
 }
-/* .B {
-  text-align: center;
-  background-color: burlywood;
-} */
 #page .nav {
-  /* border-radius: 5px; */
   margin: 0 auto;
   padding: 10px;
   background-color: #434343;
 }
 #masthead .site-branding img {
-  width: 10%;
+  width: 15%;
 }
 #masthead .main-navigation ul {
   display: flex;
+  flex-flow: wrap row;
 }
 
 #masthead .main-navigation a {
@@ -264,6 +253,10 @@ body {
 }
 #masthead .main-navigation a:hover {
   color: rgb(88, 76, 67);
+}
+.B {
+  text-align: center;
+  background-color: burlywood;
 }
 #colophon {
   text-align: center;

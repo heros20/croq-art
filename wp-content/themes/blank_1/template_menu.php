@@ -20,6 +20,16 @@ get_header();
     <div class="grullo">
 
     </div>
+    <div class="grullo">
+
+    </div>
+    <div class="blanc">
+        <div class="mage_grullo">
+           
+        </div>
+        
+    </div>
+
 </div>
 
 <?php
