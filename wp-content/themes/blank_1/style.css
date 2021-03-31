@@ -229,27 +229,31 @@ body {
   justify-content: space-around;
   flex-wrap: wrap;
 }
+
+/* Header */
 #masthead {
-  background-color: rgb(143, 140, 140);
+  background-color: #fff;
   display: flex;
+  flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
   padding: 20px;
   margin: 0 auto;
   border-radius: 5px;
+  font-size: .8em;
 }
-.B {
+/* .B {
   text-align: center;
   background-color: burlywood;
-}
+} */
 #page .nav {
-  border-radius: 5px;
+  /* border-radius: 5px; */
   margin: 0 auto;
   padding: 10px;
-  background-color: rgb(200, 199, 199);
+  background-color: #434343;
 }
 #masthead .site-branding img {
-  width: 25%;
+  width: 10%;
 }
 #masthead .main-navigation ul {
   display: flex;
