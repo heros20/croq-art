@@ -56,7 +56,7 @@ function blank_1_scripts() {
 		wp_enqueue_style('contact-style', get_template_directory_uri() . '/assets/css/contact.css', array(), _S_VERSION);
 	}
 	if (is_page(27)) {
-		wp_enqueue_style('home-style', get_template_directory_uri() . '/assets/css/menu.css', array(), _S_VERSION);
+		wp_enqueue_style('menu-style', get_template_directory_uri() . '/assets/css/menu.css', array(), _S_VERSION);
 	}
 }
 add_action( 'wp_enqueue_scripts', 'blank_1_scripts' );
