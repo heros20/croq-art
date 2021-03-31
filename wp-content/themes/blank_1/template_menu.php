@@ -53,7 +53,7 @@ get_header();
         <div class="grullo">
             <div class="marge_blanc">
             <div class="section section1">
-                        <div class="titres_plats1">
+                        <div class="titres_plats2">
                             <h3>Planches</h3>
                         </div>
                         <div class="menu menu1">
