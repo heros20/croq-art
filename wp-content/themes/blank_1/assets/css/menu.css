@@ -1,30 +1,52 @@
-.menu {
-display: flex;
-flex-flow: row wrap;
-justify-content: center;
+.page_menu {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
 }
 .blanc {
     border-top: 7px solid #fff;
+    border-bottom: 7px solid #fff;
+    border-left: 7px solid #fff;
     width: 45%;
 }
 .marge_grullo {
-    border-top: 20px solid #AD9677;
-    border-bottom: 20px solid #AD9677;
-    border-left: 20px solid #AD9677;
+    border-top: 30px solid #AD9677;
+    border-bottom: 30px solid #AD9677;
+    border-left: 30px solid #AD9677;
+    background-color: #fff;
 }
 .logo {
-    width: 75%;
-}
-.logo img {
     width: 100%;
 }
-
+.logo img {
+    width: 75%;
+}
 .grullo {
     border-top: 7px solid #AD9677;
+    border-bottom: 7px solid #AD9677;
+    border-right: 7px solid #AD9677;
     width: 45%;
 }
 .marge_blanc {
-    border-top: 20px solid #FFF;
-    border-bottom: 20px solid #FFF;
-    border-right: 20px solid #FFF;
+    border-top: 30px solid #FFF;
+    border-bottom: 30px solid #FFF;
+    border-right: 30px solid #FFF;
+    background-color: #AD9677;
+}
+
+.titres_plats1 {
+    background-color: #AD9677;
+}
+.titres_plats2 {
+    background-color: #fff;
+}
+
+.menu {
+    display: flex;
+    flex-flow: wrap row;
+    align-items: center;
 }
