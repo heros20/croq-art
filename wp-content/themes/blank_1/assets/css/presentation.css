@@ -1,0 +1,22 @@
+.B{
+    font-size: 2em;
+    font-weight: bold;
+    padding: 50px;
+}
+.B p{
+    padding: 10px;
+}
+.B .cafe img{
+    border-radius: 20px;
+}
+.B .food{
+    width: 50%;
+    display: flex;
+    max-width: 500px;
+    width: 100%;
+    margin: 10px auto;
+}
+.B .food img{
+    width: 80%;
+    border-radius: 50px;
+}

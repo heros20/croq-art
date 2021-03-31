@@ -39,8 +39,24 @@ function blank_1_scripts() {
 		wp_enqueue_script( 'jquery-js','https://code.jquery.com/jquery-3.6.0.min.js', array(), _S_VERSION, true );
 		wp_enqueue_script( 'flexslider-js',get_template_directory_uri().'/assets/flexslider/jquery.flexslider-min.js', array(), _S_VERSION, true );
 		wp_enqueue_script( 'main-js',get_template_directory_uri().'/assets/js/main.js', array(), _S_VERSION, true );
-		
 	}
-	
+	if (is_page(13)) {
+		wp_enqueue_style('clickandcollect-style', get_template_directory_uri() . '/assets/css/clickandcollect.css', array(), _S_VERSION);
+	}
+	if (is_page(15)) {
+		wp_enqueue_style('reservation-style', get_template_directory_uri() . '/assets/css/reservation.css', array(), _S_VERSION);
+	}
+	if (is_page(17)) {
+		wp_enqueue_style('avis-style', get_template_directory_uri() . '/assets/css/avis.css', array(), _S_VERSION);
+	}
+	if (is_page(19)) {
+		wp_enqueue_style('presentation-style', get_template_directory_uri() . '/assets/css/presentation.css', array(), _S_VERSION);
+	}
+	if (is_page(23)) {
+		wp_enqueue_style('contact-style', get_template_directory_uri() . '/assets/css/contact.css', array(), _S_VERSION);
+	}
+	if (is_page(27)) {
+		wp_enqueue_style('home-style', get_template_directory_uri() . '/assets/css/menu.css', array(), _S_VERSION);
+	}
 }
 add_action( 'wp_enqueue_scripts', 'blank_1_scripts' );
