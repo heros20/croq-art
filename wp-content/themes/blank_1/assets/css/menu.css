@@ -1,0 +1,30 @@
+.menu {
+display: flex;
+flex-flow: row wrap;
+justify-content: center;
+}
+.blanc {
+    border-top: 7px solid #fff;
+    width: 45%;
+}
+.marge_grullo {
+    border-top: 20px solid #AD9677;
+    border-bottom: 20px solid #AD9677;
+    border-left: 20px solid #AD9677;
+}
+.logo {
+    width: 75%;
+}
+.logo img {
+    width: 100%;
+}
+
+.grullo {
+    border-top: 7px solid #AD9677;
+    width: 45%;
+}
+.marge_blanc {
+    border-top: 20px solid #FFF;
+    border-bottom: 20px solid #FFF;
+    border-right: 20px solid #FFF;
+}
