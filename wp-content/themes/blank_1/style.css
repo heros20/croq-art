@@ -216,7 +216,6 @@ body {
 .home {
   background-color: lime;
   /* background-image:url("assets/image/nature.jpg"); */
-  color: rgb(245, 245, 245);
   font-size: 1.5em;
   font-weight: bold;
 }
@@ -267,18 +266,41 @@ body {
   color: rgb(88, 76, 67);
 }
 #colophon {
-  background-color: rgb(143, 140, 140);
   text-align: center;
-  padding: 100px;
 }
-.get {
-  background-color: rgb(14, 59, 59);
-  color: white;
-  border-radius: 15px;
-  text-align: center;
-  font-size: 1.6em;
-  font-weight: bold;
-  max-width: 500px;
-  padding: 10px;
-  margin: 20px auto;
+.grandFooter .logoFooter{
+    width: 12%;
 }
+.grandFooter .logoFooter img {
+    width: 100%;
+}
+.grandFooter .site-info{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px;
+    background-color: #434343;
+    color: #AD9677;
+}
+.grandFooter .site-info p{
+    padding: 10px;
+}
+.grandFooter .site-info .reseau{
+    display: flex;
+    flex-direction: column;
+}
+.grandFooter .site-info .reseau .fab,.far{
+    color: #AD9677;
+    font-size: 1.7em;
+    padding: 10px;
+}
+.grandFooter .site-info .reseau .fab:hover,.far:hover{
+    color: #567dbd;
+    transition: all .4s;
+}
+.copyright{
+    display: flex;
+    justify-content: space-around;
+    background-color: #AD9677;
+}
+
