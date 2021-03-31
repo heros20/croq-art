@@ -212,6 +212,7 @@ a {
 }
 body {
   font-family: "Annabelle JF Regular", sans-serif;
+  background-color: burlywood;
 }
 
 
@@ -268,7 +269,6 @@ body {
 /* Content */
 .B {
   text-align: center;
-  background-color: burlywood;
 }
 
 /* Footer */
