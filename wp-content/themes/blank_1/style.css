@@ -83,8 +83,13 @@ body { font:500 15px/1.4 'Montserrat', sans-serif;color:#3b3b3b; background-colo
 .fontAlfa {font-family: 'Alfa Slab One', cursive; }                                                          /* permet d'ajouter cette police d'écriture */
 .fontBebas {font-family: 'Bebas Neue', cursive; }                                                                       
 a { text-decoration:none;color: black;font-weight: bold;}
-                                                              /* mets le text en gris et retire les decoration des liens */
+    
+@font-face {
+ font-family: "Annabelle JF Regular";
+ src: url("assets/font/Annabelle-JF-Regular.ttf") format("truetype");
+}
 .home{
+    font-family: "Annabelle JF Regular", sans-serif;
     background-color: lime;
     /* background-image:url("assets/image/nature.jpg"); */
     color: rgb(245, 245, 245);
