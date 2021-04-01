@@ -51,7 +51,7 @@ function my_custom_menu_page_contact(){
                     <td><?= $contact['email'] ?></td>
                     <td><?= $contact['numero'] ?></td>
                     <td><?= $contact['message'] ?></td>
-                    <td><?= date('d/m/Y',strtotime($contact['created_at'])) ?></td>
+                    <td><?= date('d/m/Y à H:i',strtotime($contact['created_at'])) ?></td>
                  </tr>
             </table>
             
@@ -73,7 +73,7 @@ function my_custom_menu_page_contact(){
                         <td><?= $contact['email'] ?></td>
                         <td><?= $contact['numero'] ?></td>
                         <td><?= $contact['message'] ?></td>
-                        <td><?= date('d/m/Y',strtotime($contact['created_at'])) ?></td>
+                        <td><?= date('d/m/Y à H:i',strtotime($contact['created_at'])) ?></td>
                         <td><a href="<?= $adminUrl ?>&id=<?= $contact['id'] ?>">Detail</a></td>
                     </tr>
                     <?php } ?>

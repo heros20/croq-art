@@ -48,7 +48,13 @@ if ($success == true) { ?>
     </div>
 
 <?php } else { ?>
-
+<div class="contact">
+    <p>Si vous souhaiter des renseignement,</p>
+    <p>ou tout autre demande, nous vous invitons</p>
+    <p>à nous laisser un message via ce formulaire</p>
+    <p>ou contacter nous directement par telephone au :</p>
+    <p>02 77 73 01 74</p>
+</div>
     <form action="" id="formincription" method="POST" novalidate>
 
         <label for="nom">Nom*</label>
@@ -72,7 +78,9 @@ if ($success == true) { ?>
         </div>
 
         <label for="phone">Numero de telephone*</label>
-        <input type="text" pattern="[0-9]{10}" name="phone" placeholder="Votre numéro..." />
+        <input type="text" pattern="[0-9]{10}" name="phone" placeholder="Votre numéro..." value="<?php if (!empty($_POST['phone'])) {
+                                                                                        echo $_POST['phone'];
+                                                                                    } ?>"/>
         <div>
             <p><span class="error"><?php if (!empty($errors['phone'])) {
                                         echo $errors['phone'];

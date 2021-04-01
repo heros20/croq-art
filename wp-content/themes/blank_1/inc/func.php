@@ -20,7 +20,7 @@ function failleXSS($clean){
   return trim(strip_tags($_POST[$clean]));
 }
 
-function validForm($errors,$data,$key,$min =2,$max = 50)
+function validForm($errors,$data,$key,$min =2,$max = 255)
 {
     if(!empty($data)) {
         if(mb_strlen($data) < $min) {
@@ -38,7 +38,7 @@ function validEmail($errors,$data,$key){
 
   if(!empty($data)) {
 
-      if(filter_var($data, FILTER_VALIDATE_EMAIL) == false){ // pk !== true ne fonctionne pas ?
+      if(filter_var($data, FILTER_VALIDATE_EMAIL) == false){ 
           $errors[$key] = 'veuillez renseignez une adresse email valide';
       } 
   } else {
@@ -66,6 +66,30 @@ function validPhone($errors, $data, $key)
     return $errors;
 }
 
+function validDate($errors,$data,$key)
+{
+    if(empty($data)) {
+        $errors[$key] = 'Veuillez renseigner une date';
+    }
+    return $errors;
+}
+function validNumber($errors,$data,$key){
+    if(!empty($data)){
+        // Renseigner
+        if(!filter_var($data, FILTER_VALIDATE_INT)){
+            $errors[$key] = 'Veuillez mettre un nombre valide';
+        }elseif($data <=0){
+            $errors[$key] = 'Veuillez renseigner un entier positif';
+        }elseif($data > 10){
+            $errors[$key] = 'Nous sommes désolé, mais nous ne prenons pas de reservation au dela de 10 couvert';
+        }
+    }else{
+            // Pas afficher
+            $errors[$key] = 'Veuillez renseigner ce champ';
+    }
+
+    return $errors;
+}
 
 
 
