@@ -57,13 +57,16 @@ get_header();
         <div class="section_menus grullo grullo1">
             <div class="marge_blanc marge_blanc1">
                 <div class="menus">
-                    <div class="section_special">
+                    <div class="section_special special1">
                         <div class="title">
                             <h5>Formule viande ou poisson</h5>
                         </div>
                         <div class="separteurs">
-                            <div class="separteur"></div>
-                            <div class="separteur"></div>
+                            <div class="separteur"> </div>
+                            <div class="icon_couverts">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <div class="separteur"> </div>
                         </div>
                         <div class="menu menu1">
                             <div class="text">
@@ -71,6 +74,7 @@ get_header();
                             </div>
                             <div class="price">Prix</div>
                         </div>  
+                        <div class="notes_supl">note</div>
                     </div>
                     <div class="section section4">
                         <div class="titres_plats2">
@@ -159,6 +163,16 @@ get_header();
                             </div>
                             <div class="price">Prix</div>
                         </div>   
+                    </div>
+
+                    <div class="section_special special2">
+                        <h3>Vins</h3>
+                        <div class="content">
+                            <div class="icon_vin">
+                                <i class="fas fa-wine-glass-alt"></i>
+                            </div>
+                            <div class="text">Demandez la carte des vins</div>
+                        </div>
                     </div>
                 </div>
             </div>
