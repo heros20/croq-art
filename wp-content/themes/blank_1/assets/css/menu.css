@@ -1,17 +1,16 @@
 /* Généralité */
 
 .page_menu {
-    width: 100%;
     margin: 0 auto;
     background-color: #fff;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    align-items: center;
 }
 h3 {
     font-size: 1.5em;
     font-weight: bold;
+    text-transform: uppercase;
 }
 h4 {
     font-size: 1.3em;
@@ -20,7 +19,7 @@ h5 {
     font-size: 1.4em;
 }
 .section_menus {
-    padding: 20px 0;
+    width: 45%;
 }
 .section {
     padding: 20px 0;
@@ -34,7 +33,6 @@ h5 {
 .blanc {
     border-top: 7px solid #fff;
     border-bottom: 7px solid #fff;
-    width: 45%;
 }
 .blanc1{
     border-left: 7px solid #fff;
@@ -64,14 +62,12 @@ h5 {
 .grullo {
     border-top: 7px solid #AD9677;
     border-bottom: 7px solid #AD9677;
-    width: 45%;
 }
 .grullo1 {
     border-right: 7px solid #AD9677;
 }
 .grullo2{
     border-left: 7px solid #AD9677;
- 
 }
 .marge_blanc {
     border-top: 30px solid #FFF;
@@ -99,8 +95,37 @@ h5 {
 
 .section_special {
     padding: 20px;
-    margin: 20px;
     background-color: #434343;
-    border: #fff solid 2px;
     color: #fff;
+}
+.special1 {
+    margin: 20px;
+    border: #fff solid 2px;
+}
+.separteurs {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+.separteur {
+    background-color: #fff;
+    width: 100px;
+    height: 2px;
+    margin: auto 10px;
+}
+
+.content {
+    font-size: 1.2em;
+    display: flex;
+    flex-flow: wrap row;
+    align-items: center;
+    justify-content: center;
+}
+.icon_vin {
+    font-size: 30px;
+    margin-right: 30px;
+}
+.icon_vin i {
+    
 }
