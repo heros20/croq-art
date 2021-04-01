@@ -5,13 +5,12 @@ body{
     max-width: 700px;
     width: 100%;
     margin: 20px auto;
-    padding: 0 15px;
+    padding: 15px;
     color: rgb(184, 184, 184);
     background-color: #434343;
     box-shadow: 3px 3px 3px grey;
     border-radius: 20px;
     padding: 20px 0 80px;
-    margin-top: 40px;
 }
 #formincription p{
     text-align: center;
@@ -32,29 +31,37 @@ input,textarea{
     width:70%;
     border: 1px solid black;
     transition: all .2s ease-in-out;
-    padding: 4px 0;
+    padding:4px 0 4px 10px;
     display: block;
     margin: 0 auto;
+    background-color: rgb(209, 209, 209);
 }
 
-input:hover{
+input:hover,textarea:hover{
      background-color: #f3f3f3;
 }
 
 input[type='submit']{
+    background-color: rgb(209, 209, 209);
     margin-top: 40px;
-    background-color: #fff;
     border: 1px solid black;
     transition: all .2s ease-in-out;
     cursor: pointer;
+    margin:20px auto;
+    max-width: 200px;
 }
-
+::placeholder{
+    color: rgb(0, 0, 0);
+}
 input[type='submit']:hover{
+    background-color: #fff;
     background-color: rgb(221, 175, 131);
     color: #fff;
+    
 }
 
 label {
+    font-size: 1.5em;
     display: block;
     margin-top: 20px;
     padding: 10px 0;

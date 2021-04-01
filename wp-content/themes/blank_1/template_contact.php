@@ -23,20 +23,21 @@ if (!empty($_POST['submitted'])) {
     $errors = validForm($errors, $message, 'message', 2, 1000);
 
     if (count($errors) == 0) {
-        // global $wpdb;
-        // $table = $wpdb->prefix . 'contact';
-        // $wpdb->insert(
-        //     $table,
-        //     array(
-        //         'email' => $email,
-        //         'sujet' => $sujet,
-        //         'message' => $message,
-        //         'created_at' => current_time('mysql')
-        //     ),
-        //     array(
-        //         '%s',
-        //     )
-        // );
+        global $wpdb;
+        $table = $wpdb->prefix .'message';
+        $wpdb->insert(
+            $table,
+            array(
+                'nom' => $nom,
+                'email' => $email,
+                'message' => $message,
+                'numero' => $phone,
+                'created_at' => current_time('mysql')
+            ),
+            array(
+                '%s',
+            )
+        );
         $success = true;
     }
 }
@@ -71,7 +72,7 @@ if ($success == true) { ?>
         </div>
 
         <label for="phone">Numero de telephone*</label>
-        <input type="text" pattern="[0-9]{10}" name="phone" placeholder="votre numero..." />
+        <input type="text" pattern="[0-9]{10}" name="phone" placeholder="Votre numéro..." />
         <div>
             <p><span class="error"><?php if (!empty($errors['phone'])) {
                                         echo $errors['phone'];
