@@ -9,7 +9,10 @@ $slider = array(
 );
 get_header();
 ?>
-<div class="B">
+<div class="bienvenue B">
+    <h2>Bienvenue au croq art cafe</h2>
+</div>
+<div class="B flex">
     <div class="flexslider">
         <ul class="slides">
             <?php

@@ -2,6 +2,12 @@
     font-size: 2em;
     font-weight: bold
 }
+.h1avis{
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #838080;
+    color: burlywood;
+}
 .B h2{
     font-size: 1.7em;
     font-weight: bold;
@@ -17,4 +23,10 @@
 }
 .B .laisserUnAvis{
     font-size: 2em;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #838080;
+}
+.B .laisserUnAvis p a{
+    color: burlywood;
 }
