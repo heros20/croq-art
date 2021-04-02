@@ -286,6 +286,7 @@ body {
     justify-content: space-around;
     align-items: center;
     padding: 40px;
+    font-size: 1.5em;
     background-color: #434343;
     color: #AD9677;
 }
@@ -309,5 +310,6 @@ body {
     display: flex;
     justify-content: space-around;
     background-color: #AD9677;
+    font-size: 1.4em;
 }
 

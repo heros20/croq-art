@@ -4,7 +4,9 @@
 get_header();
 ?>
 <div class="B">
-    <h1>L'avis de nos clients :</h1>
+    <div class="h1avis">
+        <h1>L'avis de nos clients :</h1>
+    </div>
     <div class="avis">
         <div class="avis1">
             <h2>Anaëlle H</h2>

@@ -2,7 +2,7 @@
 /** 
  * Register a custom menu page.
  */
-function wpdocs_register_my_custom_menu_page(){
+function wpdocs_register_my_custom_contact_page(){
     add_menu_page( 
         __( 'Contact', 'textdomain' ),
         'contact menu',
@@ -14,7 +14,7 @@ function wpdocs_register_my_custom_menu_page(){
         60
     ); 
 }
-add_action( 'admin_menu', 'wpdocs_register_my_custom_menu_page' );
+add_action( 'admin_menu', 'wpdocs_register_my_custom_contact_page' );
  
 /** 
  * Display a custom menu page
@@ -65,6 +65,7 @@ function my_custom_menu_page_contact(){
                     <th>message</th>
                     <th>date</th>
                     <th>Action</th>
+                    <th>Action</th>
                 </tr>
                 <?php foreach ( $contacts as $contact ) { ?>
                     <tr>
@@ -75,6 +76,7 @@ function my_custom_menu_page_contact(){
                         <td><?= $contact['message'] ?></td>
                         <td><?= date('d/m/Y à H:i',strtotime($contact['created_at'])) ?></td>
                         <td><a href="<?= $adminUrl ?>&id=<?= $contact['id'] ?>">Detail</a></td>
+                        <td><a href="<?= $adminUrl ?>&id=<?= $contact['id'] ?>">Supprimer</a></td>
                     </tr>
                     <?php } ?>
             </table>

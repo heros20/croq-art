@@ -2,7 +2,7 @@ body{
     background-color: burlywood;
 }
 #formincription{
-    max-width: 700px;
+    max-width: 1400px;
     width: 100%;
     margin: 20px auto;
     padding: 15px;
@@ -67,8 +67,26 @@ label {
     padding: 10px 0;
     text-align: center;
 }
-.contact{
+
+.google{
     text-align: center;
-    font-size: 1.8em;
+    margin: 50px 0;
+}
+.contact1{
+    text-align: center;
     margin-top: 50px;
+    font-size: 2em;
+    padding: 10px;
+    background-color: #838080;
+    color: burlywood;
+}
+.contact2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.7em;
+    margin-bottom: 50px;
+    padding: 10px;
+    background-color: #838080;
+    color: burlywood;
 }

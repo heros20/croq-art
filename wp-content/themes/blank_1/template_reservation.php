@@ -19,21 +19,21 @@ if (!empty($_POST['submitted'])) {
     
 
     if (count($errors) == 0) {
-        // global $wpdb;
-        // $table = $wpdb->prefix .'message';
-        // $wpdb->insert(
-        //     $table,
-        //     array(
-        //         'nom' => $nom,
-        //         'email' => $email,
-        //         'message' => $message,
-        //         'numero' => $phone,
-        //         'created_at' => current_time('mysql')
-        //     ),
-        //     array(
-        //         '%s',
-        //     )
-        // );
+        global $wpdb;
+        $table = $wpdb->prefix .'reservation';
+        $wpdb->insert(
+            $table,
+            array(
+                'nom' => $nom,
+                'nbrecouvert' => $nbrecouvert,
+                'date&heure' => $date,
+                'numero' => $phone,
+                'created_at' => current_time('mysql')
+            ),
+            array(
+                '%s',
+            )
+        );
         $success = true;
     }
 }

@@ -6,7 +6,9 @@ require get_template_directory() . '/inc/image.php';
 
 require get_template_directory() . '/inc/extra/template-tags.php';
 require get_template_directory() . '/inc/extra/template-functions.php';
+
 require get_template_directory() . '/inc/admin/admin-contact.php';
+require get_template_directory() . '/inc/admin/admin-reservation.php';
 
 require get_template_directory() . '/inc/custom/custom-home.php';
 require get_template_directory() . '/inc/custom/custom-presentation.php';
