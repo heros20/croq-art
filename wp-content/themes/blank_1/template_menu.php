@@ -57,6 +57,12 @@ get_header();
         <div class="section_menus grullo grullo1">
             <div class="marge_blanc marge_blanc1">
                 <div class="menus">
+                    <div class="menu_du_jour">
+                    <div class="img">
+                        <img src="<?= get_template_directory_uri(); ?>/assets/images/etiqette.png" alt="">
+                    </div>
+                    <div class="text"></div>
+                    </div>
                     <div class="section_special special1">
                         <div class="title">
                             <h5>Formule viande ou poisson</h5>
