@@ -30,8 +30,9 @@ function my_custom_menu_page_contact(){
         <h1 class="wp-heading-inline">Contact</h1>
         <?php if(!empty($_GET['id'])){
            $id = $_GET['id'];
-            $wpdb->delete( $table, array( 'id' => $id ) );
-             }else{ ?>
+            $wpdb->delete( $table, array( 'id' => $id ) );?>
+            <p>Le message à bien été supprimer</p>
+            <?php }else{ ?>
             <table class="wp-list-table widefat fixed striped table-view-list posts">
                 <tr>
                     <th>id</th>

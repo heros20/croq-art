@@ -30,32 +30,9 @@ function my_custom_menu_page_reservation(){
         <h1 class="wp-heading-inline">Reservation</h1>
         <?php if(!empty($_GET['id'])){
            $id = $_GET['id'];
-           $reservations = $wpdb->get_row(
-            $wpdb->prepare(   
-            "SELECT * FROM $table WHERE id = %d",
-            $id        
-            ),ARRAY_A ); ?>
-            <table class="wp-list-table widefat fixed striped table-view-list posts">
-                <tr>
-                    <th>id</th>
-                    <th>nom</th>
-                    <th>date et heure de reservation</th>
-                    <th>numero de telephone</th>
-                    <th>nombre de couverts</th>
-                    <th>reservation enregistrer le</th>
-
-                </tr>
-                <tr>
-                    <td><?= $reservations['id'] ?></td>
-                    <td><?= $reservations['nom'] ?></td>
-                    <td><?= date('d/m/Y à H:i',strtotime($reservations['date&heure'])) ?></td>
-                    <td><?= $reservations['numero'] ?></td>
-                    <td><?= $reservations['nbrecouvert'] ?></td>
-                    <td><?= date('d/m/Y à H:i',strtotime($reservations['created_at'])) ?></td>
-                 </tr>
-            </table>
-            
-        <?php  }else{ ?>
+           $wpdb->delete( $table, array( 'id' => $id ) );?>
+           <p>La réservation à bien été supprimer</p>
+           <?php }else{ ?>
             <table class="wp-list-table widefat fixed striped table-view-list posts">
                 <tr>
                 <th>id</th>
@@ -64,7 +41,6 @@ function my_custom_menu_page_reservation(){
                     <th>numero de telephone</th>
                     <th>nombre de couverts</th>
                     <th>reservation enregistrer le</th>
-                    <th>Action</th>
                     <th>Action</th>
                 </tr>
                 <?php foreach ( $reservations as $reservation ) { ?>
@@ -75,7 +51,6 @@ function my_custom_menu_page_reservation(){
                     <td><?= $reservation['numero'] ?></td>
                     <td><?= $reservation['nbrecouvert'] ?></td>
                     <td><?= date('d/m/Y à H:i',strtotime($reservation['created_at'])) ?></td>
-                    <td><a href="<?= $adminUrl ?>&id=<?= $reservation['id'] ?>">Detail</a></td>
                     <td><a href="<?= $adminUrl ?>&id=<?= $reservation['id'] ?>">supprimer</a></td>
                     </tr>
                     <?php } ?>
