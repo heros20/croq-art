@@ -81,7 +81,7 @@ function validNumber($errors,$data,$key){
         }elseif($data <=0){
             $errors[$key] = 'Veuillez renseigner un entier positif';
         }elseif($data > 10){
-            $errors[$key] = 'Nous sommes désolé, mais nous ne prenons pas de reservation au dela de 10 couvert';
+            $errors[$key] = 'Nous sommes désolé, mais nous ne prenons pas de reservation au dela de 10 couverts';
         }
     }else{
             // Pas afficher
