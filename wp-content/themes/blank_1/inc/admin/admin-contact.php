@@ -2,7 +2,7 @@
 /** 
  * Register a custom menu page.
  */
-function wpdocs_register_my_custom_menu_page(){
+function wpdocs_register_my_custom_contact_page(){
     add_menu_page( 
         __( 'Contact', 'textdomain' ),
         'contact menu',
@@ -14,7 +14,7 @@ function wpdocs_register_my_custom_menu_page(){
         60
     ); 
 }
-add_action( 'admin_menu', 'wpdocs_register_my_custom_menu_page' );
+add_action( 'admin_menu', 'wpdocs_register_my_custom_contact_page' );
  
 /** 
  * Display a custom menu page
@@ -30,32 +30,9 @@ function my_custom_menu_page_contact(){
         <h1 class="wp-heading-inline">Contact</h1>
         <?php if(!empty($_GET['id'])){
            $id = $_GET['id'];
-           $contact = $wpdb->get_row(
-            $wpdb->prepare(   
-            "SELECT * FROM $table WHERE id = %d",
-            $id        
-            ),ARRAY_A ); ?>
-            <table class="wp-list-table widefat fixed striped table-view-list posts">
-                <tr>
-                    <th>id</th>
-                    <th>nom</th>
-                    <th>email</th>
-                    <th>numero</th>
-                    <th>message</th>
-                    <th>date</th>
-
-                </tr>
-                <tr>
-                    <td><?= $contact['id'] ?></td>
-                    <td><?= $contact['nom'] ?></td>
-                    <td><?= $contact['email'] ?></td>
-                    <td><?= $contact['numero'] ?></td>
-                    <td><?= $contact['message'] ?></td>
-                    <td><?= date('d/m/Y à H:i',strtotime($contact['created_at'])) ?></td>
-                 </tr>
-            </table>
-            
-        <?php  }else{ ?>
+            $wpdb->delete( $table, array( 'id' => $id ) );?>
+            <p>Le message à bien été supprimer</p>
+            <?php }else{ ?>
             <table class="wp-list-table widefat fixed striped table-view-list posts">
                 <tr>
                     <th>id</th>
@@ -74,7 +51,7 @@ function my_custom_menu_page_contact(){
                         <td><?= $contact['numero'] ?></td>
                         <td><?= $contact['message'] ?></td>
                         <td><?= date('d/m/Y à H:i',strtotime($contact['created_at'])) ?></td>
-                        <td><a href="<?= $adminUrl ?>&id=<?= $contact['id'] ?>">Detail</a></td>
+                        <td><a href="<?= $adminUrl ?>&id=<?= $contact['id'] ?>">Supprimer</a></td>
                     </tr>
                     <?php } ?>
             </table>
