@@ -57,22 +57,38 @@ get_header();
         <div class="section_menus grullo grullo1">
             <div class="marge_blanc marge_blanc1">
                 <div class="menus">
-                    <div class="menu_du_jour">
-                    <div class="img">
-                        <img src="<?= get_template_directory_uri(); ?>/assets/images/etiqette.png" alt="">
-                    </div>
-                    <div class="text"></div>
+                    <div class="formules">
+                        <h3>Formules...</h3>
+                        <div class="separateur separateur_simple"></div>
+                        <div class="text formule1">
+                            <p>Salade,Croque,Omelette ou Plat du jour</p>
+                            <p>Une boisson au choix*</p>
+                            <p>un dessert & un café</p>
+                            <p>15€</p>
+                        </div>
+                        <div class="separateurs">
+                            <div class="separateur"></div>
+                            <div class="icon_couverts">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <div class="separateur"> </div>
+                        </div>
+                        <div class="text formule2">
+                            <p>Salade,Croque,Omelette ou Plat du jour</p>
+                            <p>Une boisson au choix* et un café</p>
+                            <p>12,50€</p>
+                        </div>
                     </div>
                     <div class="section_special special1">
                         <div class="title">
                             <h5>Formule viande ou poisson</h5>
                         </div>
-                        <div class="separteurs">
-                            <div class="separteur"> </div>
+                        <div class="separateurs">
+                            <div class="separateur"></div>
                             <div class="icon_couverts">
                                 <i class="fas fa-utensils"></i>
                             </div>
-                            <div class="separteur"> </div>
+                            <div class="separateur"> </div>
                         </div>
                         <div class="menu menu1">
                             <div class="text">
@@ -169,6 +185,23 @@ get_header();
                             </div>
                             <div class="price">Prix</div>
                         </div>   
+                    </div>
+                    <div class="boisson_chaudes">
+                        <h3>Boisson chaudes</h3>
+                        <div class="separateurs">
+                            <div class="separateur"></div>
+                            <div class="icon_couverts">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <div class="separateur"> </div>
+                        </div>
+                        <div class="menu menu1">
+                            <div class="text">
+                                <h4>Plat</h4>
+                                <p>Descripton</p>
+                            </div>
+                            <div class="price">Prix</div>
+                        </div> 
                     </div>
 
                     <div class="section_special special2">
