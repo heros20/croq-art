@@ -12,7 +12,7 @@ require get_template_directory() . '/inc/admin/admin-reservation.php';
 
 require get_template_directory() . '/inc/custom/custom-home.php';
 require get_template_directory() . '/inc/custom/custom-presentation.php';
-require get_template_directory() . '/inc/custom/custom-clickandcollect.php';
+require get_template_directory() . '/inc/custom/custom-click-and-collect.php';
 require get_template_directory() . '/inc/custom/custom-reservation.php';
 require get_template_directory() . '/inc/custom/custom-avis.php';
 require get_template_directory() . '/inc/custom/custom-menu.php';
