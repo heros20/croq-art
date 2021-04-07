@@ -1,6 +1,16 @@
 <?php
 /* Template Name: menu */
 
+
+$salades = array("L'italienne","la segin","la campagnarde","la césar","la niçoise","la salade du chef");
+$salades_description = array("tomates, mozzaella, jambon fumé","salade de chèvre chaud, lardons","salade, tomates, oeufs durs, lardons, fromage et croûtons","salade romaine, poulet, tomates, parmesan, sauce césar, croûtons","tomates, thon, anchois, olives noires, radis, basilic, poivrons","sur demande...");
+$croques = array("le parisien","le bonbay","le nîmois","le chamonix","le cormeillais");
+$croques_description = array("jambon, fromage","poulet curry","fromage de chèvre, miel","reblochon, jambon blanc, oignons","camembert, pommes");
+$omelettes = array("nature","champignons","jambon","fromage","complète");
+$omelettes_description = array("","","","","jambon, fromage");
+
+debug($salades);
+debug($salades_description);
 get_header();
 ?>
 <div class="B">
@@ -15,44 +25,50 @@ get_header();
                         <div class="titres_plats1">
                             <h3>Salades</h3>
                         </div>
-                        <div class="menu menu1">
-                            <div class="text">
-                                <h4>Plat</h4>
-                                <p>Descripton</p>
-                            </div>
-                            <div class="price">Prix</div>
-                        </div>   
+                        <?php for ($i=0; $i < count($salades); $i++) { ?>
+                            <div class="menu menu<?= $i ?>">
+                                <div class="text">
+                                    <h4><?= $salades[$i] ?></h4>
+                                    <p><?= $salades_description[$i] ?></p>
+                                </div>
+                                <div class="price">10€</div>
+                            </div> 
+                       <?php } ?>
                     </div>
-
                     <div class="section section2">
                         <div class="titres_plats1">
                             <h3>Croques</h3>
                         </div>
-                        <div class="menu menu1">
-                            <div class="text">
-                                <h4>Plat</h4>
-                                <p>Descripton</p>
-                            </div>
-                            <div class="price">Prix</div>
-                        </div>   
-                    </div>
-                    
+                        <div class="note note1">servies avec frites maison et salade vert</div>
+                        <?php for ($i=0; $i < count($croques); $i++) { ?>
+                            <div class="menu menu<?= $i ?>">
+                                <div class="text">
+                                    <h4><?= $croques[$i] ?></h4>
+                                    <p><?= $croques_description[$i] ?></p>
+                                </div>
+                                <div class="price">11€</div>
+                            </div> 
+                       <?php } ?>
+                    </div>                  
                     <div class="section section3">
                         <div class="titres_plats1">
                             <h3>Omelettes</h3>
                         </div>
-                        <div class="menu menu1">
-                            <div class="text">
-                                <h4>Plat</h4>
-                                <p>Descripton</p>
-                            </div>
-                            <div class="price">Prix</div>
-                        </div>   
-                    </div>
+                        <div class="note note1">servies avec frites maison et salade vert</div>
+                        <?php for ($i=0; $i < count($omelettes); $i++) { ?>
+                            <div class="menu menu<?= $i ?>">
+                                <div class="text">
+                                    <h4>Omelettes<?= $omelettes[$i] ?></h4>
+                                    <p><?= $omelettes_description[$i] ?></p>
+                                </div>
+                                <div class="price">10€</div>
+                            </div> 
+                       <?php } ?> 
+                       <div class="note note2">prix nets TTC ,service compris.</div>
 
+                    </div>
                 </div>
             </div>
-            
         </div>
         <div class="section_menus grullo grullo1">
             <div class="marge_blanc marge_blanc1">
@@ -78,6 +94,7 @@ get_header();
                             <p>Une boisson au choix* et un café</p>
                             <p>12,50€</p>
                         </div>
+                        <div class="note note3">*(hors apéritifs et digestifs)</div>
                     </div>
                     <div class="section_special special1">
                         <div class="title">
