@@ -1,6 +1,6 @@
 <?php
 /* Template Name: clickandcollect  */
-$click = array(
+$args = array(
     'post_type' => 'clickandcollect',
     'post_status' => 'publish',
     'posts_per_page' => -1,
@@ -13,7 +13,7 @@ get_header();
 <div class="wrap B">
         <ul class="click">
             <?php
-            $the_query = new WP_Query($click);
+            $the_query = new WP_Query($args);
             // The Loop
             if ($the_query->have_posts()) { ?>
                 <?php while ($the_query->have_posts()) {
