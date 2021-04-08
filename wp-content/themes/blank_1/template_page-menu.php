@@ -1,5 +1,5 @@
 <?php
-/* Template Name: menu */
+/* Template Name: page-menu */
 
 
 $salades = array("L'italienne","la segin","la campagnarde","la césar","la niçoise","la salade du chef");

@@ -1,5 +1,5 @@
 <?php
-/* Template Name: contact  */
+/* Template Name: page-contact  */
 
 $contact = array(
     'post_type' => 'contact',
