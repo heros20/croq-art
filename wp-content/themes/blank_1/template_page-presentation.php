@@ -1,5 +1,5 @@
 <?php
-/* Template Name: presentation  */
+/* Template Name: page-presentation  */
 $presentation = array(
     'post_type' => 'presentation',
     'post_status' => 'publish',

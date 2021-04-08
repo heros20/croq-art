@@ -49,7 +49,7 @@ function blank_1_scripts() {
 	if (is_page(15)) {
 		wp_enqueue_style('avis-style', get_template_directory_uri() . '/assets/css/avis.css', array(), _S_VERSION);
 	}
-	if (is_page(19)) {
+	if (is_page(98)) {
 		wp_enqueue_style('presentation-style', get_template_directory_uri() . '/assets/css/presentation.css', array(), _S_VERSION);
 	}
 	if (is_page(13)) {
