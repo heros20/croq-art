@@ -1,7 +1,13 @@
 <?php
 /* Template Name: contact  */
 
-
+$contact = array(
+    'post_type' => 'contact',
+    'post_status' => 'publish',
+    'posts_per_page' => 3,
+    'orderby' => 'date',
+    'order' => 'ASC'
+);
 
 
 $errors = array();
@@ -106,29 +112,23 @@ if ($success == true) { ?>
    <iframe classe="googleMaps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2604.5322446900996!2d0.3758619156881919!3d49.24735697932747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e1b71b8c7574f9%3A0xb9603141872afd40!2sLe%20Croq&#39;Art%20Caf%C3%A9!5e0!3m2!1sfr!2sfr!4v1617363592164!5m2!1sfr!2sfr" width="1500" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 </div>
 
-<div class="contact2">
-    <div class="coordonnée">
-        <h3>Coordonnée</h3>
-        <p>02 77 73 01 74</p>
-        <p>06 14 35 20 86</p>
-        <p>06 15 79 08 03</p>
-    </div>
-    <div class="horaire">
-        <h3>Horaire</h3>
-        <p>lun.:	Fermé</p>
-        <p>mar.:	Fermé</p>
-        <p>mer.:	Fermé</p>
-        <p>jeu.:	Fermé</p>
-        <p>ven.:	08:30 – 14:00</p>
-        <p>sam.:	08:30 – 14:00</p>
-        <p>dim.:	08:30 – 14:00</p>
-    </div>
-    <div class="adresse">
-        <h3>Adresse</h3>
-        <p>29 Rue de l'Abbaye</p>
-        <p>27260 Cormeilles</p>
-        <p>France</p>
-    </div>
+<div>
+    <ul class="contact2">
+        <?php
+        $the_query = new WP_Query($contact);
+        // The Loop
+        if ($the_query->have_posts()) { ?>
+            <?php while ($the_query->have_posts()) {
+                $the_query->the_post(); ?>
+                <li>
+                    <div class="coordonnée">
+                        <h3> <?= get_the_title() ?> </h3>
+                        <p> <?= get_the_content() ?> </p>
+                    </div>
+                </li>
+            <?php  } ?>
+        <?php } ?>
+    </ul>
 </div>
 
 <?php
