@@ -12,48 +12,129 @@ License URI: LICENSE
 Text Domain: blank_1
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-    display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-    line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-    list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-    quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content: '';
-    content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 /* Pour des raisons de clarté le code ci-dessous n'est pas prefixer
     il faudra le faire lors de la mise en production
@@ -62,92 +143,182 @@ table {
 *,
 *:after,
 *:before {
-    -moz-box-sizing:border-box;
-    box-sizing:border-box;
-    -webkit-font-smoothing:antialiased;
-    text-rendering:optimizeLegibility;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 /* clear */
-.clear:before,.clear:after { content:' '; display:table; }
-.clear:after { clear:both; }
-.clear { *zoom:1;}
+.clear:before,
+.clear:after {
+  content: " ";
+  display: table;
+}
+.clear:after {
+  clear: both;
+}
+.clear {
+  *zoom: 1;
+}
 
-html { font-size:100%; }
-body { font:500 15px/1.4 'Montserrat', sans-serif;color:#3b3b3b; background-color: #fff;
-    overflow-x: hidden;
+html {
+  font-size: 100%;
 }
-.wrap {max-width: 1440px;width:100%;margin: 0 auto;padding: 0 15px;}         /* permet de centrer  les grandes div pour preparer le responsive */
-.wrap2 {max-width: 1324px;width:100%;margin: 0 auto;padding: 0 15px;}
-.wrap3 {max-width: 1235px;width:100%;margin: 0 auto;padding: 0 15px;}
-.wrap4 {max-width: 785px;width:100%;margin: 0 auto;padding: 0 15px;}
-.fontAlfa {font-family: 'Alfa Slab One', cursive; }                                                          /* permet d'ajouter cette police d'écriture */
-.fontBebas {font-family: 'Bebas Neue', cursive; }                                                                       
-a { text-decoration:none;color: black;font-weight: bold;}
-                                                              /* mets le text en gris et retire les decoration des liens */
-.home{
-    background-color: lime;
-    /* background-image:url("assets/image/nature.jpg"); */
-    color: rgb(245, 245, 245);
-    font-size: 1.5em;
-    font-weight: bold;
+body {
+  font: 500 15px/1.4 "Montserrat", sans-serif;
+  color: #3b3b3b;
+  background-color: #fff;
+  overflow-x: hidden;
 }
-.flexslider{
-    width: 25%;
+.wrap {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+} /* permet de centrer  les grandes div pour preparer le responsive */
+.wrap2 {
+  max-width: 1324px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
 }
-.bigflex{
-    margin: 50px 0;
+.wrap3 {
+  max-width: 1235px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.wrap4 {
+  max-width: 785px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.fontAlfa {
+  font-family: "Alfa Slab One", cursive;
+} /* permet d'ajouter cette police d'écriture */
+.fontBebas {
+  font-family: "Bebas Neue", cursive;
+}
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Annabelle JF Regular";
+  src: url("assets/font/Annabelle-JF-Regular.ttf") format("truetype");
+}
+body {
+  font-family: "Annabelle JF Regular", sans-serif;
+  background-color: burlywood;
+}
+
+
+.bigflex {
+  margin: 50px 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+/* Header */
+#page .nav {
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #434343;
+}
+#masthead {
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  margin: 0 auto;
+  border-radius: 5px;
+  font-size: 1.1em;
+}
+#masthead .site-branding {
+    width: 15%;
+}
+#masthead .site-branding img {
+  width: 100%;
+}
+#masthead .main-navigation ul {
+    width: 100%;
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    flex-flow: wrap row;
 }
-#masthead{
-    background-color: rgb(143, 140, 140);
+#masthead .main-navigation li {
+    border-left: 1px dashed #fff;
+    border-right: 1px dashed #FFFFFF;
+    background-color: #AD9677;
+}
+#masthead .main-navigation li:hover {
+     background-color: #ad9677a8;
+}
+#masthead .main-navigation a {
+  font-size: 1.4em;
+  margin: 0 10px;
+}
+#masthead .main-navigation a:hover {
+  color: #AD9677;
+}
+
+/* Content */
+.B {
+  text-align: center;
+}
+
+/* Footer */
+#colophon {
+  text-align: center;
+}
+.grandFooter .logoFooter{
+    width: 12%;
+}
+.grandFooter .logoFooter img {
+    width: 100%;
+}
+.grandFooter .site-info{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 20px;
-    margin: 0 auto;
-    border-radius: 5px;
+    padding: 40px;
+    font-size: 1.5em;
+    background-color: #434343;
+    color: #AD9677;
 }
-.B{
-    text-align: center;
-    background-color: burlywood;
-}
-#page .nav{
-    border-radius: 5px;
-    margin: 0 auto;
+.grandFooter .site-info p{
     padding: 10px;
-    background-color: rgb(200, 199, 199);
 }
-#masthead .site-branding img{
-    width: 25%;
-}
-#masthead .main-navigation ul{
+.grandFooter .site-info .reseau{
     display: flex;
+    flex-direction: column;
 }
-
-#masthead .main-navigation a{
-    font-size: 1.4em;
-    margin: 0 10px;
-}
-#masthead .main-navigation a:hover{
-   color: rgb(88, 76, 67);
-}
-#colophon{
-    background-color: rgb(143, 140, 140);
-    text-align: center;
-    padding: 100px;
-}
-.get{
-    background-color: rgb(14, 59, 59);
-    color: white;
-    border-radius: 15px;
-    text-align: center;
-    font-size: 1.6em;
-    font-weight: bold;
-    max-width: 500px;
+.grandFooter .site-info .reseau .fab,.far{
+    color: #AD9677;
+    font-size: 1.7em;
     padding: 10px;
-    margin: 20px auto;
-
 }
-
+.grandFooter .site-info .reseau .fab:hover,.far:hover{
+    color: #567dbd;
+    transition: all .4s;
+}
+.copyright{
+    display: flex;
+    justify-content: space-around;
+    background-color: #AD9677;
+    font-size: 1.4em;
+}
+.mentions{
+  padding: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: blanchedalmond;
+}
+.mentions h2{
+  margin: 20px;
+  font-weight: bold;
+  font-size: 1.7em
+}

@@ -1,0 +1,165 @@
+/* Généralité */
+
+.page_menu {
+    margin: 0 auto;
+    background-color: #fff;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+h4 {
+    font-size: 1.3em;
+}
+h5 {
+    font-size: 1.4em;
+}
+.section_menus {
+    width: 40%;
+}
+.section {
+    padding: 20px 0;
+}
+.menu {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-flow: wrap row;
+    align-items: center;
+}
+.text {
+    text-align: left;
+    margin-right: 50px;
+    padding: 0 10px;
+    text-transform: capitalize;
+}
+.text p {
+    color: #AD9677;
+}
+.price {
+    text-align: end;
+}
+
+/* boites avec bordure alternées */
+.blanc {
+    border-top: 7px solid #fff;
+    border-bottom: 7px solid #fff;
+}
+.blanc1{
+    border-left: 7px solid #fff;
+}
+.blanc2 {
+    border-right: 7px solid #fff;
+}
+.marge_grullo {
+    border-top: 30px solid #AD9677;
+    border-bottom: 30px solid #AD9677;
+    background-color: #fff;
+}
+.marge_grullo1 {
+    border-left: 30px solid #AD9677;
+}
+.marge_grullo2 {
+    border-right: 30px solid #AD9677; 
+}
+.grullo {
+    border-top: 7px solid #AD9677;
+    border-bottom: 7px solid #AD9677;
+}
+.grullo1 {
+    border-right: 7px solid #AD9677;
+}
+.grullo2{
+    border-left: 7px solid #AD9677;
+}
+.marge_blanc {
+    border-top: 30px solid #FFF;
+    border-bottom: 30px solid #FFF;
+    background-color: #AD9677;
+}
+.marge_blanc1 {
+    border-right: 30px solid #FFF;
+}
+.marge_blanc2 {
+    border-left: 30px solid #FFF;
+}
+
+/* boites titre plat */
+.titres_plats1 {
+    background-color: #AD9677;
+}
+.titres_plats2 {
+    background-color: #fff;
+}
+
+/* logo */
+.logo {
+    width: 100%;
+}
+.logo img {
+    width: 75%;
+}
+
+/* boites menus et formules */
+.formules, .boisson_chaudes {
+    font-size: 1.2em;
+    color: #FFF;
+    margin: 30px auto;
+    padding: 100px 0;
+    background: url(../images/etiqette.png) no-repeat 50%;
+}
+.section_special {
+    padding: 20px;
+    background-color: #434343;
+    color: #fff;
+}
+.special1 {
+    margin: 20px;
+    border: #fff solid 2px;
+}
+
+/* separateurs */
+.separateurs {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+.separateur {
+    background-color: #fff;
+    width: 100px;
+    height: 2px;
+    margin: auto 10px;
+}
+.separateur_simple {
+    margin: 10px auto;
+}
+
+/* content */
+.content {
+    font-size: 1.2em;
+    display: flex;
+    flex-flow: wrap row;
+    align-items: center;
+    justify-content: center;
+}
+.icon_vin {
+    font-size: 30px;
+    margin-right: 30px;
+}
+
+
+/* notes */
+.note {
+    font-size: 1.2em;
+}
+.note2 {
+    color: #AD9677;
+}
+.note3 {
+    font-size: .8em;
+}

@@ -67,29 +67,11 @@ label {
     padding: 10px 0;
     text-align: center;
 }
-
-.google{
+.reservation{
     text-align: center;
-    margin: 50px 0;
-}
-.contact1{
-    text-align: center;
-    margin-top: 50px;
-    font-size: 2em;
+    font-size: 1.8em;
+    margin-top: 20px;
     padding: 10px;
     background-color: #838080;
     color: burlywood;
-}
-.contact2{
-    display: flex;
-    justify-content: space-around;
-    align-items: baseline;
-    font-size: 1.7em;
-    margin-bottom: 50px;
-    padding: 10px;
-    background-color: #838080;
-    color: burlywood;
-}
-.contact2 h3{
-    margin-bottom: 20px;
 }

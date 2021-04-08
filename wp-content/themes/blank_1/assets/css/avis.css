@@ -1,0 +1,32 @@
+.B h1{
+    font-size: 2em;
+    font-weight: bold
+}
+.h1avis{
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #838080;
+    color: burlywood;
+}
+.B h2{
+    font-size: 1.7em;
+    font-weight: bold;
+}
+.B .avis{
+    font-size: 1.5em;
+    margin: 50px;
+    display: flex;
+
+}
+.B .avis .avis1,.avis2,.avis3{
+    margin-left: 20px;
+}
+.B .laisserUnAvis{
+    font-size: 2em;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #838080;
+}
+.B .laisserUnAvis p a{
+    color: burlywood;
+}
