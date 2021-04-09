@@ -236,55 +236,55 @@ $aperitifs = array(
         'prix' => 4.50
     )
 );
-$digestifs = array(
-    array(
-        'boisson' => '',
-        'contenu' => ,
-        'prix' => 15
-    ), 
-    array(
-        'boisson' => '',
-        'contenu' => ,
-        'prix' => 15
-    )
-);
-$bieres = array(
-    array(
-        'boisson' => '',
-        'contenu' => ,
-        'prix' => 15
-    ), 
-    array(
-        'boisson' => '',
-        'contenu' => ,
-        'prix' => 15
-    )
-);
-$softs = array(
-    array(
-        'boisson' => '',
-        'contenu' => ,
-        'prix' => 15
-    ), 
-    array(
-        'boisson' => '',
-        'contenu' => ,
-        'prix' => 15
-    )
-);
-$boissons_chaudes = array(
-    array(
-        'boisson' => '',
-        'contenu' => ,
-        'prix' => 15
-    ), 
-    array(
-        'boisson' => '',
-        'contenu' => ,
-        'prix' => 15
-    )
-);
-debug($salades);
+// $digestifs = array(
+//     array(
+//         'boisson' => '',
+//         'contenu' => ,
+//         'prix' => 15
+//     ), 
+//     array(
+//         'boisson' => '',
+//         'contenu' => ,
+//         'prix' => 15
+//     )
+// );
+// $bieres = array(
+//     array(
+//         'boisson' => '',
+//         'contenu' => ,
+//         'prix' => 15
+//     ), 
+//     array(
+//         'boisson' => '',
+//         'contenu' => ,
+//         'prix' => 15
+//     )
+// );
+// $softs = array(
+//     array(
+//         'boisson' => '',
+//         'contenu' => ,
+//         'prix' => 15
+//     ), 
+//     array(
+//         'boisson' => '',
+//         'contenu' => ,
+//         'prix' => 15
+//     )
+// );
+// $boissons_chaudes = array(
+//     array(
+//         'boisson' => '',
+//         'contenu' => ,
+//         'prix' => 15
+//     ), 
+//     array(
+//         'boisson' => '',
+//         'contenu' => ,
+//         'prix' => 15
+//     )
+// );
+// debug($salades);
 // debug($salades_description);
 get_header();
 ?>
