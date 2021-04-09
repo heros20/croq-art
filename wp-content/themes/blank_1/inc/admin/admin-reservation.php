@@ -41,21 +41,48 @@ function my_custom_menu_page_reservation(){
                     <th>numero de telephone</th>
                     <th>nombre de couverts</th>
                     <th>reservation enregistrer le</th>
+                    <th>moderation</th>
                     <th>Action</th>
                 </tr>
                 <?php foreach ( $reservations as $reservation ) { ?>
-                    <tr>
+                <tr>
                     <td><?= $reservation['id'] ?></td>
                     <td><?= $reservation['nom'] ?></td>
                     <td><?= date('d/m/Y à H:i',strtotime($reservation['date&heure'])) ?></td>
                     <td><?= $reservation['numero'] ?></td>
                     <td><?= $reservation['nbrecouvert'] ?></td>
                     <td><?= date('d/m/Y à H:i',strtotime($reservation['created_at'])) ?></td>
+                    <td>en attente de moderation</td>
                     <td><a href="<?= $adminUrl ?>&id=<?= $reservation['id'] ?>">supprimer</a></td>
-                    </tr>
-                    <?php } ?>
+                </tr>
+                <?php } ?>
             </table>
-        <?php } ?>
+            <?php foreach ( $reservations as $reservation ) {
+                 if ($reservation['moderation'] == 'validé') { ?>
+                    <table class="wp-list-table widefat fixed striped table-view-list posts">
+                        <tr>
+                            <th>id</th>
+                            <th>nom</th>
+                            <th>date et heure de reservation</th>
+                            <th>numero de telephone</th>
+                            <th>nombre de couverts</th>
+                            <th>reservation enregistrer le</th>
+                            <th>moderation</th>
+                            <th>Action</th>
+                        </tr>
+                        <tr>
+                            <td><?= $reservation['id'] ?></td>
+                            <td><?= $reservation['nom'] ?></td>
+                            <td><?= date('d/m/Y à H:i',strtotime($reservation['date&heure'])) ?></td>
+                            <td><?= $reservation['numero'] ?></td>
+                            <td><?= $reservation['nbrecouvert'] ?></td>
+                            <td><?= date('d/m/Y à H:i',strtotime($reservation['created_at'])) ?></td>
+                            <td><?= $reservation['moderation'] ?></td>
+                            <td><a href="<?= $adminUrl ?>&id=<?= $reservation['id'] ?>">supprimer</a></td>
+                        </tr>
+                <?php }
+            } 
+         } ?>
         
     </div>
    
