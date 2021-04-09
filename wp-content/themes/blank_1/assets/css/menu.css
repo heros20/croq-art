@@ -19,17 +19,32 @@ h5 {
     font-size: 1.4em;
 }
 .section_menus {
-    width: 45%;
+    width: 40%;
 }
 .section {
     padding: 20px 0;
 }
 .menu {
+    width: 100%;
     padding: 10px;
+    display: flex;
+    flex-flow: wrap row;
+    align-items: center;
+}
+.text {
+    text-align: left;
+    margin-right: 50px;
+    padding: 0 10px;
+    text-transform: capitalize;
+}
+.text p {
+    color: #AD9677;
+}
+.price {
+    text-align: end;
 }
 
-
-
+/* boites avec bordure alternées */
 .blanc {
     border-top: 7px solid #fff;
     border-bottom: 7px solid #fff;
@@ -51,14 +66,6 @@ h5 {
 .marge_grullo2 {
     border-right: 30px solid #AD9677; 
 }
-
-
-.logo {
-    width: 100%;
-}
-.logo img {
-    width: 75%;
-}
 .grullo {
     border-top: 7px solid #AD9677;
     border-bottom: 7px solid #AD9677;
@@ -78,8 +85,10 @@ h5 {
     border-right: 30px solid #FFF;
 }
 .marge_blanc2 {
-    border-right: 30px solid #FFF;
+    border-left: 30px solid #FFF;
 }
+
+/* boites titre plat */
 .titres_plats1 {
     background-color: #AD9677;
 }
@@ -87,16 +96,22 @@ h5 {
     background-color: #fff;
 }
 
-.menu {
-    display: flex;
-    flex-flow: wrap row;
-    align-items: center;
+/* logo */
+.logo {
+    width: 100%;
+}
+.logo img {
+    width: 75%;
 }
 
-.menu_du_jour {
-    background-color: lime;
+/* boites menus et formules */
+.formules, .boisson_chaudes {
+    font-size: 1.2em;
+    color: #FFF;
+    margin: 30px auto;
+    padding: 100px 0;
+    background: url(../images/etiqette.png) no-repeat 50%;
 }
-
 .section_special {
     padding: 20px;
     background-color: #434343;
@@ -106,19 +121,25 @@ h5 {
     margin: 20px;
     border: #fff solid 2px;
 }
-.separteurs {
+
+/* separateurs */
+.separateurs {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
 }
-.separteur {
+.separateur {
     background-color: #fff;
     width: 100px;
     height: 2px;
     margin: auto 10px;
 }
+.separateur_simple {
+    margin: 10px auto;
+}
 
+/* content */
 .content {
     font-size: 1.2em;
     display: flex;
@@ -129,4 +150,16 @@ h5 {
 .icon_vin {
     font-size: 30px;
     margin-right: 30px;
+}
+
+
+/* notes */
+.note {
+    font-size: 1.2em;
+}
+.note2 {
+    color: #AD9677;
+}
+.note3 {
+    font-size: .8em;
 }
