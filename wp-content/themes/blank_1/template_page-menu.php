@@ -9,8 +9,8 @@ $croques_description = array("jambon, fromage","poulet curry","fromage de chèvr
 $omelettes = array("nature","champignons","jambon","fromage","complète");
 $omelettes_description = array("","","","","jambon, fromage");
 
-debug($salades);
-debug($salades_description);
+// debug($salades);
+// debug($salades_description);
 get_header();
 ?>
 <div class="B">
