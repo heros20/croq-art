@@ -32,22 +32,28 @@ h5 {
     align-items: center;
 }
 .text {
+   text-transform: capitalize; 
+}
+.menu .text {
     text-align: left;
     margin-right: 50px;
     padding: 0 10px;
-    text-transform: capitalize;
-}
-.text p {
-    color: #AD9677;
+    
 }
 .price {
     text-align: end;
 }
 
+.contenus {
+   margin: 0 50px;
+}
 /* boites avec bordure alternées */
 .blanc {
     border-top: 7px solid #fff;
     border-bottom: 7px solid #fff;
+}
+.blanc .text p {
+    color: #AD9677;
 }
 .blanc1{
     border-left: 7px solid #fff;
@@ -69,6 +75,9 @@ h5 {
 .grullo {
     border-top: 7px solid #AD9677;
     border-bottom: 7px solid #AD9677;
+}
+.grullo .text p {
+    color: #FFF;
 }
 .grullo1 {
     border-right: 7px solid #AD9677;
@@ -121,7 +130,12 @@ h5 {
     margin: 20px;
     border: #fff solid 2px;
 }
-
+.section6 {
+    color: #FFF;
+}
+.menu_solo {
+    color: black;
+}
 /* separateurs */
 .separateurs {
     display: flex;
@@ -159,7 +173,11 @@ h5 {
 }
 .note2 {
     color: #AD9677;
+    text-align: right;
 }
 .note3 {
     font-size: .8em;
+}
+.notes_sup {
+    color: #FFF;
 }
