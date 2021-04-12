@@ -17,5 +17,6 @@ require get_template_directory() . '/inc/custom/custom-avis.php';
 require get_template_directory() . '/inc/custom/custom-menu.php';
 require get_template_directory() . '/inc/custom/custom-contact.php';
 require get_template_directory() . '/inc/custom/custom-footer.php';
+require get_template_directory() . '/inc/custom/custom-gallery.php';
 
 

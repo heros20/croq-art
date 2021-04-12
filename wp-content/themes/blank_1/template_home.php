@@ -21,9 +21,10 @@ get_header();
             if ($the_query->have_posts()) { ?>
                 <?php while ($the_query->have_posts()) {
                     $the_query->the_post(); ?>
-                    <?php $image = get_the_post_thumbnail_url(get_the_ID(), 'slider-img'); ?>
+                    <?php $image = get_the_post_thumbnail_url(get_the_ID(), 'slider-img'); 
+                    $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');?>
                     <li>
-                        <img src="<?= $image ?>" alt="<?= get_the_title() ?>">
+                        <a href="<?= esc_url($featured_img_url) ?>" rel="lightbox">  <?= the_post_thumbnail('medium'); ?> </a>
                     </li>
                 <?php  } ?>
             <?php } ?>

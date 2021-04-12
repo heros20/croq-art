@@ -58,5 +58,8 @@ function blank_1_scripts() {
 	if (is_page(98)) {
 		wp_enqueue_style('presentation-style', get_template_directory_uri() . '/assets/css/presentation.css', array(), _S_VERSION);
 	}
+	if (is_page(101)) {
+		wp_enqueue_style('gallery-style', get_template_directory_uri() . '/assets/css/gallery.css', array(), _S_VERSION);
+	}
 }
 add_action( 'wp_enqueue_scripts', 'blank_1_scripts' );
