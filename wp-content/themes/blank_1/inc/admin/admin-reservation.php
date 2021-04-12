@@ -9,9 +9,9 @@ function wpdocs_register_my_custom_reservation_page(){
         'manage_options',
         'custompage_reservation',
         'my_custom_menu_page_reservation',
-        'dashicons-email-alt',
+        'dashicons-groups',
         // plugins_url( 'myplugin/images/icon.png' ),
-        60
+        2
     ); 
 }
 add_action( 'admin_menu', 'wpdocs_register_my_custom_reservation_page' );

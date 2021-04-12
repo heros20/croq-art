@@ -43,9 +43,9 @@ function wpdocs_codex_contact_init() {
         'capability_type'    => 'post',
         'has_archive'        => true,
         'hierarchical'       => false,
-        'menu_position'      => null,
+        'menu_position'      => 7,
         'supports'           => array( 'title', 'editor' ),
-        'menu_icon'          => 'dashicons-carrot'
+        'menu_icon'          => 'dashicons-email-alt'
     );
  
     register_post_type( 'contact', $args );

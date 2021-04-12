@@ -43,9 +43,9 @@ function wpdocs_codex_clickandcollect_init() {
         'capability_type'    => 'post',
         'has_archive'        => true,
         'hierarchical'       => false,
-        'menu_position'      => null,
+        'menu_position'      => 5,
         'supports'           => array( 'title', 'editor'),
-        'menu_icon'          => 'dashicons-carrot'
+        'menu_icon'          => 'dashicons-cart'
     );
  
     register_post_type( 'clickandcollect', $args );

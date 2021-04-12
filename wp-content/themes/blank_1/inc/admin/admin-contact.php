@@ -9,9 +9,9 @@ function wpdocs_register_my_custom_contact_page(){
         'manage_options',
         'custompage_contact',
         'my_custom_menu_page_contact',
-        'dashicons-email-alt',
+        'dashicons-phone',
         // plugins_url( 'myplugin/images/icon.png' ),
-        60
+        3
     ); 
 }
 add_action( 'admin_menu', 'wpdocs_register_my_custom_contact_page' );

@@ -43,9 +43,9 @@ function wpdocs_codex_footer_init() {
         'capability_type'    => 'post',
         'has_archive'        => true,
         'hierarchical'       => false,
-        'menu_position'      => null,
+        'menu_position'      => 11,
         'supports'           => array( 'title', 'editor' ),
-        'menu_icon'          => 'dashicons-carrot'
+        'menu_icon'          => 'dashicons-admin-home'
     );
  
     register_post_type( 'footer', $args );

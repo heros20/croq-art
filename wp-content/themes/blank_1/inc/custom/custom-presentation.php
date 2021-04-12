@@ -45,9 +45,9 @@ function wpdocs_codex_presentation_init()
         'capability_type'    => 'post',
         'has_archive'        => true,
         'hierarchical'       => false,
-        'menu_position'      => null,
+        'menu_position'      => 10,
         'supports'           => array('title', 'editor' ),
-        'menu_icon'          => 'dashicons-carrot'
+        'menu_icon'          => 'dashicons-universal-access'
     );
 
     register_post_type('presentation', $args);
