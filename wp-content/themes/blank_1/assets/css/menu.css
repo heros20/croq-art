@@ -24,17 +24,21 @@ h5 {
 .section {
     padding: 20px 0;
 }
-.menu {
-    width: 100%;
-    padding: 10px;
-    display: flex;
-    flex-flow: wrap row;
-    align-items: center;
+table {
+    width: 90%;
+
 }
+.menu {
+    padding: 10px;
+}
+.boisson {
+    padding: 10px;
+}
+
 .text {
    text-transform: capitalize; 
 }
-.menu .text {
+.menu .text, .boisson .text {
     text-align: left;
     margin-right: 50px;
     padding: 0 10px;
@@ -46,6 +50,32 @@ h5 {
 
 .contenus {
    margin: 0 50px;
+}
+.boisson_solo {
+    color: black;
+}
+
+.boisson_chaudes {
+    width: 75%;
+}
+.boisson_chaudes table {
+    padding: 0 50px;
+
+}
+.boisson_chaudes .menu {
+    color: #FFF;
+
+}
+
+.menus_admin {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.menu_admin {
+    width: 45%;
 }
 /* boites avec bordure alternées */
 .blanc {
@@ -84,6 +114,7 @@ h5 {
 }
 .grullo2{
     border-left: 7px solid #AD9677;
+    color: #FFF;
 }
 .marge_blanc {
     border-top: 30px solid #FFF;

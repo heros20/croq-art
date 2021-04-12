@@ -236,59 +236,282 @@ $aperitifs = array(
         'prix' => 4.50
     )
 );
-// $digestifs = array(
-//     array(
-//         'boisson' => '',
-//         'contenu' => ,
-//         'prix' => 15
-//     ), 
-//     array(
-//         'boisson' => '',
-//         'contenu' => ,
-//         'prix' => 15
-//     )
-// );
-// $bieres = array(
-//     array(
-//         'boisson' => '',
-//         'contenu' => ,
-//         'prix' => 15
-//     ), 
-//     array(
-//         'boisson' => '',
-//         'contenu' => ,
-//         'prix' => 15
-//     )
-// );
-// $softs = array(
-//     array(
-//         'boisson' => '',
-//         'contenu' => ,
-//         'prix' => 15
-//     ), 
-//     array(
-//         'boisson' => '',
-//         'contenu' => ,
-//         'prix' => 15
-//     )
-// );
-// $boissons_chaudes = array(
-//     array(
-//         'boisson' => '',
-//         'contenu' => ,
-//         'prix' => 15
-//     ), 
-//     array(
-//         'boisson' => '',
-//         'contenu' => ,
-//         'prix' => 15
-//     )
-// );
-// debug($salades);
-// debug($salades_description);
+$digestifs = array(
+    array(
+        'boisson' => 'calvados',
+        'contenu' => 4,
+        'prix' => 5.00
+    ), 
+    array(
+        'boisson' => 'get 27',
+        'contenu' => 4,
+        'prix' => 5.00
+    ), 
+    array(
+        'boisson' => 'get 31',
+        'contenu' => 4,
+        'prix' => 5.00
+    ), 
+    array(
+        'boisson' => 'cognac',
+        'contenu' => 4,
+        'prix' => 5.00
+    ), 
+    array(
+        'boisson' => 'armagnac',
+        'contenu' => 4,
+        'prix' => 5.00
+    ), 
+    array(
+        'boisson' => 'bailey\'s',
+        'contenu' => 4,
+        'prix' => 5.00
+    ), 
+    array(
+        'boisson' => 'tequila',
+        'contenu' => 4,
+        'prix' => 5.00
+    ), 
+    array(
+        'boisson' => 'rhum',
+        'contenu' => 4,
+        'prix' => 6.00
+    )
+);
+$bieres = array(
+    array(
+        'boisson' => 'bière pression',
+        25 => array(
+            'prix' => '3.50€'
+        ),
+        33 => array(
+            'prix' => ''
+        ),
+        50 => array(
+            'prix' => '5.50€'
+        )
+    ), 
+    array(
+        'boisson' => 'monaco',
+        25 => array(
+            'prix' => '3.00€'
+        ),
+        33 => array(
+            'prix' => ''
+        ),
+        50 => array(
+            'prix' => ''
+        )
+    ), 
+    array(
+        'boisson' => 'panaché',
+        25 => array(
+            'prix' => '3.00€'
+        ),
+        33 => array(
+            'prix' => ''
+        ),
+        50 => array(
+            'prix' => ''
+        )
+    ), 
+    array(
+        'boisson' => 'desperados',
+        25 => array(
+            'prix' => ''
+        ),
+        33 => array(
+            'prix' => '4.00€'
+        ),
+        50 => array(
+            'prix' => ''
+        )
+    )
+);
+$softs = array(
+    array(
+        'boisson' => 'eau plate',
+        25 => array(
+            'prix' => ''
+        ),
+        33 => array(
+            'prix' => ''
+        ),
+        50 => array(
+            'prix' => '3.00€'
+        ),
+        1 => array(
+            'prix' => '4.50€'
+        )
+    ), 
+    array(
+        'boisson' => 'eau gazeuse',
+        25 => array(
+            'prix' => ''
+        ),
+        33 => array(
+            'prix' => ''
+        ),
+        50 => array(
+            'prix' => '4.00€'
+        ),
+        1 => array(
+            'prix' => '5.50€'
+        )
+    ), 
+    array(
+        'boisson' => 'perrier',
+        25 => array(
+            'prix' => ''
+        ),
+        33 => array(
+            'prix' => '2.50€'
+        ),
+        50 => array(
+            'prix' => ''
+        ),
+        1 => array(
+            'prix' => ''
+        )
+    ), 
+    array(
+        'boisson' => 'sirop à l\'eau',
+        25 => array(
+            'prix' => '2.00€'
+        ),
+        33 => array(
+            'prix' => ''
+        ),
+        50 => array(
+            'prix' => ''
+        ),
+        1 => array(
+            'prix' => ''
+        )
+    ), 
+    array(
+        'boisson' => 'diabolo',
+        25 => array(
+            'prix' => '2.50€'
+        ),
+        33 => array(
+            'prix' => ''
+        ),
+        50 => array(
+            'prix' => ''
+        ),
+        1 => array(
+            'prix' => ''
+        )
+    ), 
+    array(
+        'boisson' => 'jus de fruit',
+        25 => array(
+            'prix' => '3.00€ (20cl)'
+        ),
+        33 => array(
+            'prix' => ''
+        ),
+        50 => array(
+            'prix' => ''
+        ),
+        1 => array(
+            'prix' => ''
+        )
+    ), 
+    array(
+        'boisson' => 'soda (canette)',
+        25 => array(
+            'prix' => ''
+        ),
+        33 => array(
+            'prix' => '2.50€'
+        ),
+        50 => array(
+            'prix' => ''
+        ),
+        1 => array(
+            'prix' => ''
+        )
+    ), 
+    array(
+        'boisson' => 'limonade',
+        25 => array(
+            'prix' => '2.50€'
+        ),
+        33 => array(
+            'prix' => ''
+        ),
+        50 => array(
+            'prix' => ''
+        ),
+        1 => array(
+            'prix' => ''
+        )
+    )
+);
+$boissons_chaudes = array(
+    array(
+        'boisson' => 'café',
+        'prix' => 1.50
+    ), 
+    array(
+        'boisson' => 'café noisettes',
+        'prix' => 1.60
+    ), 
+    array(
+        'boisson' => 'café (décaféiné)',
+        'prix' => 1.60
+    ), 
+    array(
+        'boisson' => 'café crème',
+        'prix' => 2.50
+    ), 
+    array(
+        'boisson' => 'double expresso',
+        'prix' => 2.80
+    ), 
+    array(
+        'boisson' => 'thé',
+        'prix' => 3.50
+    ), 
+    array(
+        'boisson' => 'chocolat chaud maison',
+        'prix' => 3.50
+    ), 
+    array(
+        'boisson' => 'chocolat vennois',
+        'prix' => 3.80
+    )
+);
+
+$args = array(
+    'post_type' => 'menu',
+    'post_status' => 'publish',
+    'posts_per_page' => 2,
+    'orderby' => 'date',
+    'order' => 'DESC'
+);
+
+$the_query = new WP_Query($args);
+
 get_header();
 ?>
 <div class="B">
+    <div class="admin">
+        <h3>Menus du jour</h3>
+        <div class="menus_admin">
+            <?php if ($the_query->have_posts()) { 
+                while ($the_query->have_posts()) {
+                    $the_query->the_post(); ?>
+                    <div class="menu_admin plat">
+                        <p><?= nl2br(get_the_content()) ?></p>
+                    </div>
+                <?php  } ?>
+            <?php } ?>
+        </div>
+    </div>
+    
     <div class="page_menu">
         <div class="section_menus blanc blanc1">
             <div class="marge_grullo marge_grullo1">
@@ -300,45 +523,63 @@ get_header();
                         <div class="titres_plats1">
                             <h3>Salades</h3>
                         </div>
+                        <table>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                            </tr>
                         <?php foreach ($salades as $salade) { ?>
-                            <div class="menu">
-                                <div class="text">
+                            <tr class="menu">
+                                <td class="text">
                                     <h4><?= $salade['plat'] ?></h4>
                                     <p><?= $salade['contenu'] ?></p>
-                                </div>
-                                <div class="price"><?= $salade['prix'] ?>€</div>
-                            </div> 
+                                </td>
+                                <td class="price"><?= $salade['prix'] ?>€</td>
+                            </tr> 
                        <?php } ?>
+                        </table>
                     </div>
                     <div class="section section2">
                         <div class="titres_plats1">
                             <h3>Croques</h3>
                         </div>
                         <div class="note note1">servies avec frites maison et salade vert</div>
+                        <table>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                            </tr>
                         <?php foreach ($croques as $croque) { ?>
-                            <div class="menu">
-                                <div class="text">
+                            <tr class="menu">
+                                <td class="text">
                                     <h4><?= $croque['plat'] ?></h4>
                                     <p><?= $croque['contenu'] ?></p>
-                                </div>
-                                <div class="price"><?= $croque['prix'] ?>€</div>
-                            </div> 
+                                </td>
+                                <td class="price"><?= $croque['prix'] ?>€</td>
+                            </tr> 
                        <?php } ?>
+                        </table>
                     </div>                  
                     <div class="section section3">
                         <div class="titres_plats1">
                             <h3>Omelettes</h3>
                         </div>
                         <div class="note note1">servies avec frites maison et salade vert</div>
+                        <table>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                            </tr>
                         <?php foreach ($omelettes as $omelette) { ?>
-                            <div class="menu">
-                                <div class="text">
+                            <tr class="menu">
+                                <td class="text">
                                     <h4>omelette <?= $omelette['plat'] ?></h4>
                                     <p><?= $omelette['contenu'] ?></p>
-                                </div>
-                                <div class="price"><?= $omelette['prix'] ?>€</div>
-                            </div> 
+                                </td>
+                                <td class="price"><?= $omelette['prix'] ?>€</td>
+                            </tr> 
                        <?php } ?>
+                        </table>
                        <div class="note note2">prix nets TTC ,service compris.</div>
 
                     </div>
@@ -399,31 +640,43 @@ get_header();
                             <h3>Planches</h3>
                         </div>
                         <div class="note note1">servies avec une boisson au choix *</div>
-                        <?php foreach ($planches as $planche) { ?>
-                            <div class="menu">
-                                <div class="text">
-                                    <h4><?= $planche['plat'] ?></h4>
-                                    <p><?= $planche['contenu'] ?></p>
-                                </div>
-                                <div class="price"><?= $planche['prix'] ?>€</div>
-                            </div> 
-                       <?php } ?>
-                       <div class="notes_sup">*(hors apéritifs et digestifs)</div>  
+                        <table>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            <?php foreach ($planches as $planche) { ?>
+                                <tr class="menu">
+                                    <td class="text">
+                                        <h4><?= $planche['plat'] ?></h4>
+                                        <p><?= $planche['contenu'] ?></p>
+                                    </td>
+                                    <td class="price"><?= $planche['prix'] ?>€</td>
+                                </tr> 
+                        <?php } ?>
+                        </table> 
+                        <div class="notes_sup">*(hors apéritifs et digestifs)</div>  
                     </div>
                     <div class="section section5">
                         <div class="titres_plats2">
                             <h3>Desserts</h3>
                         </div>
                         <div class="note note1">faits maison</div>
-                        <?php foreach ($desserts as $dessert) { ?>
-                            <div class="menu">
-                                <div class="text">
-                                    <h4><?= $dessert['plat'] ?></h4>
-                                </div>
-                                <div class="price"><?= $dessert['prix'] ?>€</div>
-                            </div> 
-                       <?php } ?>
-                       <div class="note note1" style="text-align: left; color: #FFF;">liste des allergènes sur demande</div>
+                        <table>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            <?php foreach ($desserts as $dessert) { ?>
+                                <tr class="menu">
+                                    <td class="text">
+                                        <h4><?= $dessert['plat'] ?></h4>
+                                    </td>
+                                    <td class="price"><?= $dessert['prix'] ?>€</td>
+                                </tr> 
+                        <?php } ?>
+                       </table>  
+                        <div class="note note1" style="text-align: left; color: #FFF;">liste des allergènes sur demande</div>
                     </div>
                 </div>
             </div>
@@ -435,40 +688,58 @@ get_header();
                         <div class="titres_plats2">
                             <h3>Aperitifs</h3>
                         </div>
-                        <?php foreach ($aperitifs as $aperitif) { ?>
-                            <div class="menu">
-                                <div class="text">
-                                    <h4><?= $aperitif['boisson'] ?></h4>
-                                </div>
-                                <div class="contenus"><?= $aperitif['contenu'] ?>cl</div>
-                                <div class="price"><?= $aperitif['prix'] ?>€</div>
-                            </div> 
-                       <?php } ?>
-                        <div class="menu menu_solo">
-                            <div class="text">
-                                <h4>supplèment coca-cola</h4>
-                            </div>
-                            <div class="price">0.50€</div>
-                        </div>
-                        <div class="menu menu_solo">
-                            <div class="text">
-                                <h4>supplèment sirop</h4>
-                            </div>
-                            <div class="price">0.50€</div>
-                        </div>
+                        <table>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            <?php foreach ($aperitifs as $aperitif) { ?>
+                                <tr class="boisson">
+                                    <td class="text">
+                                        <h4><?= $aperitif['boisson'] ?></h4>
+                                    </td>
+                                    <td class="contenus"><?= $aperitif['contenu'] ?>cl</td>
+                                    <td class="price"><?= $aperitif['prix'] ?>€</td>
+                                </tr> 
+                            <?php } ?>                        
+                            <tr class="boisson boisson_solo">
+                                <td class="text">
+                                    <h4>supplèment coca-cola</h4>
+                                </td>
+                                <td></td>
+                                <td class="price">0.50€</td>
+                            </tr>
+                            <tr class="boisson boisson_solo">
+                                <td class="text">
+                                    <h4>supplèment sirop</h4>
+                                </td>
+                                <td></td>
+                                <td class="price">0.50€</td>
+                            </tr>
+                        </table>
                     </div>
 
                     <div class="section section7">
                         <div class="titres_plats2">
                             <h3>Digestifs</h3>
                         </div>
-                        <div class="menu menu1">
-                            <div class="text">
-                                <h4>Plat</h4>
-                                <p>Descripton</p>
-                            </div>
-                            <div class="price">Prix</div>
-                        </div>   
+                        <table>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            <?php foreach ($digestifs as $digestif) { ?>
+                                <tr class="boisson">
+                                    <td class="text">
+                                        <h4><?= $digestif['boisson'] ?></h4>
+                                    </td>
+                                    <td class="contenus"><?= $digestif['contenu'] ?>cl</td>
+                                    <td class="price"><?= $digestif['prix'] ?>€</td>
+                                </tr> 
+                            <?php } ?>
+                        </table>  
                     </div>
                 </div>
             </div>
@@ -481,26 +752,50 @@ get_header();
                         <div class="titres_plats1">
                             <h3>Divers</h3>
                         </div>
-                        <div class="menu menu1">
-                            <div class="text">
-                                <h4>Plat</h4>
-                                <p>Descripton</p>
-                            </div>
-                            <div class="price">Prix</div>
-                        </div>   
-                    </div>
+                        <table>
+                            <tr>
+                                <th></th>
+                                <th>25cL</th>
+                                <th>33cL</th>
+                                <th>50cL</th>
+                            </tr>
+                            <?php foreach ($bieres as $biere) { ?>
+                                <tr class="boisson">
+                                    <td class="text">
+                                        <h4><?= $biere['boisson'] ?></h4>
+                                    </td>
+                                    <td class="price"><?= $biere[25]['prix'] ?></td>
+                                    <td class="price"><?= $biere[33]['prix'] ?></td>
+                                    <td class="price"><?= $biere[50]['prix'] ?></td>
 
+                                </tr> 
+                            <?php } ?>
+                        </table>     
+                    </div>
                     <div class="section section9">
                         <div class="titres_plats1">
                             <h3>Softs</h3>
                         </div>
-                        <div class="menu menu1">
-                            <div class="text">
-                                <h4>Plat</h4>
-                                <p>Descripton</p>
-                            </div>
-                            <div class="price">Prix</div>
-                        </div>   
+                        <table>
+                            <tr>
+                                <th></th>
+                                <th>25cL</th>
+                                <th>33cL</th>
+                                <th>50cL</th>
+                                <th>1L</th>
+                            </tr>
+                            <?php foreach ($softs as $soft) { ?>
+                                <tr class="boisson">
+                                    <td class="text">
+                                        <h4><?= $soft['boisson'] ?></h4>
+                                    </td>
+                                    <td class="price"><?= $soft[25]['prix'] ?></td>
+                                    <td class="price"><?= $soft[33]['prix'] ?></td>
+                                    <td class="price"><?= $soft[50]['prix'] ?></td>
+                                    <td class="price"><?= $soft[1]['prix'] ?></td>
+                                </tr> 
+                            <?php } ?>
+                        </table>   
                     </div>
                     <div class="boisson_chaudes">
                         <h3>Boisson chaudes</h3>
@@ -511,13 +806,20 @@ get_header();
                             </div>
                             <div class="separateur"> </div>
                         </div>
-                        <div class="menu menu1">
-                            <div class="text">
-                                <h4>Plat</h4>
-                                <p>Descripton</p>
-                            </div>
-                            <div class="price">Prix</div>
-                        </div> 
+                        <table>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        <?php foreach ($boissons_chaudes as $boisson_chaude) { ?>
+                            <tr class="menu">
+                                <td class="text">
+                                    <h4><?= $boisson_chaude['boisson'] ?></h4>
+                                </td>
+                                <td class="price"><?= $boisson_chaude['prix'] ?>€</td>
+                            </tr> 
+                       <?php } ?>
+                        </table>
                     </div>
 
                     <div class="section_special special2">
