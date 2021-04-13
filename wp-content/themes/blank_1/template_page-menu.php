@@ -488,7 +488,7 @@ $boissons_chaudes = array(
 $args = array(
     'post_type' => 'menu',
     'post_status' => 'publish',
-    'posts_per_page' => 2,
+    'posts_per_page' => 3,
     'orderby' => 'date',
     'order' => 'DESC'
 );
@@ -505,7 +505,7 @@ get_header();
                 while ($the_query->have_posts()) {
                     $the_query->the_post(); ?>
                     <div class="menu_admin plat">
-                        <p><?= nl2br(get_the_content()) ?></p>
+                        <?= nl2br(get_the_content()) ?>
                     </div>
                 <?php  } ?>
             <?php } ?>
@@ -590,7 +590,40 @@ get_header();
             <div class="marge_blanc marge_blanc1">
                 <div class="menus">
                     <div class="plats">
-                    
+                        <div class="titres_plats1">
+                            <h3>les plats</h3>
+                        </div>
+                        <table>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            <tr class="menu">
+                                <td class="text">
+                                    <h4>l'inspiration du chef</h4>
+                                    <p>tarte salée ou tratine</p>
+                                </td>
+                                <td class="price">11€</td>
+                            </tr>
+                            <tr class="menu">
+                                <td class="text">
+                                    <h4>la piece du boucher</h4>
+                                </td>
+                                <td class="price">15€</td>
+                            </tr>
+                            <tr class="menu">
+                                <td class="text">
+                                    <h4>le poisson du jour</h4>
+                                </td>
+                                <td class="price">15€</td>
+                            </tr>
+                            <tr class="menu">
+                                <td class="text">
+                                    <h4>le plat d jour</h4>
+                                </td>
+                                <td class="price">11€</td>
+                            </tr>
+                        </table>
                     </div>
                     <div class="formules">
                         <h3>Formules...</h3>

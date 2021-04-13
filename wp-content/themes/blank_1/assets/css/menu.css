@@ -8,8 +8,9 @@
     justify-content: center;
 }
 h3 {
-    font-size: 1.5em;
-    font-weight: bold;
+    font-family: 'Palanquin', sans-serif;
+    font-size: 1.9em;
+    /* font-weight: bold; */
     text-transform: uppercase;
 }
 h4 {
@@ -75,7 +76,10 @@ table {
     justify-content: center;
 }
 .menu_admin {
-    width: 45%;
+    width: 33%;
+}
+.menu_admin .text {
+    text-align: center;
 }
 /* boites avec bordure alternées */
 .blanc {
@@ -131,14 +135,17 @@ table {
 /* boites titre plat */
 .titres_plats1 {
     background-color: #AD9677;
+    color: #FFF;
 }
 .titres_plats2 {
     background-color: #fff;
+    color: #AD9677;
 }
 
 /* logo */
 .logo {
     width: 100%;
+    margin: 50px auto;
 }
 .logo img {
     width: 75%;
