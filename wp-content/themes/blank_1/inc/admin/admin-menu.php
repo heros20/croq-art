@@ -5,7 +5,7 @@
 function wpdocs_register_my_custom_menu_page(){
     add_menu_page( 
         __( 'Menus', 'textdomain' ),
-        'menus menus',
+        'menus menu',
         'manage_options',
         'custompage_menu',
         'my_custom_menu_page_menu',
@@ -27,8 +27,13 @@ function my_custom_menu_page_menu(){
     <label for="nom">Nom du plat</label>
     <input type="text" name="nom" id="nom">
 
+    <label for="ingredients">Ingredients du plat</label>
+    <input type="r" name="ingredients" id="ingredients">
+    
     <label for="prix">Prix</label>
     <input type="number" name="prix" id="prix">
+
+    <input type="submit" name="submitted" value="Enregistrer">
     </form>    
 
 

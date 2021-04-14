@@ -9,9 +9,9 @@ function wpdocs_register_my_custom_click_and_collect_page(){
         'manage_options',
         'custompage_reservation',
         'my_custom_menu_page_click_and_collect',
-        'dashicons-groups',
+        'dashicons-products',
         // plugins_url( 'myplugin/images/icon.png' ),
-        5
+        4
     ); 
 }
 add_action( 'admin_menu', 'wpdocs_register_my_custom_click_and_collect_page' );
@@ -19,7 +19,7 @@ add_action( 'admin_menu', 'wpdocs_register_my_custom_click_and_collect_page' );
 /** 
  * Display a custom menu page
  */
-function my_custom_menu_page_reservation(){ 
+function my_custom_menu_page_click_and_collect(){ 
     $adminUrl = admin_url().'admin.php?page=custompage_click_and_collect';
     global $wpdb;
     $table = $wpdb->prefix.'c&c';
@@ -34,12 +34,16 @@ function my_custom_menu_page_reservation(){
     $click_collects = $wpdb->get_results($sdl, ARRAY_A);
     ?>
     <div class="wrap contact-wrap">
-        <h1 class="wp-heading-inline">Reservation</h1>
-        <?php if(!empty($_GET['id'])){
-           $id = $_GET['id'];
-           $wpdb->delete( $table, array( 'id' => $id ) );?>
-           <p>La réservation à bien été supprimer</p>
-           <?php }else{ ?>
+        <h1 class="wp-heading-inline">Click and collect</h1>
+        <?php 
+        // if(!empty($_GET['id'])){
+        //    $id = $_GET['id'];
+        //    $wpdb->delete( $table, array( 'id' => $id ) );
+        ?>
+           <!-- <p>La réservation à bien été supprimer</p> -->
+           <?php
+            // }else{ 
+               ?>
             <table class="wp-list-table widefat fixed striped table-view-list posts">
                 <tr>
                 <th>id</th>
@@ -64,7 +68,9 @@ function my_custom_menu_page_reservation(){
                 </tr>
                 <?php } ?>
             </table>
-        <?php } ?>
+        <?php 
+    // } 
+    ?>
         
     </div>
 <?php } ?>

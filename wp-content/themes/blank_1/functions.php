@@ -9,6 +9,8 @@ require get_template_directory() . '/inc/extra/template-functions.php';
 
 require get_template_directory() . '/inc/admin/admin-contact.php';
 require get_template_directory() . '/inc/admin/admin-reservation.php';
+require get_template_directory() . '/inc/admin/admin-menu.php';
+require get_template_directory() . '/inc/admin/admin-click-and-collect.php';
 
 require get_template_directory() . '/inc/custom/custom-slider.php';
 require get_template_directory() . '/inc/custom/custom-presentation.php';
