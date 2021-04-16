@@ -23,17 +23,24 @@ function my_custom_menu_page_reservation(){
     $adminUrl = admin_url().'admin.php?page=custompage_reservation';
     global $wpdb;
     $table = $wpdb->prefix.'reservation';
-    $sdl =  "SELECT * FROM $table ORDER BY created_at DESC";
+    $table2 = $wpdb->prefix.'client';
+    $sdl =  "SELECT * FROM $table2 
+    LEFT JOIN $table AS c
+    ON c&c.id_client = c.id
+    ORDER BY created_at DESC";
     $reservations = $wpdb->get_results($sdl, ARRAY_A);
+    debug($reservations);
     ?>
     <div class="wrap contact-wrap">
         <h1 class="wp-heading-inline">Reservation</h1>
-        <?php if(!empty($_GET['id'])){
-           $id = $_GET['id'];
-           $wpdb->delete( $table, array( 'id' => $id ) );?>
-           <p>La réservation à bien été supprimer</p>
-           <?php }else{ ?>
-            <table class="wp-list-table widefat fixed striped table-view-list posts">
+        <?php 
+        // if(!empty($_GET['id'])){
+        //    $id = $_GET['id'];
+        //    $wpdb->delete( $table, array( 'id' => $id ) );?>
+           <!-- <p>La réservation à bien été supprimer</p> -->
+           <?php 
+        // }else{ ?>
+            <!-- <table class="wp-list-table widefat fixed striped table-view-list posts">
                 <tr>
                 <th>id</th>
                     <th>nom</th>
@@ -43,9 +50,10 @@ function my_custom_menu_page_reservation(){
                     <th>reservation enregistrer le</th>
                     <th>moderation</th>
                     <th>Action</th>
-                </tr>
-                <?php foreach ( $reservations as $reservation ) { ?>
-                <tr>
+                </tr> -->
+                <?php 
+                // foreach ( $reservations as $reservation ) { ?>
+                <!-- <tr>
                     <td><?= $reservation['id'] ?></td>
                     <td><?= $reservation['nom'] ?></td>
                     <td><?= date('d/m/Y à H:i',strtotime($reservation['date&heure'])) ?></td>
@@ -54,12 +62,14 @@ function my_custom_menu_page_reservation(){
                     <td><?= date('d/m/Y à H:i',strtotime($reservation['created_at'])) ?></td>
                     <td>en attente de moderation</td>
                     <td><a href="<?= $adminUrl ?>&id=<?= $reservation['id'] ?>">supprimer</a></td>
-                </tr>
-                <?php } ?>
-            </table>
-            <?php foreach ( $reservations as $reservation ) {
-                 if ($reservation['moderation'] == 'validé') { ?>
-                    <table class="wp-list-table widefat fixed striped table-view-list posts">
+                </tr> -->
+                <?php 
+            // } ?>
+            <!-- </table> -->
+            <?php 
+            // foreach ($reservations as $reservation ) {
+                //  if ($reservation['moderation'] == 'validé') { ?>
+                    <!-- <table class="wp-list-table widefat fixed striped table-view-list posts">
                         <tr>
                             <th>id</th>
                             <th>nom</th>
@@ -70,8 +80,8 @@ function my_custom_menu_page_reservation(){
                             <th>moderation</th>
                             <th>Action</th>
                         </tr>
-                        <tr>
-                            <td><?= $reservation['id'] ?></td>
+                        <tr> -->
+                            <!-- <td><?= $reservation['id'] ?></td>
                             <td><?= $reservation['nom'] ?></td>
                             <td><?= date('d/m/Y à H:i',strtotime($reservation['date&heure'])) ?></td>
                             <td><?= $reservation['numero'] ?></td>
@@ -79,12 +89,14 @@ function my_custom_menu_page_reservation(){
                             <td><?= date('d/m/Y à H:i',strtotime($reservation['created_at'])) ?></td>
                             <td><?= $reservation['moderation'] ?></td>
                             <td><a href="<?= $adminUrl ?>&id=<?= $reservation['id'] ?>">supprimer</a></td>
-                        </tr>
-                <?php }
-            } 
-         } ?>
+                        </tr> -->
+                <?php 
+        //         }
+        //     } 
+        //  } ?>
         
     </div>
    
-<?php } ?>
+<?php 
+} ?>
 

@@ -7,12 +7,14 @@ if (!empty($_POST['submitted'])) {
     // FAILLE XSS
 
     $nom = failleXSS('nom');
+    $email = failleXSS('email');
     $nbrecouvert = failleXSS('nbrecouvert');
     $date = failleXSS('date');
     $phone = failleXSS('phone');
 
     // fonction pour afficher les erreurs eventuelles
     $errors = validForm($errors, $nom, 'nom');
+    $errors = validEmail($errors, $email, 'email', 2, 50);
     $errors = validNumber($errors, $nbrecouvert, 'nbrecouvert');
     $errors = validDate($errors, $date, 'date');
     $errors = validPhone($errors, $phone, 'phone');
@@ -21,16 +23,29 @@ if (!empty($_POST['submitted'])) {
     if (count($errors) == 0) {
         global $wpdb;
         $table = $wpdb->prefix .'reservation';
+        $table2 = $wpdb->prefix.'client';
         $wpdb->insert(
-            $table,
+            $table2,
             array(
                 'nom' => $nom,
-                'nbrecouvert' => $nbrecouvert,
-                'date&heure' => $date,
                 'numero' => $phone,
+                'email' => $email,
                 'created_at' => current_time('mysql')
             ),
             array(
+                '%s',
+            )
+        );
+        $wpdb->insert(  
+            $table,
+            array(
+                'id_client' => $wpdb->insert_id,
+                'date&heure' => $date,
+                'nbrecouvert' => $nbrecouvert,
+                'created_at' => current_time('mysql')
+            ),
+            array(
+                '%d',
                 '%s',
             )
         );
@@ -43,7 +58,7 @@ if($success == true){ ?>
     <div id="formincription">
          <p>Merci d'avoir réserver, nous vous confirmeront celle-ci dans les plus bref delais</p>
     </div>
-<?php } else{ ?>
+<?php } else { ?>
 <div class="reservation">
     <p>Afin de reserver une table dans notre restaurant,</p>
     <p>Merci de remplir le formulaire ci-dessous</p>
@@ -59,6 +74,16 @@ if($success == true){ ?>
         <div>
             <p><span class="error"><?php if (!empty($errors['nom'])) {
                                         echo $errors['nom'];
+                                    } ?><span></p>
+        </div>
+        
+        <label for="email">Email*</label>
+        <input type="text" id="email" name="email" placeholder="Votre email..." value="<?php if (!empty($_POST['email'])) {
+                                                                                            echo $_POST['email'];
+                                                                                        } ?>">
+        <div>
+            <p><span class="error"><?php if (!empty($errors['email'])) {
+                                        echo $errors['email'];
                                     } ?><span></p>
         </div>
 
