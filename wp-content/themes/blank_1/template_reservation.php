@@ -86,16 +86,6 @@ if($success == true){ ?>
                                         echo $errors['email'];
                                     } ?><span></p>
         </div>
-
-        <label for="email">Email*</label>
-        <input type="text" id="email" name="email" placeholder="Votre email..." value="<?php if (!empty($_POST['email'])) {
-                                                                                            echo $_POST['email'];
-                                                                                        } ?>">
-        <div>
-            <p><span class="error"><?php if (!empty($errors['email'])) {
-                                        echo $errors['email'];
-                                    } ?><span></p>
-        </div>
         <label for="nbrecouvert">Nombre de personnes*</label>
         <input type="number" id="nbrecouvert" name="nbrecouvert" value="<?php if (!empty($_POST['nbrecouvert'])) {
                                                                                         echo $_POST['nbrecouvert'];
