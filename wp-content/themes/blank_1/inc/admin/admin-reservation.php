@@ -30,8 +30,9 @@ function my_custom_menu_page_reservation(){
         <h1 class="wp-heading-inline">Reservation</h1>
         <?php if(!empty($_GET['id'])){
            $id = $_GET['id'];
-           $wpdb->delete( $table, array( 'id' => $id ) );?>
-           <p>La réservation à bien été supprimer</p>
+           $wpdb :: update ($table ,array ('moderation' => 'validé'), 
+           array ('id' => $id), array ('% s', '% d'), array ('% d') );?>
+           <p>La réservation à bien été validé</p>
            <?php }else{ ?>
             <table class="wp-list-table widefat fixed striped table-view-list posts">
                 <tr>
@@ -41,7 +42,7 @@ function my_custom_menu_page_reservation(){
                     <th>numero de telephone</th>
                     <th>nombre de couverts</th>
                     <th>reservation enregistrer le</th>
-                    <th>moderation</th>
+                    <th>accepter</th>
                     <th>refuser</th>
                 </tr>
                 <?php foreach ( $reservations as $reservation ) { ?>
@@ -52,8 +53,8 @@ function my_custom_menu_page_reservation(){
                     <td><?= $reservation['numero'] ?></td>
                     <td><?= $reservation['nbrecouvert'] ?></td>
                     <td><?= date('d/m/Y à H:i',strtotime($reservation['created_at'])) ?></td>
-                    <td>en attente de moderation</td>
-                    <td><a href="<?= $adminUrl ?>&id=<?= $reservation['id'] ?>">supprimer</a></td>
+                    <td><a href="<?= $adminUrl ?>&id=<?= $reservation['id'] ?>">accepter</a></td>
+                    <td>en attente de supression</td>
                 </tr>
                 <?php } ?>
             </table>
