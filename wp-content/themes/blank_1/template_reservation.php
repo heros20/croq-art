@@ -28,12 +28,6 @@ if (!empty($_POST['submitted'])) {
             $table2,
             array(
                 'nom' => $nom,
-<<<<<<< HEAD
-=======
-                'email' => $email,
-                'nbrecouvert' => $nbrecouvert,
-                'date&heure' => $date,
->>>>>>> 20fbc477101a3fce11a71b40b536e59edbe60f56
                 'numero' => $phone,
                 'email' => $email,
                 'created_at' => current_time('mysql')
