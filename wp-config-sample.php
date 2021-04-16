@@ -22,16 +22,16 @@
 
 // ** Réglages MySQL - Votre hébergeur doit vous fournir ces informations. ** //
 /** Nom de la base de données de WordPress. */
-define( 'DB_NAME', 'votre_nom_de_bdd' );
+define( 'DB_NAME', 'baykeyk20' );
 
 /** Utilisateur de la base de données MySQL. */
-define( 'DB_USER', 'votre_utilisateur_de_bdd' );
+define( 'DB_USER', 'baykeyk20' );
 
 /** Mot de passe de la base de données MySQL. */
-define( 'DB_PASSWORD', 'votre_mdp_de_bdd' );
+define( 'DB_PASSWORD', 'Lolilol1' );
 
 /** Adresse de l’hébergement MySQL. */
-define( 'DB_HOST', 'localhost' );
+define( 'DB_HOST', 'baykeyk20.mysql.db' );
 
 /** Jeu de caractères à utiliser par la base de données lors de la création des tables. */
 define( 'DB_CHARSET', 'utf8' );
@@ -70,7 +70,7 @@ define( 'NONCE_SALT',       'mettez une phrase unique ici' );
  * si vous leur donnez chacune un préfixe unique.
  * N’utilisez que des chiffres, des lettres non-accentuées, et des caractères soulignés !
  */
-$table_prefix = 'wp_';
+$table_prefix = 'ca_';
 
 /**
  * Pour les développeurs : le mode déboguage de WordPress.
