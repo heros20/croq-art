@@ -45,7 +45,6 @@ if (!empty($_POST['submitted'])) {
                 'created_at' => current_time('mysql')
             ),
             array(
-                '%d',
                 '%s',
             )
         );
