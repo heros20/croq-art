@@ -24,8 +24,8 @@ function my_custom_menu_page_reservation(){
     global $wpdb;
     $table = $wpdb->prefix.'reservation';
     $table2 = $wpdb->prefix.'client';
-    $sdl =  "SELECT * FROM $table2 AS c
-    LEFT JOIN $table AS r
+    $sdl =  "SELECT * FROM $table AS r
+    LEFT JOIN $table2 AS c
     ON r.id_client = c.id
     ORDER BY r.created_at DESC";
     $reservations = $wpdb->get_results($sdl, ARRAY_A);
