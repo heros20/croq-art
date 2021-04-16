@@ -23,7 +23,11 @@ function my_custom_menu_page_contact(){
     $adminUrl = admin_url().'admin.php?page=custompage_contact';
     global $wpdb;
     $table = $wpdb->prefix.'message';
-    $sdl =  "SELECT * FROM $table ORDER BY created_at DESC";
+    $table2 = $wpdb->prefix.'client';
+    $sdl =  "SELECT * FROM $table AS m
+    LEFT JOIN $table2 AS c
+    ON m.id_client = c.id
+    ORDER BY m.created_at DESC";
     $contacts = $wpdb->get_results($sdl, ARRAY_A);
     ?>
     <div class="wrap contact-wrap">
