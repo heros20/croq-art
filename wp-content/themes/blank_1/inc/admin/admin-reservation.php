@@ -42,7 +42,7 @@ function my_custom_menu_page_reservation(){
                     <th>nombre de couverts</th>
                     <th>reservation enregistrer le</th>
                     <th>moderation</th>
-                    <th>Action</th>
+                    <th>refuser</th>
                 </tr>
                 <?php foreach ( $reservations as $reservation ) { ?>
                 <tr>

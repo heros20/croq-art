@@ -7,12 +7,14 @@ if (!empty($_POST['submitted'])) {
     // FAILLE XSS
 
     $nom = failleXSS('nom');
+    $email = failleXSS('email');
     $nbrecouvert = failleXSS('nbrecouvert');
     $date = failleXSS('date');
     $phone = failleXSS('phone');
 
     // fonction pour afficher les erreurs eventuelles
     $errors = validForm($errors, $nom, 'nom');
+    $errors = validEmail($errors, $email, 'email', 2, 50);
     $errors = validNumber($errors, $nbrecouvert, 'nbrecouvert');
     $errors = validDate($errors, $date, 'date');
     $errors = validPhone($errors, $phone, 'phone');
@@ -25,6 +27,7 @@ if (!empty($_POST['submitted'])) {
             $table,
             array(
                 'nom' => $nom,
+                'email' => $email,
                 'nbrecouvert' => $nbrecouvert,
                 'date&heure' => $date,
                 'numero' => $phone,
@@ -62,6 +65,15 @@ if($success == true){ ?>
                                     } ?><span></p>
         </div>
 
+        <label for="email">Email*</label>
+        <input type="text" id="email" name="email" placeholder="Votre email..." value="<?php if (!empty($_POST['email'])) {
+                                                                                            echo $_POST['email'];
+                                                                                        } ?>">
+        <div>
+            <p><span class="error"><?php if (!empty($errors['email'])) {
+                                        echo $errors['email'];
+                                    } ?><span></p>
+        </div>
         <label for="nbrecouvert">Nombre de personnes*</label>
         <input type="number" id="nbrecouvert" name="nbrecouvert" value="<?php if (!empty($_POST['nbrecouvert'])) {
                                                                                         echo $_POST['nbrecouvert'];
