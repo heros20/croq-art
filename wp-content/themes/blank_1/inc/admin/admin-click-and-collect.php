@@ -7,7 +7,7 @@ function wpdocs_register_my_custom_click_and_collect_page(){
         __( 'Click and collect', 'textdomain' ),
         'click and collect menu',
         'manage_options',
-        'custompage_reservation',
+        'custompage_click_and_collect',
         'my_custom_menu_page_click_and_collect',
         'dashicons-products',
         // plugins_url( 'myplugin/images/icon.png' ),
