@@ -28,6 +28,12 @@ if (!empty($_POST['submitted'])) {
             $table2,
             array(
                 'nom' => $nom,
+<<<<<<< HEAD
+=======
+                'email' => $email,
+                'nbrecouvert' => $nbrecouvert,
+                'date&heure' => $date,
+>>>>>>> 20fbc477101a3fce11a71b40b536e59edbe60f56
                 'numero' => $phone,
                 'email' => $email,
                 'created_at' => current_time('mysql')
@@ -87,6 +93,15 @@ if($success == true){ ?>
                                     } ?><span></p>
         </div>
 
+        <label for="email">Email*</label>
+        <input type="text" id="email" name="email" placeholder="Votre email..." value="<?php if (!empty($_POST['email'])) {
+                                                                                            echo $_POST['email'];
+                                                                                        } ?>">
+        <div>
+            <p><span class="error"><?php if (!empty($errors['email'])) {
+                                        echo $errors['email'];
+                                    } ?><span></p>
+        </div>
         <label for="nbrecouvert">Nombre de personnes*</label>
         <input type="number" id="nbrecouvert" name="nbrecouvert" value="<?php if (!empty($_POST['nbrecouvert'])) {
                                                                                         echo $_POST['nbrecouvert'];
