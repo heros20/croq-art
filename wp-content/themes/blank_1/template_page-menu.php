@@ -591,7 +591,7 @@ get_header();
                 <div class="menus">
                     <div class="plats">
                         <div class="titres_plats1">
-                            <h3>les plats</h3>
+                            <h3><img src="<?= get_template_directory_uri(); ?>/assets/images/banderole-removebg-preview.png" alt=""></h3>
                         </div>
                         <table>
                             <tr>

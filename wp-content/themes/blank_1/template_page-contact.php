@@ -31,13 +31,24 @@ if (!empty($_POST['submitted'])) {
     if (count($errors) == 0) {
         global $wpdb;
         $table = $wpdb->prefix .'message';
+        $table2 = $wpdb->prefix.'client';
+        $wpdb->insert(
+            $table2,
+            array(
+                'nom' => $nom,
+                'numero' => $phone,
+                'email' => $email,
+                'created_at' => current_time('mysql')
+            ),
+            array(
+                '%s',
+            )
+        );
         $wpdb->insert(
             $table,
             array(
-                'nom' => $nom,
-                'email' => $email,
+                'id_client' => $wpdb->insert_id,
                 'message' => $message,
-                'numero' => $phone,
                 'created_at' => current_time('mysql')
             ),
             array(

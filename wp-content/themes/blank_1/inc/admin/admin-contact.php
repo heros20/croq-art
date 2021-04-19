@@ -39,7 +39,6 @@ function my_custom_menu_page_contact(){
             <?php }else{ ?>
             <table class="wp-list-table widefat fixed striped table-view-list posts">
                 <tr>
-                    <th>id</th>
                     <th>nom</th>
                     <th>email</th>
                     <th>numero</th>
@@ -49,7 +48,6 @@ function my_custom_menu_page_contact(){
                 </tr>
                 <?php foreach ( $contacts as $contact ) { ?>
                     <tr>
-                        <td><?= $contact['id'] ?></td>
                         <td><?= $contact['nom'] ?></td>
                         <td><?= $contact['email'] ?></td>
                         <td><?= $contact['numero'] ?></td>
