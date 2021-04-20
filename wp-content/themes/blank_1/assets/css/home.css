@@ -21,22 +21,22 @@
     margin-right: 400px;
     margin-left: 400px;
 }
-.flexslider .slides img{
-    /* height: 500px; */
-} 
 .afterSlider{
-    height: 500px;
-    margin-bottom: 20px;
+    display: none;
 }
-.afterSlider img{
-    height: 100%;
-    width: 100%;
-}
-.afterSlider .after{
-}
-@media screen and (max-width: 900px)
+
+@media screen and (max-width: 1400px)
 {
     .flexslider{
         display: none;
+    }
+    .afterSlider{
+        display: block;
+        height: 500px;
+        margin-bottom: -75px;
+    }
+    .afterSlider img{
+        height: 100%;
+        width: 100%;
     }
 }
