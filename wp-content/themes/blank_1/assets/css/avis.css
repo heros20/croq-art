@@ -33,3 +33,18 @@
 .B .laisserUnAvis p a{
     color: burlywood;
 }
+@media screen and (max-width: 900px)
+{
+    .B .avis{
+         display: block;
+         text-align: center;
+    }
+    .B .avis .avis1,.avis2,.avis3{
+         margin-bottom: 20px;
+    }
+    .trait{
+        height: 1px;
+        background-color: #838080;
+        margin-bottom: 15px;
+    }
+}

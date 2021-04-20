@@ -85,3 +85,16 @@ label {
     background-color: #838080;
     color: burlywood;
 }
+@media screen and (max-width: 900px)
+{
+    .contact2{
+         display: block;
+         text-align: center;
+    }
+    .trait{
+        height: 1px;
+        background-color: burlywood;
+        margin-bottom: 10px;
+        margin-top: -10px;
+    }
+}
