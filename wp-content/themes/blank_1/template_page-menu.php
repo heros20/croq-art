@@ -5,7 +5,7 @@
 $salades = array(
     array(
         'plat' => 'L\'italienne',
-        'contenu' => 'tomates, mozzaella, jambon fumé',
+        'contenu' => 'tomates, mozzarella, jambon fumé',
         'prix' => 10
     ),
     array(
@@ -92,17 +92,17 @@ $omelettes = array(
 );
 $planches = array(
     array(
-        'plat' => 'la plache du charcutier',
+        'plat' => 'la planche du charcutier',
         'contenu' => '',
         'prix' => 15
     ), 
     array(
-        'plat' => 'la plache du fromager',
+        'plat' => 'la planche du fromager',
         'contenu' => '',
         'prix' => 15
     ),
     array(
-        'plat' => 'la plache du pêcheur',
+        'plat' => 'la planche du pêcheur',
         'contenu' => 'selon marée',
         'prix' => 17
     ), 
@@ -117,7 +117,7 @@ $planches = array(
         'prix' => 25
     ), 
     array(
-        'plat' => 'camenbert roti',
+        'plat' => 'camembert roti',
         'contenu' => 'frites, salade, jambon fumé',
         'prix' => 15
     )
@@ -499,7 +499,7 @@ get_header();
 ?>
 <div class="B">
     <div class="admin">
-        <h3>Menus du jour</h3>
+        <h3>Notre Menu</h3>
         <div class="menus_admin">
             <?php if ($the_query->have_posts()) { 
                 while ($the_query->have_posts()) {
@@ -543,7 +543,7 @@ get_header();
                         <div class="titres_plats1">
                             <h3>Croques</h3>
                         </div>
-                        <div class="note note1">servies avec frites maison et salade vert</div>
+                        <div class="note note1">servies avec frites maison et salade verte</div>
                         <table>
                             <tr>
                                 <th></th>
@@ -564,7 +564,7 @@ get_header();
                         <div class="titres_plats1">
                             <h3>Omelettes</h3>
                         </div>
-                        <div class="note note1">servies avec frites maison et salade vert</div>
+                        <div class="note note1">servies avec frites maison et salade verte</div>
                         <table>
                             <tr>
                                 <th></th>
@@ -580,7 +580,7 @@ get_header();
                             </tr> 
                        <?php } ?>
                         </table>
-                       <div class="note note2">prix nets TTC ,service compris.</div>
+                       <div class="note note2">prix nets TTC, service compris.</div>
 
                     </div>
                 </div>
@@ -601,13 +601,13 @@ get_header();
                             <tr class="menu">
                                 <td class="text">
                                     <h4>l'inspiration du chef</h4>
-                                    <p>tarte salée ou tratine</p>
+                                    <p>tarte salée ou tartine</p>
                                 </td>
                                 <td class="price">11€</td>
                             </tr>
                             <tr class="menu">
                                 <td class="text">
-                                    <h4>la piece du boucher</h4>
+                                    <h4>la pièce du boucher</h4>
                                 </td>
                                 <td class="price">15€</td>
                             </tr>
@@ -619,7 +619,7 @@ get_header();
                             </tr>
                             <tr class="menu">
                                 <td class="text">
-                                    <h4>le plat d jour</h4>
+                                    <h4>le plat du jour</h4>
                                 </td>
                                 <td class="price">11€</td>
                             </tr>
@@ -629,7 +629,7 @@ get_header();
                         <h3>Formules...</h3>
                         <div class="separateur separateur_simple"></div>
                         <div class="text formule1">
-                            <p>Salade,Croque,Omelette ou Plat du jour</p>
+                            <p>Salade, Croque, Omelette ou Plat du jour</p>
                             <p>Une boisson au choix*</p>
                             <p>un dessert & un café</p>
                             <p>15€</p>
@@ -642,11 +642,11 @@ get_header();
                             <div class="separateur"> </div>
                         </div>
                         <div class="text formule2">
-                            <p>Salade,Croque,Omelette ou Plat du jour</p>
+                            <p>Salade, Croque, Omelette ou Plat du jour</p>
                             <p>Une boisson au choix* et un café</p>
                             <p>12,50€</p>
                         </div>
-                        <div class="note note3">*(hors apéritifs et digestifs)</div>
+                        <div class="note note3">* (hors apéritifs et digestifs)</div>
                     </div>
                     <div class="section_special special1">
                         <div class="title">
@@ -662,11 +662,11 @@ get_header();
                         <div class="menu menu1">
                             <div class="text">
                                 <p>Une boisson au choix*</p>
-                                <p>Un dessert et un café</p>
+                                <p>Un dessert & un café</p>
                             </div>
                             <div class="price">18,00€</div>
                         </div>  
-                        <div class="notes_supl">*(hors apéritifs et digestifs)</div>
+                        <div class="notes_supl">* (hors apéritifs et digestifs)</div>
                     </div>
                     <div class="section section4">
                         <div class="titres_plats2">
@@ -688,7 +688,7 @@ get_header();
                                 </tr> 
                         <?php } ?>
                         </table> 
-                        <div class="notes_sup">*(hors apéritifs et digestifs)</div>  
+                        <div class="notes_sup">* (hors apéritifs et digestifs)</div>  
                     </div>
                     <div class="section section5">
                         <div class="titres_plats2">
@@ -738,14 +738,14 @@ get_header();
                             <?php } ?>                        
                             <tr class="boisson boisson_solo">
                                 <td class="text">
-                                    <h4>supplèment coca-cola</h4>
+                                    <h4>supplément coca-cola</h4>
                                 </td>
                                 <td></td>
                                 <td class="price">0.50€</td>
                             </tr>
                             <tr class="boisson boisson_solo">
                                 <td class="text">
-                                    <h4>supplèment sirop</h4>
+                                    <h4>supplément sirop</h4>
                                 </td>
                                 <td></td>
                                 <td class="price">0.50€</td>
@@ -869,7 +869,7 @@ get_header();
             
         </div>
     </div>
-</div>
+</div> <!-- .B -->
 
 
 <?php

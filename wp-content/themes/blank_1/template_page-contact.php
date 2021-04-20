@@ -61,15 +61,15 @@ if (!empty($_POST['submitted'])) {
 get_header();
 if ($success == true) { ?>
     <div id="formincription">
-        <p>Votre message à bien été transmis, nous vous recontacterons dans les plus bref delais</p>
+        <p>Votre message a bien été transmis, nous vous recontacterons dans les plus bref délais</p>
     </div>
 
 <?php } else { ?>
 <div class="contact1">
-    <p>Si vous souhaiter des renseignement,</p>
-    <p>ou tout autre demande, nous vous invitons</p>
+    <p>Si vous souhaitez des renseignements,</p>
+    <p>où tout autre demande, nous vous invitons</p>
     <p>à nous laisser un message via ce formulaire</p>
-    <p>ou contacter nous directement par telephone au :</p>
+    <p>ou contactez-nous directement par téléphone au :</p>
     <p>02 77 73 01 74</p>
 </div>
     <form action="" id="formincription" method="POST" novalidate>

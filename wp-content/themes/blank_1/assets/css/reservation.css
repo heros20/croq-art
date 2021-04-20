@@ -75,3 +75,13 @@ label {
     background-color: #838080;
     color: burlywood;
 }
+.contact2{
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    font-size: 1.7em;
+    margin-bottom: 50px;
+    padding: 10px;
+    background-color: #838080;
+    color: burlywood;
+}

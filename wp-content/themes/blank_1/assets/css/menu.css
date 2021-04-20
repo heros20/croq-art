@@ -1,5 +1,8 @@
 /* Généralité */
-
+.B{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.3em;
+}
 .page_menu {
     margin: 0 auto;
     background-color: #fff;

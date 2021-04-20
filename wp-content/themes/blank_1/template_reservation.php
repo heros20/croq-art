@@ -1,5 +1,12 @@
 <?php
 /* Template Name: reservation  */
+$contact = array(
+    'post_type' => 'contact',
+    'post_status' => 'publish',
+    'posts_per_page' => 3,
+    'orderby' => 'date',
+    'order' => 'ASC'
+);
 $errors = array();
 $success = false;
 
@@ -55,13 +62,13 @@ if (!empty($_POST['submitted'])) {
 get_header();
 if($success == true){ ?>
     <div id="formincription">
-         <p>Merci d'avoir réserver, nous vous confirmeront celle-ci dans les plus bref delais</p>
+         <p>Merci d'avoir réservé, nous vous confirmerons celle-ci dans les plus brefs délais</p>
     </div>
 <?php } else { ?>
 <div class="reservation">
-    <p>Afin de reserver une table dans notre restaurant,</p>
+    <p>Afin de réserver une table dans notre restaurant,</p>
     <p>Merci de remplir le formulaire ci-dessous</p>
-    <p>ou contacter nous directement par telephone au :</p>
+    <p>ou contactez-nous directement par téléphone au :</p>
     <p>02 77 73 01 74</p>
 </div>
 <form action="" id="formincription" method="POST" novalidate>
@@ -119,6 +126,25 @@ if($success == true){ ?>
 
     </form>
 <?php } ?>
+
+<div>
+    <ul class="contact2">
+        <?php
+        $the_query = new WP_Query($contact);
+        // The Loop
+        if ($the_query->have_posts()) { ?>
+            <?php while ($the_query->have_posts()) {
+                $the_query->the_post(); ?>
+                <li>
+                    <div class="coordonnée">
+                        <h3> <?= get_the_title() ?> </h3>
+                        <p> <?= get_the_content() ?> </p>
+                    </div>
+                </li>
+            <?php  } ?>
+        <?php } ?>
+    </ul>
+</div>
 
 
 <?php

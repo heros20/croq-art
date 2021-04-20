@@ -205,13 +205,16 @@ a {
   color: black;
   font-weight: bold;
 }
-
 @font-face {
   font-family: "Annabelle JF Regular";
   src: url("assets/font/Annabelle-JF-Regular.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Cookie-Regular";
+  src: url("assets/font/Cookie-Regular.ttf") format("truetype");
+}
 body {
-  font-family: "Annabelle JF Regular", sans-serif;
+  font-family:Arial, Helvetica, sans-serif;
   background-color: burlywood;
 }
 
@@ -225,6 +228,7 @@ body {
 
 /* Header */
 #page .nav {
+  font-family: "Annabelle JF Regular", sans-serif;
   margin: 0 auto;
   padding: 10px;
   background-color: #434343;
@@ -274,6 +278,7 @@ body {
 /* Footer */
 #colophon {
   text-align: center;
+  font-family: "Annabelle JF Regular", sans-serif;
 }
 .grandFooter .logoFooter{
     width: 12%;

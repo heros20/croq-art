@@ -46,7 +46,7 @@ function wpdocs_codex_presentation_init()
         'has_archive'        => true,
         'hierarchical'       => false,
         'menu_position'      => 10,
-        'supports'           => array('title', 'editor' ),
+        'supports'           => array('title', 'editor','excerpt' ),
         'menu_icon'          => 'dashicons-universal-access'
     );
 

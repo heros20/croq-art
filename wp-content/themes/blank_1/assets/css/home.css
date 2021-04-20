@@ -6,19 +6,21 @@
     color: burlywood;
 }
 .B{
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    align-items:flex-start;
+    width: 100%;
+    text-align: center;
 }
 .B2{
+    font-family: "Annabelle JF Regular", sans-serif;
+    margin: 20px 0;
+    margin-right: 400px;
     font-weight: bold;
-    margin-left: 10px;
     font-size: 2.1em;
-    width: 48%;
+    width: 100%;
 }
 .flexslider{
-    width: 48%;
+    margin-right: 400px;
+    margin-left: 400px;
+    min-width: 400px;
 }
 .flexslider .slides img{
     height: 500px;
