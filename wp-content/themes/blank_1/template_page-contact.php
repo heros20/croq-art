@@ -137,6 +137,7 @@ if ($success == true) { ?>
                         <p> <?= get_the_content() ?> </p>
                     </div>
                 </li>
+                <div class="trait"></div>
             <?php  } ?>
         <?php } ?>
     </ul>
