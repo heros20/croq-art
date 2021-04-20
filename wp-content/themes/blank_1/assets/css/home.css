@@ -20,8 +20,23 @@
 .flexslider{
     margin-right: 400px;
     margin-left: 400px;
-    min-width: 400px;
 }
 .flexslider .slides img{
     /* height: 500px; */
 } 
+.afterSlider{
+    height: 500px;
+    margin-bottom: 20px;
+}
+.afterSlider img{
+    height: 100%;
+    width: 100%;
+}
+.afterSlider .after{
+}
+@media screen and (max-width: 900px)
+{
+    .flexslider{
+        display: none;
+    }
+}
