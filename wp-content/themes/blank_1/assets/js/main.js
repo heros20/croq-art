@@ -4,7 +4,8 @@ $( document ).ready(function() {
             animation: "slide",
             slideshowSpeed: 5000,
             controlNav: false, 
-            directionNav: false,
+            directionNav: true,
+            animationSpeed: 1000, 
         });
     });
 })

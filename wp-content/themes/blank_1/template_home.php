@@ -48,7 +48,7 @@ get_header();
                     <?php $image = get_the_post_thumbnail_url(get_the_ID(), 'slider-img'); 
                     $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');?>
                     <li>
-                        <a href="<?= esc_url($featured_img_url) ?>" rel="lightbox">  <?= the_post_thumbnail('medium'); ?> </a>
+                        <a href="<?= esc_url($featured_img_url) ?>" rel="lightbox">  <?= the_post_thumbnail(get_the_ID(), 'slider-img') ?> </a>
                     </li>
                 <?php  } ?>
             <?php } ?>
