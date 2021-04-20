@@ -20,6 +20,10 @@
 .flexslider{
     margin-right: 400px;
     margin-left: 400px;
+    min-width: 400px;
+}
+.flexslider .slides img{
+    height: 500px;
 }
 .afterSlider{
     display: none;

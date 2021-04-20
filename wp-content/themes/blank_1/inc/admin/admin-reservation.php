@@ -41,7 +41,7 @@ function my_custom_menu_page_reservation(){
         }else{ ?>
             <table class="wp-list-table widefat fixed striped table-view-list posts">
                 <tr>
-                <th>id</th>
+                    <th>id</th>
                     <th>nom</th>
                     <th>numero de telephone</th>
                     <th>Email</th>
@@ -98,7 +98,7 @@ function my_custom_menu_page_reservation(){
                     <p>Aucunes reservations n'a été validées</p>
                 <?php }
             } 
-         } ?>
+        } ?>
         
     </div>
    
