@@ -31,38 +31,42 @@ function my_custom_menu_page_moderation(){
             debug($_POST);
             if (count($errors) == 0) {
                 if ($_POST['valid'] === 'validé') {
-                    $wpdb->query(
+                echo 'lol';
+                $requet = $wpdb->query(
                         $wpdb->prepare(
                             "UPDATE $table 
-                            SET (status)
-                            VALUES (%s)
+                            SET status = $valid
                             WHERE id = $id"
                         ),
                         array(
-                            $valid,
-                            $id
+                            '%s',
+                            '%d'
                         )
-                    );
+                    );?>
+                    <p>La réservation à bien été accepée</p>
+                    <?php 
                 }
-                $success = true;
-                echo 'lol';
-            }
-            else {
+                else {
                 echo 'dodo';
+                $wpdb->delete( $table, array( 'id' => $id ) );?>
+                <p>La réservation à bien été supprimer</p>
+                <?php 
+                }
+            $success = true;
             }
-        }
-        debug($reservations);
-        // debug($errors);
-    }
-?>
-<form action="" method="POST" novalidate>
-<select name="valid" id="valid">
-    <option value="En attente">En attente</option>
-    <option value="validé">Validé</option>
-    <option value="refusé">Refusé</option>
-</select>
-<p><span class="error"><?php if (!empty($errors['valid'])) { echo $errors['valid']; } ?><span></p>
-<input type="submit" name="submitted" value="Confirmer">
-</form>
+        }else { ?>
+            <form action="" method="POST" novalidate>
+            <select name="valid" id="valid">
+                <option value="En attente">En attente</option>
+                <option value="validé">Validé</option>
+                <option value="refusé">Refusé</option>
+            </select>
+            <p><span class="error"><?php if (!empty($errors['valid'])) { echo $errors['valid']; } ?><span></p>
+            <input type="submit" name="submitted" value="Confirmer">
+            </form>
 
-<?php }
+        <?php }
+        debug($reservations);
+        // debug($);
+    }
+ }
