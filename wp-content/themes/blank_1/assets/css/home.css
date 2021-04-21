@@ -24,6 +24,7 @@
 }
 .flexslider .slides img{
     height: 500px;
+    object-fit: cover;
 }
 .afterSlider{
     display: none;
@@ -40,5 +41,6 @@
     .afterSlider img{
         height: 100%;
         width: 100%;
+        object-fit: cover;
     }
 }

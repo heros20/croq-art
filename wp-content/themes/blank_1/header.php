@@ -39,10 +39,11 @@
 						<li><a href="<?= esc_url(home_url('page-presentation')) ?>">Presentation</a></li>
 						<li><a href="<?= esc_url(home_url('reservation')) ?>">Réservation</a></li>
 						<li><a href="<?= esc_url(home_url('page-menu')) ?>">Menu</a></li>
-						<li><a href="<?= esc_url(home_url('click-and-collect')) ?>">Click and collect</a></li>
+						<li><a href="<?= esc_url(home_url('shop')) ?>">Click and collect</a></li>
 						<li><a href="<?= esc_url(home_url('page-contact')) ?>">Contact</a></li>
 						<li><a href="<?= esc_url(home_url('page-gallery')) ?>">Galerie</a></li>
 						<li><a href="<?= esc_url(home_url('page-avis')) ?>">Avis</a></li>
+						
 					</ul>
 				</nav><!-- #site-navigation -->
 
