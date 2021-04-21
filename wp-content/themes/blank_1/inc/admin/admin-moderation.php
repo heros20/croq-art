@@ -20,7 +20,7 @@ function my_custom_menu_page_moderation(){
         global $wpdb;
         $table = $wpdb->prefix.'reservation';
         $sdl =  "SELECT * FROM $table WHERE id = $id ";
-        $reservation = $wpdb->get_results($sdl, ARRAY_A);
+        $reservations = $wpdb->get_results($sdl, ARRAY_A);
         $adminUrl = admin_url().'admin.php?page=custompage_moderation&id='.$id;
         echo $id;
         $errors = array();
@@ -30,23 +30,29 @@ function my_custom_menu_page_moderation(){
             $errors = validSelect($errors,'valid');
             debug($_POST);
             if (count($errors) == 0) {
-                    if ($_POST['valid'] === 'validé') {
-                        $wpdb->query($wpdb->prepare("UPDATE $table SET status = $valid WHERE id = $id"));
-                        $success = true;
-                        echo 'lol';
-                    }
-                    else {
-                        echo 'dodo';
-                    }
+                if ($_POST['valid'] === 'validé') {
+                    $wpdb->query(
+                        $wpdb->prepare(
+                            "UPDATE $table 
+                            SET (status)
+                            VALUES (%s)
+                            WHERE id = $id"
+                        ),
+                        array(
+                            $valid,
+                            $id
+                        )
+                    );
+                }
+                $success = true;
+                echo 'lol';
             }
-            
-                
+            else {
+                echo 'dodo';
             }
-            
-        
-        
-        debug($reservation);
-        debug($errors);
+        }
+        debug($reservations);
+        // debug($errors);
     }
 ?>
 <form action="" method="POST" novalidate>
