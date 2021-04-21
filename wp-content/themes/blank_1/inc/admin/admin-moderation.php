@@ -28,45 +28,36 @@ function my_custom_menu_page_moderation(){
         if (!empty($_POST['submitted'])) {
             $valid = failleXSS('valid');
             $errors = validSelect($errors,'valid');
-            debug($_POST);
             if (count($errors) == 0) {
                 if ($_POST['valid'] === 'validé') {
-                echo 'lol';
-                $requet = $wpdb->query(
-                        $wpdb->prepare(
-                            "UPDATE $table 
-                            SET status = $valid
-                            WHERE id = $id"
-                        ),
-                        array(
-                            '%s',
-                            '%d'
-                        )
-                    );?>
+                    $wpdb->prepare(
+                        "UPDATE $table 
+                        SET 'status' = $valid
+                        WHERE 'id' = $id"
+                    ); ?>
                     <p>La réservation à bien été accepée</p>
                     <?php 
                 }
                 else {
-                echo 'dodo';
-                $wpdb->delete( $table, array( 'id' => $id ) );?>
-                <p>La réservation à bien été supprimer</p>
-                <?php 
-                }
-            $success = true;
+                    $wpdb->delete( $table, array( 'id' => $id ) );?>
+                    <p>La réservation à bien été supprimer</p>
+                <?php }
+                $success = true;
             }
-        }else { ?>
-            <form action="" method="POST" novalidate>
-            <select name="valid" id="valid">
-                <option value="En attente">En attente</option>
-                <option value="validé">Validé</option>
-                <option value="refusé">Refusé</option>
-            </select>
-            <p><span class="error"><?php if (!empty($errors['valid'])) { echo $errors['valid']; } ?><span></p>
-            <input type="submit" name="submitted" value="Confirmer">
-            </form>
-
-        <?php }
+            debug($_POST);
+        }
         debug($reservations);
         // debug($);
     }
- }
+?>
+<form action="" method="POST" novalidate>
+<select name="valid" id="valid">
+    <option value="En attente">En attente</option>
+    <option value="validé">Validé</option>
+    <option value="refusé">Refusé</option>
+</select>
+<p><span class="error"><?php if (!empty($errors['valid'])) { echo $errors['valid']; } ?><span></p>
+<input type="submit" name="submitted" value="Confirmer">
+</form>
+
+<?php }
