@@ -24,11 +24,12 @@ function my_custom_menu_page_reservation(){
     global $wpdb;
     $table = $wpdb->prefix.'reservation';
     $table2 = $wpdb->prefix.'client';
-    $sdl =  "SELECT * FROM $table AS r
+    $sdl =  "SELECT r.id AS id,c.id AS id_client,r.nbrecouvert,r.status,r.created_at,c.nom,c.email,c.numero FROM $table AS r
     LEFT JOIN $table2 AS c
     ON r.id_client = c.id
     ORDER BY r.created_at DESC";
     $reservations = $wpdb->get_results($sdl, ARRAY_A);
+    debug($reservations);
     ?>
     <div class="wrap contact-wrap">
         <h1 class="wp-heading-inline">Reservation</h1>
@@ -49,7 +50,6 @@ function my_custom_menu_page_reservation(){
                     <th>nombre de couverts</th>
                     <th>reservation enregistrer le</th>
                     <th>moderation</th>
-                    <th>Action</th>
                 </tr>
                 <?php 
                 foreach ( $reservations as $reservation ) { 
@@ -63,7 +63,6 @@ function my_custom_menu_page_reservation(){
                             <td><?= $reservation['nbrecouvert'] ?></td>
                             <td><?= date('d/m/Y à H:i',strtotime($reservation['created_at'])) ?></td>
                             <td><a href="admin.php?page=custompage_moderation&id=<?= $reservation['id'] ?>"><?= $reservation['status'] ?></a></td>
-                            <td><a href="<?= $adminUrl ?>&id=<?= $reservation['id'] ?>">supprimer</a></td>
                         </tr>
                     <?php }} ?>
             </table>
@@ -80,8 +79,6 @@ function my_custom_menu_page_reservation(){
                             <th>date et heure de reservation</th>
                             <th>nombre de couverts</th>
                             <th>reservation enregistrer le</th>
-                            <th>moderation</th>
-                            <th>Action</th>
                         </tr>
                         <tr>
                             <td><?= $reservation['id'] ?></td>
@@ -91,8 +88,6 @@ function my_custom_menu_page_reservation(){
                             <td><?= date('d/m/Y à H:i',strtotime($reservation['date&heure'])) ?></td>
                             <td><?= $reservation['nbrecouvert'] ?></td>
                             <td><?= date('d/m/Y à H:i',strtotime($reservation['created_at'])) ?></td>
-                            <td><?= $reservation['moderation'] ?></td>
-                            <td><a href="<?= $adminUrl ?>&id=<?= $reservation['id'] ?>">supprimer</a></td>
                         </tr>
                 <?php 
                 }
