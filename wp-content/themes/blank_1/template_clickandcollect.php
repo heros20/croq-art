@@ -20,7 +20,7 @@ get_header();
                     $the_query->the_post(); ?>
                     <li>
                         <div class="menu">
-                            <a href="<?= get_the_permalink() ?>"><img src="<?= get_template_directory_uri(); ?>/assets/images/etiqette.png" alt="">
+                            <!-- <a href="<?= get_the_permalink() ?>"><img src="<?= get_template_directory_uri(); ?>/assets/images/etiqette.png" alt=""> -->
                                 <div class="insideMenu">
                                     <h2> <?= get_the_title() ?> </h2>
                                     <p> <?= nl2br(get_the_content()) ?> </p>

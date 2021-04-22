@@ -1,11 +1,7 @@
 .B{
     font-size: 2em;
-    font-weight: bold;
     padding: 50px;
-}
-.B p{
-    
-    padding: 10px;
+    font-family: "Cookie-Regular", sans-serif;
 }
 .B .cafe img{
     border-radius: 20px;

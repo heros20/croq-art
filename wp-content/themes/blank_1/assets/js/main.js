@@ -2,9 +2,10 @@ $( document ).ready(function() {
     $(window).on("load", function () {
         $('.flexslider').flexslider({
             animation: "slide",
-            slideshowSpeed: 10000,
+            slideshowSpeed: 5000,
             controlNav: false, 
-            directionNav: false,
+            directionNav: true,
+            animationSpeed: 1000, 
         });
     });
 })

@@ -17,6 +17,8 @@
 <head>
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Palanquin:wght@700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
 	<?php wp_head(); ?>
@@ -34,12 +36,14 @@
 				<nav id="site-navigation" class="main-navigation">
 					<ul>
 						<li><a href="<?= esc_url(home_url('/')) ?>">Acceuil</a></li>
-						<li><a href="<?= esc_url(home_url('reservation')) ?>">Réservation</a></li>
-						<li><a href="<?= esc_url(home_url('click-and-collect')) ?>">Click and colect</a></li>
-						<li><a href="<?= esc_url(home_url('page-contact')) ?>">Contact</a></li>
-						<li><a href="<?= esc_url(home_url('page-avis')) ?>">Avis</a></li>
-						<li><a href="<?= esc_url(home_url('page-menu')) ?>">Menu</a></li>
 						<li><a href="<?= esc_url(home_url('page-presentation')) ?>">Presentation</a></li>
+						<li><a href="<?= esc_url(home_url('reservation')) ?>">Réservation</a></li>
+						<li><a href="<?= esc_url(home_url('page-menu')) ?>">Menu</a></li>
+						<li><a href="<?= esc_url(home_url('shop')) ?>">Click and collect</a></li>
+						<li><a href="<?= esc_url(home_url('page-contact')) ?>">Contact</a></li>
+						<li><a href="<?= esc_url(home_url('page-gallery')) ?>">Galerie</a></li>
+						<li><a href="<?= esc_url(home_url('page-avis')) ?>">Avis</a></li>
+						
 					</ul>
 				</nav><!-- #site-navigation -->
 

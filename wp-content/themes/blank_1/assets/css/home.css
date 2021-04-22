@@ -5,3 +5,42 @@
     background-color: #838080;
     color: burlywood;
 }
+.B{
+    width: 100%;
+    text-align: center;
+}
+.B2{
+    font-family: "Annabelle JF Regular", sans-serif;
+    margin: 20px 0;
+    margin-right: 400px;
+    font-weight: bold;
+    font-size: 2.1em;
+    width: 100%;
+}
+.flexslider{
+    margin-right: 400px;
+    margin-left: 400px;
+    min-width: 400px;
+}
+.flexslider .slides img{
+    height: 500px;
+    object-fit: cover;
+}
+.afterSlider{
+    display: none;
+}
+@media screen and (max-width: 1000px)
+{
+    .flexslider{
+        display: none;
+    }
+    .afterSlider{
+        display: block;
+        height: 500px;
+    }
+    .afterSlider img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}

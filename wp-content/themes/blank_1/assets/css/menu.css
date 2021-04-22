@@ -1,5 +1,8 @@
 /* Généralité */
-
+.B{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.3em;
+}
 .page_menu {
     margin: 0 auto;
     background-color: #fff;
@@ -8,8 +11,9 @@
     justify-content: center;
 }
 h3 {
-    font-size: 1.5em;
-    font-weight: bold;
+    font-family: 'Palanquin', sans-serif;
+    font-size: 1.9em;
+    /* font-weight: bold; */
     text-transform: uppercase;
 }
 h4 {
@@ -24,30 +28,69 @@ h5 {
 .section {
     padding: 20px 0;
 }
-.menu {
-    width: 100%;
-    padding: 10px;
-    display: flex;
-    flex-flow: wrap row;
-    align-items: center;
+table {
+    width: 90%;
+
 }
+.menu {
+    padding: 10px;
+}
+.boisson {
+    padding: 10px;
+}
+
 .text {
+   text-transform: capitalize; 
+}
+.menu .text, .boisson .text {
     text-align: left;
     margin-right: 50px;
     padding: 0 10px;
-    text-transform: capitalize;
-}
-.text p {
-    color: #AD9677;
+    
 }
 .price {
     text-align: end;
 }
 
+.contenus {
+   margin: 0 50px;
+}
+.boisson_solo {
+    color: black;
+}
+
+.boisson_chaudes {
+    width: 75%;
+}
+.boisson_chaudes table {
+    padding: 0 50px;
+
+}
+.boisson_chaudes .menu {
+    color: #FFF;
+
+}
+
+.menus_admin {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.menu_admin {
+    width: 33%;
+}
+.menu_admin .text {
+    text-align: center;
+}
 /* boites avec bordure alternées */
 .blanc {
     border-top: 7px solid #fff;
     border-bottom: 7px solid #fff;
+}
+.blanc .text p {
+    color: #AD9677;
 }
 .blanc1{
     border-left: 7px solid #fff;
@@ -70,11 +113,15 @@ h5 {
     border-top: 7px solid #AD9677;
     border-bottom: 7px solid #AD9677;
 }
+.grullo .text p {
+    color: #FFF;
+}
 .grullo1 {
     border-right: 7px solid #AD9677;
 }
 .grullo2{
     border-left: 7px solid #AD9677;
+    color: #FFF;
 }
 .marge_blanc {
     border-top: 30px solid #FFF;
@@ -91,14 +138,17 @@ h5 {
 /* boites titre plat */
 .titres_plats1 {
     background-color: #AD9677;
+    color: #FFF;
 }
 .titres_plats2 {
     background-color: #fff;
+    color: #AD9677;
 }
 
 /* logo */
 .logo {
     width: 100%;
+    margin: 50px auto;
 }
 .logo img {
     width: 75%;
@@ -121,7 +171,12 @@ h5 {
     margin: 20px;
     border: #fff solid 2px;
 }
-
+.section6 {
+    color: #FFF;
+}
+.menu_solo {
+    color: black;
+}
 /* separateurs */
 .separateurs {
     display: flex;
@@ -159,7 +214,11 @@ h5 {
 }
 .note2 {
     color: #AD9677;
+    text-align: right;
 }
 .note3 {
     font-size: .8em;
+}
+.notes_sup {
+    color: #FFF;
 }

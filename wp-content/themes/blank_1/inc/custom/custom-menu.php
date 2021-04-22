@@ -43,9 +43,9 @@ function wpdocs_codex_menu_init() {
         'capability_type'    => 'post',
         'has_archive'        => true,
         'hierarchical'       => false,
-        'menu_position'      => null,
+        'menu_position'      => 4,
         'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
-        'menu_icon'          => 'dashicons-carrot'
+        'menu_icon'          => 'dashicons-food'
     );
  
     register_post_type( 'menu', $args );

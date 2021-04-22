@@ -9,9 +9,9 @@ function wpdocs_register_my_custom_reservation_page(){
         'manage_options',
         'custompage_reservation',
         'my_custom_menu_page_reservation',
-        'dashicons-email-alt',
+        'dashicons-groups',
         // plugins_url( 'myplugin/images/icon.png' ),
-        60
+        2
     ); 
 }
 add_action( 'admin_menu', 'wpdocs_register_my_custom_reservation_page' );
@@ -23,41 +23,82 @@ function my_custom_menu_page_reservation(){
     $adminUrl = admin_url().'admin.php?page=custompage_reservation';
     global $wpdb;
     $table = $wpdb->prefix.'reservation';
-    $sdl =  "SELECT * FROM $table ORDER BY created_at DESC";
+    $table2 = $wpdb->prefix.'client';
+    $sdl =  "SELECT r.id AS id,c.id AS id_client,r.nbrecouvert,r.status,r.created_at,c.nom,c.email,c.numero FROM $table AS r
+    LEFT JOIN $table2 AS c
+    ON r.id_client = c.id
+    ORDER BY r.created_at DESC";
     $reservations = $wpdb->get_results($sdl, ARRAY_A);
+    debug($reservations);
     ?>
     <div class="wrap contact-wrap">
         <h1 class="wp-heading-inline">Reservation</h1>
-        <?php if(!empty($_GET['id'])){
+        <?php 
+        if(!empty($_GET['id'])){
            $id = $_GET['id'];
            $wpdb->delete( $table, array( 'id' => $id ) );?>
            <p>La réservation à bien été supprimer</p>
-           <?php }else{ ?>
+           <?php 
+        }else{ ?>
             <table class="wp-list-table widefat fixed striped table-view-list posts">
                 <tr>
-                <th>id</th>
+                    <th>id</th>
                     <th>nom</th>
-                    <th>date et heure de reservation</th>
                     <th>numero de telephone</th>
+                    <th>Email</th>
+                    <th>date et heure de reservation</th>
                     <th>nombre de couverts</th>
                     <th>reservation enregistrer le</th>
-                    <th>Action</th>
+                    <th>moderation</th>
                 </tr>
-                <?php foreach ( $reservations as $reservation ) { ?>
-                    <tr>
-                    <td><?= $reservation['id'] ?></td>
-                    <td><?= $reservation['nom'] ?></td>
-                    <td><?= date('d/m/Y à H:i',strtotime($reservation['date&heure'])) ?></td>
-                    <td><?= $reservation['numero'] ?></td>
-                    <td><?= $reservation['nbrecouvert'] ?></td>
-                    <td><?= date('d/m/Y à H:i',strtotime($reservation['created_at'])) ?></td>
-                    <td><a href="<?= $adminUrl ?>&id=<?= $reservation['id'] ?>">supprimer</a></td>
-                    </tr>
-                    <?php } ?>
+                <?php 
+                foreach ( $reservations as $reservation ) { 
+                    if ($reservation['status'] == 'En attente') { ?>?>
+                        <tr>
+                            <td><?= $reservation['id'] ?></td>
+                            <td><?= $reservation['nom'] ?></td>
+                            <td><?= $reservation['numero'] ?></td>
+                            <td><?= $reservation['email'] ?></td>
+                            <td><?= date('d/m/Y à H:i',strtotime($reservation['date&heure'])) ?></td>
+                            <td><?= $reservation['nbrecouvert'] ?></td>
+                            <td><?= date('d/m/Y à H:i',strtotime($reservation['created_at'])) ?></td>
+                            <td><a href="admin.php?page=custompage_moderation&id=<?= $reservation['id'] ?>"><?= $reservation['status'] ?></a></td>
+                        </tr>
+                    <?php }} ?>
             </table>
-        <?php } ?>
+            <?php 
+            
+            foreach ($reservations as $reservation ) {
+                 if ($reservation['status'] == 'validé') { ?>
+                    <table class="wp-list-table widefat fixed striped table-view-list posts">
+                        <tr>
+                            <th>id</th>
+                            <th>nom</th>
+                            <th>numero de telephone</th>
+                            <th>Email</th>
+                            <th>date et heure de reservation</th>
+                            <th>nombre de couverts</th>
+                            <th>reservation enregistrer le</th>
+                        </tr>
+                        <tr>
+                            <td><?= $reservation['id'] ?></td>
+                            <td><?= $reservation['nom'] ?></td>
+                            <td><?= $reservation['numero'] ?></td>
+                            <td><?= $reservation['email'] ?></td>
+                            <td><?= date('d/m/Y à H:i',strtotime($reservation['date&heure'])) ?></td>
+                            <td><?= $reservation['nbrecouvert'] ?></td>
+                            <td><?= date('d/m/Y à H:i',strtotime($reservation['created_at'])) ?></td>
+                        </tr>
+                <?php 
+                }
+                else { ?>
+                    <p>Aucunes reservations n'a été validées</p>
+                <?php }
+            } 
+        } ?>
         
     </div>
    
-<?php } ?>
+<?php 
+} ?>
 

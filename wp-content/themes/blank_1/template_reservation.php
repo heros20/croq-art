@@ -1,5 +1,12 @@
 <?php
 /* Template Name: reservation  */
+$contact = array(
+    'post_type' => 'contact',
+    'post_status' => 'publish',
+    'posts_per_page' => 3,
+    'orderby' => 'date',
+    'order' => 'ASC'
+);
 $errors = array();
 $success = false;
 
@@ -7,12 +14,14 @@ if (!empty($_POST['submitted'])) {
     // FAILLE XSS
 
     $nom = failleXSS('nom');
+    $email = failleXSS('email');
     $nbrecouvert = failleXSS('nbrecouvert');
     $date = failleXSS('date');
     $phone = failleXSS('phone');
 
     // fonction pour afficher les erreurs eventuelles
     $errors = validForm($errors, $nom, 'nom');
+    $errors = validEmail($errors, $email, 'email', 2, 50);
     $errors = validNumber($errors, $nbrecouvert, 'nbrecouvert');
     $errors = validDate($errors, $date, 'date');
     $errors = validPhone($errors, $phone, 'phone');
@@ -21,13 +30,25 @@ if (!empty($_POST['submitted'])) {
     if (count($errors) == 0) {
         global $wpdb;
         $table = $wpdb->prefix .'reservation';
+        $table2 = $wpdb->prefix.'client';
         $wpdb->insert(
-            $table,
+            $table2,
             array(
                 'nom' => $nom,
-                'nbrecouvert' => $nbrecouvert,
-                'date&heure' => $date,
                 'numero' => $phone,
+                'email' => $email,
+                'created_at' => current_time('mysql')
+            ),
+            array(
+                '%s',
+            )
+        );
+        $wpdb->insert(  
+            $table,
+            array(
+                'id_client' => $wpdb->insert_id,
+                'date&heure' => $date,
+                'nbrecouvert' => $nbrecouvert,
                 'created_at' => current_time('mysql')
             ),
             array(
@@ -41,13 +62,13 @@ if (!empty($_POST['submitted'])) {
 get_header();
 if($success == true){ ?>
     <div id="formincription">
-         <p>Merci d'avoir réserver, nous vous confirmeront celle-ci dans les plus bref delais</p>
+         <p>Merci d'avoir réservé, nous vous confirmerons celle-ci dans les plus brefs délais</p>
     </div>
-<?php } else{ ?>
+<?php } else { ?>
 <div class="reservation">
-    <p>Afin de reserver une table dans notre restaurant,</p>
+    <p>Afin de réserver une table dans notre restaurant,</p>
     <p>Merci de remplir le formulaire ci-dessous</p>
-    <p>ou contacter nous directement par telephone au :</p>
+    <p>ou contactez-nous directement par téléphone au :</p>
     <p>02 77 73 01 74</p>
 </div>
 <form action="" id="formincription" method="POST" novalidate>
@@ -61,7 +82,16 @@ if($success == true){ ?>
                                         echo $errors['nom'];
                                     } ?><span></p>
         </div>
-
+        
+        <label for="email">Email*</label>
+        <input type="text" id="email" name="email" placeholder="Votre email..." value="<?php if (!empty($_POST['email'])) {
+                                                                                            echo $_POST['email'];
+                                                                                        } ?>">
+        <div>
+            <p><span class="error"><?php if (!empty($errors['email'])) {
+                                        echo $errors['email'];
+                                    } ?><span></p>
+        </div>
         <label for="nbrecouvert">Nombre de personnes*</label>
         <input type="number" id="nbrecouvert" name="nbrecouvert" value="<?php if (!empty($_POST['nbrecouvert'])) {
                                                                                         echo $_POST['nbrecouvert'];
@@ -96,6 +126,26 @@ if($success == true){ ?>
 
     </form>
 <?php } ?>
+
+<div>
+    <ul class="contact2">
+        <?php
+        $the_query = new WP_Query($contact);
+        // The Loop
+        if ($the_query->have_posts()) { ?>
+            <?php while ($the_query->have_posts()) {
+                $the_query->the_post(); ?>
+                <li>
+                    <div class="coordonnée">
+                        <h3> <?= get_the_title() ?> </h3>
+                        <p> <?= get_the_content() ?> </p>
+                    </div>
+                </li>
+                <div class="trait"></div>
+            <?php  } ?>
+        <?php } ?>
+    </ul>
+</div>
 
 
 <?php
