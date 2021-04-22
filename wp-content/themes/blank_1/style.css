@@ -327,3 +327,65 @@ body {
   font-weight: bold;
   font-size: 1.7em
 }
+.entry-title{
+  margin: 20px 0;
+  font-size: 2em;
+  text-align: center;
+  background-color: #838080;
+  color: burlywood;
+}
+.term-description{
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: bold;
+  font-family: "Annabelle JF Regular";
+}
+.woocommerce-result-count{
+  background-color: #838080;
+  color: burlywood;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 2px;
+}
+.columns-4{
+  font-size: 1em;
+}
+.shop_table{
+  background-color: #fff;
+}
+.col2-set{
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 25px;
+  border-radius: 10px;
+  background-color: #838080;
+  color: burlywood;
+}
+#order_review{
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 25px;
+}
+#order_review_heading{
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 1.4em;
+  background-color: #838080;
+  color: burlywood;
+  max-width: 400px;
+  width: 100%;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 3px;
+}
+.woocommerce-order{
+  background-color: #838080;
+  color: burlywood;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 25px;
+}

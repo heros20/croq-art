@@ -30,13 +30,18 @@ function my_custom_menu_page_moderation(){
             $errors = validSelect($errors,'valid');
             if (count($errors) == 0) {
                 if ($_POST['valid'] === 'validé') {
-                    $wpdb->prepare(
-                        "UPDATE $table 
-                        SET 'status' = $valid
-                        WHERE 'id' = $id"
-                    ); ?>
-                    <p>La réservation à bien été accepée</p>
-                    <?php 
+                    $sql = $wpdb->query( $wpdb->prepare( "
+                        UPDATE $table
+                        SET status = %s
+                        WHERE id = $id",
+                        $valid
+                    ) ); 
+                    if ( false === $sql ) { ?>
+                        <p>La modification a echouée</p>
+                    <?php } else { ?>
+                        <p>La modification à bien été prise en compte</p>
+                        <p>La réservation à bien été accepée</p>
+                    <?php } 
                 }
                 else {
                     $wpdb->delete( $table, array( 'id' => $id ) );?>
