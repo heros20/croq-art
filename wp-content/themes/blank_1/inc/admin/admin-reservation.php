@@ -68,13 +68,10 @@ function my_custom_menu_page_reservation(){
             </table>
             <?php 
             if (empty($reservations[0]['status'])) { ?>
-                <p>Aucune réservation validé</p>
+                <p>il y a des reservation en attente</p>
             <?php } ?>
             <div class="box" style="margin:100px"></div>
-            <?php
-            foreach ($reservations as $reservation ) {
-                 if ($reservation['status'] == 'validé') { ?>
-                    <table class="wp-list-table widefat fixed striped table-view-list posts">
+            <table class="wp-list-table widefat fixed striped table-view-list posts">
                         <tr>
                             <th>id</th>
                             <th>nom</th>
@@ -85,6 +82,9 @@ function my_custom_menu_page_reservation(){
                             <th>reservation enregistrer le</th>
                             <th>status</th>
                         </tr>
+            <?php
+            foreach ($reservations as $reservation ) {
+                 if ($reservation['status'] == 'validé') { ?>
                         <tr>
                             <td><?= $reservation['id'] ?></td>
                             <td><?= $reservation['nom'] ?></td>
@@ -97,8 +97,9 @@ function my_custom_menu_page_reservation(){
                         </tr>
                 <?php 
                 }
-            } 
-        } ?>
+            } ?>
+            </table>
+        <?php } ?>
         
     </div>
    
