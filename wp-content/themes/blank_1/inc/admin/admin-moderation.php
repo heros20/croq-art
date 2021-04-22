@@ -20,7 +20,7 @@ function my_custom_menu_page_moderation(){
         global $wpdb;
         $table = $wpdb->prefix.'reservation';
         $sdl =  "SELECT * FROM $table WHERE id = $id ";
-        $reservation = $wpdb->get_results($sdl, ARRAY_A);
+        $reservations = $wpdb->get_results($sdl, ARRAY_A);
         $adminUrl = admin_url().'admin.php?page=custompage_moderation&id='.$id;
         echo $id;
         $errors = array();
@@ -28,25 +28,31 @@ function my_custom_menu_page_moderation(){
         if (!empty($_POST['submitted'])) {
             $valid = failleXSS('valid');
             $errors = validSelect($errors,'valid');
-            debug($_POST);
             if (count($errors) == 0) {
-                    if ($_POST['valid'] === 'validé') {
-                        $wpdb->query($wpdb->prepare("UPDATE $table SET status = $valid WHERE id = $id"));
-                        $success = true;
-                        echo 'lol';
-                    }
-                    else {
-                        echo 'dodo';
-                    }
+                if ($_POST['valid'] === 'validé') {
+                    $sql = $wpdb->query( $wpdb->prepare( "
+                        UPDATE $table
+                        SET status = %s
+                        WHERE id = $id",
+                        $valid
+                    ) ); 
+                    if ( false === $sql ) { ?>
+                        <p>La modification a echouée</p>
+                    <?php } else { ?>
+                        <p>La modification à bien été prise en compte</p>
+                        <p>La réservation à bien été accepée</p>
+                    <?php } 
+                }
+                else {
+                    $wpdb->delete( $table, array( 'id' => $id ) );?>
+                    <p>La réservation à bien été supprimer</p>
+                <?php }
+                $success = true;
             }
-            
-                
-            }
-            
-        
-        
-        debug($reservation);
-        debug($errors);
+            debug($_POST);
+        }
+        debug($reservations);
+        // debug($);
     }
 ?>
 <form action="" method="POST" novalidate>
