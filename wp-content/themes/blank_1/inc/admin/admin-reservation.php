@@ -53,7 +53,7 @@ function my_custom_menu_page_reservation(){
                 </tr>
                 <?php 
                 foreach ( $reservations as $reservation ) { 
-                    if ($reservation['status'] == 'En attente') { ?>?>
+                    if ($reservation['status'] == 'En attente') { ?>
                         <tr>
                             <td><?= $reservation['id'] ?></td>
                             <td><?= $reservation['nom'] ?></td>
