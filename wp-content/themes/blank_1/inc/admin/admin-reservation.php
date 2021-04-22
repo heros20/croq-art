@@ -53,7 +53,7 @@ function my_custom_menu_page_reservation(){
                 </tr>
                 <?php 
                 foreach ( $reservations as $reservation ) { 
-                    if ($reservation['status'] == 'En attente') { ?>?>
+                    if (empty($reservation['status'])) { ?>
                         <tr>
                             <td><?= $reservation['id'] ?></td>
                             <td><?= $reservation['nom'] ?></td>
@@ -62,12 +62,16 @@ function my_custom_menu_page_reservation(){
                             <td><?= date('d/m/Y à H:i',strtotime($reservation['hours'])) ?></td>
                             <td><?= $reservation['nbrecouvert'] ?></td>
                             <td><?= date('d/m/Y à H:i',strtotime($reservation['created_at'])) ?></td>
-                            <td><a href="admin.php?page=custompage_moderation&id=<?= $reservation['id'] ?>"><?= $reservation['status'] ?></a></td>
+                            <td><a href="admin.php?page=custompage_moderation&id=<?= $reservation['id'] ?>">En attente</a></td>
                         </tr>
                     <?php }} ?>
             </table>
             <?php 
-            
+            if (empty($reservations[0]['status'])) { ?>
+                <p>Aucune réservation validé</p>
+            <?php } ?>
+            <div class="box" style="margin:100px"></div>
+            <?php
             foreach ($reservations as $reservation ) {
                  if ($reservation['status'] == 'validé') { ?>
                     <table class="wp-list-table widefat fixed striped table-view-list posts">
@@ -93,9 +97,6 @@ function my_custom_menu_page_reservation(){
                         </tr>
                 <?php 
                 }
-                else { ?>
-                    <p>Aucunes reservations n'a été validées</p>
-                <?php }
             } 
         } ?>
         
