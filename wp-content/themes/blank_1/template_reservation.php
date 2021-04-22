@@ -47,7 +47,7 @@ if (!empty($_POST['submitted'])) {
             $table,
             array(
                 'id_client' => $wpdb->insert_id,
-                'date&heure' => $date,
+                'hours' => $date,
                 'nbrecouvert' => $nbrecouvert,
                 'created_at' => current_time('mysql')
             ),

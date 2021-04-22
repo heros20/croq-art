@@ -93,7 +93,7 @@ function validNumber($errors,$data,$key){
 }
 
 function validSelect($errors,$val) {
-	if ($_POST[$val] === 'En attente') {
+	if ($_POST[$val] === '') {
 		$errors[$val] ='Veuillez renseigner ce champ';
 
 	}

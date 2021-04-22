@@ -59,7 +59,7 @@ function my_custom_menu_page_moderation(){
 ?>
 <form action="" method="POST" novalidate>
 <select name="valid" id="valid">
-    <option value="En attente">En attente</option>
+    <option value="">En attente</option>
     <option value="validé">Validé</option>
     <option value="refusé">Refusé</option>
 </select>
