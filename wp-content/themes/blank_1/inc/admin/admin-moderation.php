@@ -41,7 +41,9 @@ function my_custom_menu_page_moderation(){
                     <?php } else { ?>
                         <p>La modification à bien été prise en compte</p>
                         <p>La réservation à bien été accepée</p>
-                    <?php } 
+                        <?php 
+                        wp_safe_redirect('admin.php?page=custompage_reservation');
+                    } 
                 }
                 else {
                     $wpdb->delete( $table, array( 'id' => $id ) );?>
