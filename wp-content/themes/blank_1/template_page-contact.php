@@ -62,6 +62,11 @@ get_header();
 if ($success == true) { ?>
     <div id="formincription">
         <p>Votre message a bien été transmis, nous vous recontacterons dans les plus bref délais</p>
+        <?php $message = "Nouveau message \r\n de : ".$_POST['nom']."\r\n telephone : ".$_POST['phone']." \r\n email : ".$_POST['email']."\r\n message :\r\n ".$_POST['message'];
+        mail('heros40@hotmail.fr', 'Message Croq art cafe', $message);
+        $messageClient = "Votre message a bien ete transmis au restaurant";
+        mail($_POST['email'], 'Message Croq art cafe', $messageClient);
+    ?>
     </div>
 
 <?php } else { ?>
