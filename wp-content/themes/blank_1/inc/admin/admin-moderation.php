@@ -44,9 +44,9 @@ function my_custom_menu_page_moderation(){
                         <p>La modification a echouée</p>
                     <?php } else { ?>
                         <p>La modification à bien été prise en compte</p>
-                        <p>La réservation à bien été accepée</p>
+                        <p>La réservation à bien été acceptée</p>
                         <?php 
-                        $message = "Bonjour Monsieur ".$clients[0]['nom'].",\r\nVotre réservation à bien été accepter\r\nMerci de votre confiance.\r\nLe Croq'Art Café";
+                        $message = "Bonjour ".$clients[0]['nom'].",\r\nVotre réservation à bien été accepter\r\nMerci de votre confiance.\r\nLe Croq'Art Café";
                         mail($clients[0]['email'], 'Reservation', $message);
                         wp_safe_redirect('admin.php?page=custompage_reservation');
                     } 
@@ -56,7 +56,7 @@ function my_custom_menu_page_moderation(){
                     $wpdb->delete($table2,array( 'id' => $reservations[0]['id_cient']));?>
                     <p>La réservation à bien été supprimer</p>
                     <?php 
-                    $message = "Bonjour Monsieur ".$clients[0]['nom'].",\r\nVotre réservation n'a, malheureusement, pas été accepter, certainement du à un manque de place\r\nNos plus sinsères excuses,\r\nLe Croq'Art Café";
+                    $message = "Bonjour ".$clients[0]['nom'].",\r\nVotre réservation n'a, malheureusement, pas été accepter, certainement du à un manque de place\r\nNos plus sinsères excuses,\r\nLe Croq'Art Café";
                     mail($clients[0]['email'], 'Reservation', $message);
                     wp_safe_redirect('admin.php?page=custompage_reservation');
 
