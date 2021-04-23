@@ -52,16 +52,14 @@ function my_custom_menu_page_moderation(){
                     } 
                 }
                 else {
-                    $wpdb->delete( 
-                        $table, 
-                        array( 'id' => $id ),
-                        $table2,
-                        array( 'id' => $reservations[0]['id_cient'])
-                    );?>
+                    $wpdb->delete( $table, array( 'id' => $id ));
+                    $wpdb->delete($table2,array( 'id' => $reservations[0]['id_cient']));?>
                     <p>La réservation à bien été supprimer</p>
                     <?php 
                     $message = "Bonjour Monsuieur ".$clients[0]['nom'].",\r\nVotre réservation n'a, maleureusement, pas été accèptée, certainement dû a un manque de place\r\nNos plus sinsères excuses,\r\nLe Croq'Art Café";
                     mail($clients[0]['email'], 'Réservation', $message);
+                    wp_safe_redirect('admin.php?page=custompage_reservation');
+
                 }
                 $success = true;
             }
