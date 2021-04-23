@@ -9,6 +9,10 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 h3 {
     font-family: 'Palanquin', sans-serif;
@@ -221,4 +225,16 @@ table {
 }
 .notes_sup {
     color: #FFF;
+}
+
+
+@media screen and (max-width: 900px)
+{
+    .page_menu{
+         flex-direction: column;
+    }
+    .section_menus {
+         width: 100%;
+    }
+    
 }
