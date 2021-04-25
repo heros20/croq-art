@@ -9,7 +9,7 @@
 
 get_header();
 
-// wp_redirect('404.php');
+wp_redirect('404.php');
 ?>
 
 
