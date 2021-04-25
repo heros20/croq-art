@@ -269,11 +269,13 @@ body {
 #masthead .main-navigation a:hover {
   color: #AD9677;
 }
+/* Fin Header */
 
 /* Content */
 .B {
   text-align: center;
 }
+/* Fin  Content */
 
 /* Footer */
 #colophon {
@@ -327,6 +329,9 @@ body {
   font-weight: bold;
   font-size: 1.7em
 }
+/* Fin Footer */
+
+/* CSS WOOCOMMERCE */
 article{
   max-width: 1440px;
   width: 100%;
@@ -427,3 +432,30 @@ address{
   display: flex;
   justify-content: space-around
 }
+.woocommerce-LoopProduct-link{pointer-events:none;}
+/* FIN CSS WOOCOMMERCE */
+
+/* page 404 */
+.b {
+  text-align: center;
+}
+.errorPage{
+  background-color: #838080;
+  color: burlywood;
+  max-width: 600px;
+  width: 100%;
+  margin: 20px auto;
+  padding: 25px;
+  border-radius: 15px;
+  font-size: 1.5em;
+}
+.error p{
+  margin-bottom: 15px;
+}
+.error a{
+  border-bottom: solid 1px black;
+}
+.error img{
+  width: 100%;
+}
+/* fin page 404 */
