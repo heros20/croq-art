@@ -24,19 +24,16 @@ function my_custom_menu_page_contact(){
     global $wpdb;
     $table = $wpdb->prefix.'message';
     $table2 = $wpdb->prefix.'client';
-    $sdl =  "SELECT * FROM $table AS m
+    $sdl =  "SELECT m.id AS id,m.message,m.created_at,c.id AS id_client,c.nom,c.email,c.numero FROM $table AS m
     LEFT JOIN $table2 AS c
     ON m.id_client = c.id
     ORDER BY m.created_at DESC";
     $contacts = $wpdb->get_results($sdl, ARRAY_A);
+    debug($contacts);
     ?>
     <div class="wrap contact-wrap">
         <h1 class="wp-heading-inline">Contact</h1>
-        <?php if(!empty($_GET['id'])){
-           $id = $_GET['id'];
-            $wpdb->delete( $table, array( 'id' => $id ) );?>
-            <p>Le message à bien été supprimer</p>
-            <?php }else{ ?>
+
             <table class="wp-list-table widefat fixed striped table-view-list posts">
                 <tr>
                     <th>nom</th>
@@ -53,11 +50,11 @@ function my_custom_menu_page_contact(){
                         <td><?= $contact['numero'] ?></td>
                         <td><?= $contact['message'] ?></td>
                         <td><?= date('d/m/Y à H:i',strtotime($contact['created_at'])) ?></td>
-                        <td><a href="<?= $adminUrl ?>&id=<?= $contact['id'] ?>">Supprimer</a></td>
+                        <td><a href="admin.php?page=delete&id=<?= $contact['id'] ?>">Supprimer</a></td>
                     </tr>
                     <?php } ?>
             </table>
-        <?php } ?>
+      
         
     </div>
    
