@@ -47,7 +47,7 @@ if (!empty($_POST['submitted'])) {
             $table,
             array(
                 'id_client' => $wpdb->insert_id,
-                'date&heure' => $date,
+                'hours' => $date,
                 'nbrecouvert' => $nbrecouvert,
                 'created_at' => current_time('mysql')
             ),
@@ -64,6 +64,12 @@ if($success == true){ ?>
     <div id="formincription">
          <p>Merci d'avoir réservé, nous vous confirmerons celle-ci dans les plus brefs délais</p>
     </div>
+    <?php $message = "Nouvelle reservation \r\n au nom de : ".$_POST['nom']."\r\n nombre de couvert : ".$_POST['nbrecouvert']."\r\n reservation le : ".date('d/m/Y  H:i',strtotime($_POST['date']));
+        mail('heros40@hotmail.fr', 'Reservation Croq art cafe', $message);
+        $messageClient = "Votre reservation a bien ete transmise au restaurant";
+        mail($_POST['email'], 'Reservation Croq art cafe', $messageClient);
+    ?>
+    
 <?php } else { ?>
 <div class="reservation">
     <p>Afin de réserver une table dans notre restaurant,</p>

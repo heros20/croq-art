@@ -9,7 +9,7 @@ function wpdocs_register_my_custom_moderation_page(){
         'my_custom_menu_page_moderation',
         '',
         // plugins_url( 'myplugin/images/icon.png' ),
-        2
+        100
     ); 
 }
 add_action( 'admin_menu', 'wpdocs_register_my_custom_moderation_page' );
@@ -22,7 +22,6 @@ function my_custom_menu_page_moderation(){
         $sdl =  "SELECT * FROM $table WHERE id = $id ";
         $reservations = $wpdb->get_results($sdl, ARRAY_A);
         $adminUrl = admin_url().'admin.php?page=custompage_moderation&id='.$id;
-        echo $id;
         $errors = array();
         $success = false;
         if (!empty($_POST['submitted'])) {
@@ -38,31 +37,28 @@ function my_custom_menu_page_moderation(){
                     ) ); 
                     if ( false === $sql ) { ?>
                         <p>La modification a echouée</p>
-                    <?php } else { ?>
-                        <p>La modification à bien été prise en compte</p>
-                        <p>La réservation à bien été accepée</p>
-                    <?php } 
+                    <?php }
+                }elseif ($_POST['valid'] === 'refusé') {
+                    $wpdb->delete( $table, array( 'id' => $id ) );
                 }
-                else {
-                    $wpdb->delete( $table, array( 'id' => $id ) );?>
-                    <p>La réservation à bien été supprimer</p>
-                <?php }
+                
                 $success = true;
+                wp_safe_redirect('admin.php?page=custompage_reservation');
             }
-            debug($_POST);
         }
-        debug($reservations);
-        // debug($);
     }
 ?>
-<form action="" method="POST" novalidate>
-<select name="valid" id="valid">
-    <option value="En attente">En attente</option>
-    <option value="validé">Validé</option>
-    <option value="refusé">Refusé</option>
-</select>
-<p><span class="error"><?php if (!empty($errors['valid'])) { echo $errors['valid']; } ?><span></p>
-<input type="submit" name="submitted" value="Confirmer">
+<form style="text-align:center;margin-top:200px;" action="" method="POST" novalidate>
+    <div>
+         <p style="font-size: 26px;">Valider, refuser ou supprimer la reservation</p>
+    </div>
+    <select style="font-size: 26px;padding: 0 100px;" name="valid" id="valid">
+        <option value="validé">Validé</option>
+        <option value="refusé">Refusé</option>
+        <option value="refusé">Supprimer</option>
+    </select>
+    <p><span class="error"><?php if (!empty($errors['valid'])) { echo $errors['valid']; } ?><span></p>
+    <input style="font-size: 26px;padding: 0 100px;" type="submit" name="submitted" value="Confirmer">
 </form>
 
 <?php }
