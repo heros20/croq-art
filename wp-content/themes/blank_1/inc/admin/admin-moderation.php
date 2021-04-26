@@ -32,7 +32,7 @@ if(!empty($_GET['id'])){
                     <?php 
                     $message = "Bonjour ".$clients[0]['nom'].",\r\nVotre réservation à bien été accepter\r\nMerci de votre confiance.\r\nLe Croq'Art Café";
                     mail($clients[0]['email'], 'Reservation', $message);
-                    wp_safe_redirect('admin.php?page=custompage_reservation');
+                    // wp_safe_redirect('admin.php?page=custompage_reservation');
                 } 
             }
             else {
@@ -42,11 +42,12 @@ if(!empty($_GET['id'])){
                 <?php 
                 $message = "Bonjour ".$clients[0]['nom'].",\r\nVotre réservation n'a, malheureusement, pas été accepter, certainement du à un manque de place\r\nNos plus sinsères excuses,\r\nLe Croq'Art Café";
                 mail($clients[0]['email'], 'Reservation', $message);
-                wp_safe_redirect('admin.php?page=custompage_reservation');
+                // wp_safe_redirect('admin.php?page=custompage_reservation');
 
             }
             $success = true; ?>
             <p><a href="admin.php?page=custompage_reservation">retour a la page menu reservation</a></p>
+            <?php wp_safe_redirect('admin.php?page=custompage_reservation'); ?>
         <?php }
         debug($_POST);
     }
