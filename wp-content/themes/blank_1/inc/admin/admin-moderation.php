@@ -9,8 +9,7 @@ if(!empty($_GET['id'])){
     $id_client = $reservations[0]['id_client'];
     $sql =  "SELECT * FROM $table2 WHERE id = $id_client ";
     $clients = $wpdb->get_results($sql, ARRAY_A);
-    $adminUrl = admin_url().'admin.php?page=custompage_moderation&id='.$id;
-    echo $id;
+    $adminUrl = admin_url().'admin.php?page=admin_moderation&id='.$id;
     $errors = array();
     $success = false;
     if (!empty($_POST['submitted'])) {
@@ -48,11 +47,7 @@ if(!empty($_GET['id'])){
             $success = true; ?>
             <p><a href="admin.php?page=custompage_reservation">retour a la page menu reservation</a></p>
         <?php }
-        debug($_POST);
-    }
-    // echo $reservations[0]['id_client'];
-    debug($reservations);
-    debug($clients); ?>
+    } ?>
     <form action="" method="POST" novalidate>
         <select name="valid" id="valid">
             <option value="">En attente</option>
@@ -63,7 +58,8 @@ if(!empty($_GET['id'])){
         <input type="submit" name="submitted" value="Confirmer">
     </form>
 
-<?php }
+<?php 
+}
 
 
 
