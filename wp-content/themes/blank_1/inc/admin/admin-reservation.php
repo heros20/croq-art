@@ -33,6 +33,13 @@ function my_custom_menu_page_reservation(){
     ?>
     <div class="wrap contact-wrap">
         <h1 class="wp-heading-inline">Reservation</h1>
+        <?php 
+        if(!empty($_GET['id'])){
+           $id = $_GET['id'];
+           $wpdb->delete( $table, array( 'id' => $id ) );?>
+           <p>La réservation à bien été supprimer</p>
+           <?php 
+        }else{ ?>
             <table class="wp-list-table widefat fixed striped table-view-list posts">
                 <tr>
                     <th>id</th>
@@ -55,7 +62,7 @@ function my_custom_menu_page_reservation(){
                             <td><?= date('d/m/Y à H:i',strtotime($reservation['hours'])) ?></td>
                             <td><?= $reservation['nbrecouvert'] ?></td>
                             <td><?= date('d/m/Y à H:i',strtotime($reservation['created_at'])) ?></td>
-                            <td><a href="admin.php?page=admin_moderation&id=<?= $reservation['id'] ?>">En attente</a></td>
+                            <td><a href="admin.php?page=custompage_moderation&id=<?= $reservation['id'] ?>">En attente</a></td>
                         </tr>
                     <?php }} ?>
             </table>
@@ -92,6 +99,7 @@ function my_custom_menu_page_reservation(){
                 }
             } ?>
             </table>
+        <?php } ?>
         
     </div>
    
