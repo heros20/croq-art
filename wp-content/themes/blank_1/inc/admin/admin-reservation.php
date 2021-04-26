@@ -81,6 +81,7 @@ function my_custom_menu_page_reservation(){
                             <th>nombre de couverts</th>
                             <th>reservation enregistrer le</th>
                             <th>status</th>
+                            <th>action</th>
                         </tr>
             <?php
             foreach ($reservations as $reservation ) {
@@ -94,6 +95,7 @@ function my_custom_menu_page_reservation(){
                             <td><?= $reservation['nbrecouvert'] ?></td>
                             <td><?= date('d/m/Y à H:i',strtotime($reservation['created_at'])) ?></td>
                             <td>Validé</td>
+                            <td><a href="admin.php?page=custompage_moderation&id=<?= $reservation['id'] ?>">Supprimer</a></td>
                         </tr>
                 <?php 
                 }
@@ -104,5 +106,7 @@ function my_custom_menu_page_reservation(){
     </div>
    
 <?php 
-} ?>
+} 
+
+?>
 

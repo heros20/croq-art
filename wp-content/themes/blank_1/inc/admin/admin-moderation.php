@@ -50,11 +50,12 @@ function my_custom_menu_page_moderation(){
 ?>
 <form style="text-align:center;margin-top:200px;" action="" method="POST" novalidate>
     <div>
-         <p style="font-size: 26px;">Valider ou refuser la reservation</p>
+         <p style="font-size: 26px;">Valider, refuser ou supprimer la reservation</p>
     </div>
     <select style="font-size: 26px;padding: 0 100px;" name="valid" id="valid">
         <option value="validé">Validé</option>
         <option value="refusé">Refusé</option>
+        <option value="refusé">Supprimer</option>
     </select>
     <p><span class="error"><?php if (!empty($errors['valid'])) { echo $errors['valid']; } ?><span></p>
     <input style="font-size: 26px;padding: 0 100px;" type="submit" name="submitted" value="Confirmer">
