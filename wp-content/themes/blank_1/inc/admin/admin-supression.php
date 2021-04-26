@@ -1,6 +1,6 @@
 <?php
-if(!empty($_GET['id'])){
-    $adminUrl = admin_url().'admin.php?page=delete&id='.$id;
+if(!empty($_GET['admin.php?page=custompage_delete&id='.'id'])){
+    $adminUrl = admin_url().'admin.php?page=custompage_delete&id='.$id;
     $id = $_GET['id'];
     global $wpdb;
     $table = $wpdb->prefix.'message';

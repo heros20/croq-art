@@ -50,7 +50,7 @@ function my_custom_menu_page_contact(){
                         <td><?= $contact['numero'] ?></td>
                         <td><?= $contact['message'] ?></td>
                         <td><?= date('d/m/Y à H:i',strtotime($contact['created_at'])) ?></td>
-                        <td><a href="admin.php?page=delete&id=<?= $contact['id'] ?>">Supprimer</a></td>
+                        <td><a href="admin.php?page=custompage_delete&id=<?= $contact['id'] ?>">Supprimer</a></td>
                     </tr>
                     <?php } ?>
             </table>
