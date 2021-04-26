@@ -9,7 +9,7 @@ if(!empty($_GET['id'])){
     $id_client = $reservations[0]['id_client'];
     $sql =  "SELECT * FROM $table2 WHERE id = $id_client ";
     $clients = $wpdb->get_results($sql, ARRAY_A);
-    $adminUrl = admin_url().'admin.php?page=admin_moderation&id='.$id;
+    $adminUrl = admin_url().'admin.php?page=custompage_moderation&id='.$id;
     $errors = array();
     $success = false;
     if (!empty($_POST['submitted'])) {
