@@ -38,7 +38,10 @@ function my_custom_menu_page_moderation(){
                     if ( false === $sql ) { ?>
                         <p>La modification a echouée</p>
                     <?php }
+                }elseif ($_POST['valid'] === 'refusé') {
+                    $wpdb->delete( $table, array( 'id' => $id ) );
                 }
+                
                 $success = true;
                 wp_safe_redirect('admin.php?page=custompage_reservation');
             }
