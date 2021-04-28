@@ -97,6 +97,9 @@ label {
    width: 1000px; 
    height: 450px; 
 }
+.contact2{
+  margin-bottom: -380px;
+}
 @media screen and (max-width: 900px)
 {
     .contact2{

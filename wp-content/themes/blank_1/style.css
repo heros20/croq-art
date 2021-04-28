@@ -274,6 +274,7 @@ body {
 /* Content */
 .B {
   text-align: center;
+  margin-bottom: -380px;
 }
 /* Fin  Content */
 
@@ -429,8 +430,6 @@ bdi{
 }
 address{
   background-color: #fff;
-  display: flex;
-  justify-content: space-around
 }
 .woocommerce div.product div.images .woocommerce-product-gallery__image--placeholder{
   border: none;
@@ -487,7 +486,18 @@ address{
 .woocommerce-product-gallery__image a img{
   height: 100%;
 }
-
+.woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt{
+  margin-bottom: 50px;
+}
+.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button{
+  margin-bottom: 20px;
+}
+.post-edit-link{
+  display: none;
+}
+.cart-collaterals,#order_review,.woocommerce-order{
+  margin-bottom: -380px;
+}
 /* FIN CSS WOOCOMMERCE */
 
 /* page 404 */

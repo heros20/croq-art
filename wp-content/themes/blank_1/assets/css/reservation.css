@@ -84,6 +84,7 @@ label {
     padding: 10px;
     background-color: #838080;
     color: burlywood;
+    margin-bottom: -380px;
 }
 @media screen and (max-width: 900px)
 {
