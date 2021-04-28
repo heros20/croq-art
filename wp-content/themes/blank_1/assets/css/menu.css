@@ -4,14 +4,13 @@
     font-size: 1.3em;
 }
 .page_menu {
+    max-width: 1440px;
+    /* width: 100%; */
     margin: 0 auto;
     background-color: #fff;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    max-width: 1440px;
-    width: 100%;
-    margin: 0 auto;
     padding: 0 15px;
 }
 h3 {
@@ -154,7 +153,7 @@ table {
     margin: 50px auto;
 }
 .logo img {
-    width: 75%;
+    width: 80%;
 }
 
 /* boites menus et formules */
