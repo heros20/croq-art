@@ -241,5 +241,16 @@ table {
     .section_menus {
          width: 100%;
     }
-    
+    .blanc{
+        border: 7px solid #fff;
+    }
+    .marge_grullo {
+        border: 30px solid #AD9677;
+    }
+    .grullo {
+        border: 7px solid #AD9677;
+    }
+    .marge_blanc {
+        border: 30px solid #FFF;
+    }
 }
