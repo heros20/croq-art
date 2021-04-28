@@ -5,7 +5,7 @@
 }
 .page_menu {
     max-width: 1440px;
-    /* width: 100%; */
+    width: 100%;
     margin: 0 auto;
     background-color: #fff;
     display: flex;
@@ -72,16 +72,22 @@ table {
     color: #FFF;
 
 }
+/* .admin {
+    background-color: #FFF;
+} */
 
-.menus_admin {
-    margin: 0 auto;
+.menu_admin {
     width: 90%;
+    margin: 0 auto;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
 }
-.menu_admin {
-    width: 33%;
+.menu_admin .section {
+    padding: 0 20px;
+}
+.menu_admin .section h3 {
+    padding: 0 10px;
 }
 .menu_admin .text {
     text-align: center;
