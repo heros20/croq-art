@@ -5,7 +5,7 @@
 function wpdocs_register_my_custom_reservation_page(){
     add_menu_page( 
         __( 'reservation', 'textdomain' ),
-        'reservation menu',
+        'reservation reçu',
         'manage_options',
         'custompage_reservation',
         'my_custom_menu_page_reservation',
@@ -29,18 +29,9 @@ function my_custom_menu_page_reservation(){
     ON r.id_client = c.id
     ORDER BY r.created_at DESC";
     $reservations = $wpdb->get_results($sdl, ARRAY_A);
-    debug($reservations);
     ?>
     <div class="wrap contact-wrap">
-        <h1 class="wp-heading-inline">Reservation</h1>
-        <?php 
-        if(!empty($_GET['id'])){
-           $id = $_GET['id'];
-           $wpdb->delete( $table, array( 'id' => $id ) );?>
-           <p>La réservation à bien été supprimer</p>
-           <?php 
-        }else{ ?>
-            <table class="wp-list-table widefat fixed striped table-view-list posts">
+        <h1 class="wp-heading-inline">Reservation</h1><table class="wp-list-table widefat fixed striped table-view-list posts">
                 <tr>
                     <th>id</th>
                     <th>nom</th>
@@ -67,7 +58,9 @@ function my_custom_menu_page_reservation(){
                     <?php }} ?>
             </table>
             <?php 
-            if (empty($reservations[0]['status'])) { ?>
+            if (empty($reservations)){ ?>
+                <p>aucune reservation en attente</p>
+            <?php }elseif (empty($reservations[0]['status'])) { ?>
                 <p>il y a des reservation en attente</p>
             <?php } ?>
             <div class="box" style="margin:100px"></div>
@@ -101,7 +94,6 @@ function my_custom_menu_page_reservation(){
                 }
             } ?>
             </table>
-        <?php } ?>
         
     </div>
    

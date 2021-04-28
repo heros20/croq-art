@@ -6,10 +6,10 @@
  */
 function wpdocs_codex_slider_init() {
     $labels = array(
-        'name'                  => _x( 'diaporama', 'Post type general name', 'blank_1' ),
-        'singular_name'         => _x( 'diaporama', 'Post type singular name', 'blank_1' ),
-        'menu_name'             => _x( 'diaporama', 'Admin Menu text', 'blank_1' ),
-        'name_admin_bar'        => _x( 'diaporama', 'Add New on Toolbar', 'blank_1' ),
+        'name'                  => _x( 'diaporama page d\'accueil', 'Post type general name', 'blank_1' ),
+        'singular_name'         => _x( 'diaporama page d\'accueil', 'Post type singular name', 'blank_1' ),
+        'menu_name'             => _x( 'diaporama page d\'accueil', 'Admin Menu text', 'blank_1' ),
+        'name_admin_bar'        => _x( 'diaporama page d\'accueil', 'Add New on Toolbar', 'blank_1' ),
         'add_new'               => __( 'Ajouter une nouvelle image', 'blank_1' ),
         'add_new_item'          => __('Ajouter une nouvelle image', 'blank_1' ),
         'new_item'              => __('Nouvelle image', 'blank_1' ),
@@ -43,7 +43,7 @@ function wpdocs_codex_slider_init() {
         'capability_type'    => 'post',
         'has_archive'        => true,
         'hierarchical'       => false,
-        'menu_position'      => 8,
+        'menu_position'      => 18,
         'supports'           => array( 'title','thumbnail'),
         'menu_icon'          => 'dashicons-format-image'
     );

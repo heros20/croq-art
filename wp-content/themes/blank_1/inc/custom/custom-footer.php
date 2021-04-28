@@ -6,10 +6,10 @@
  */
 function wpdocs_codex_footer_init() {
     $labels = array(
-        'name'                  => _x( 'adresse', 'Post type general name', 'blank_1' ),
-        'singular_name'         => _x( 'adresse', 'Post type singular name', 'blank_1' ),
-        'menu_name'             => _x( 'adresse', 'Admin Menu text', 'blank_1' ),
-        'name_admin_bar'        => _x( 'adresse', 'Add New on Toolbar', 'blank_1' ),
+        'name'                  => _x( 'adresse du restaurant', 'Post type general name', 'blank_1' ),
+        'singular_name'         => _x( 'adresse du restaurant', 'Post type singular name', 'blank_1' ),
+        'menu_name'             => _x( 'adresse du restaurant', 'Admin Menu text', 'blank_1' ),
+        'name_admin_bar'        => _x( 'adresse du restaurant', 'Add New on Toolbar', 'blank_1' ),
         'add_new'               => __( 'Ajouter un nouveau', 'blank_1' ),
         'add_new_item'          => __('Ajouter une nouvelle adresse', 'blank_1' ),
         'new_item'              => __('Nouvelle adresse', 'blank_1' ),
@@ -43,7 +43,7 @@ function wpdocs_codex_footer_init() {
         'capability_type'    => 'post',
         'has_archive'        => true,
         'hierarchical'       => false,
-        'menu_position'      => 11,
+        'menu_position'      => 14,
         'supports'           => array( 'title', 'editor' ),
         'menu_icon'          => 'dashicons-admin-home'
     );

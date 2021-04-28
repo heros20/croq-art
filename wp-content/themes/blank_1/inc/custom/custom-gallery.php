@@ -6,10 +6,10 @@
  */
 function wpdocs_codex_gallery_init() {
     $labels = array(
-        'name'                  => _x( 'gallery', 'Post type general name', 'blank_1' ),
-        'singular_name'         => _x( 'gallery', 'Post type singular name', 'blank_1' ),
-        'menu_name'             => _x( 'gallery', 'Admin Menu text', 'blank_1' ),
-        'name_admin_bar'        => _x( 'gallery', 'Add New on Toolbar', 'blank_1' ),
+        'name'                  => _x( 'page galerie d\'image', 'Post type general name', 'blank_1' ),
+        'singular_name'         => _x( 'page galerie d\'image', 'Post type singular name', 'blank_1' ),
+        'menu_name'             => _x( 'page galerie d\'image', 'Admin Menu text', 'blank_1' ),
+        'name_admin_bar'        => _x( 'page galerie d\'image', 'Add New on Toolbar', 'blank_1' ),
         'add_new'               => __( 'Ajouter un nouveau', 'blank_1' ),
         'add_new_item'          => __('Ajouter une nouvelle image', 'blank_1' ),
         'new_item'              => __('Nouvelle image', 'blank_1' ),
@@ -43,7 +43,7 @@ function wpdocs_codex_gallery_init() {
         'capability_type'    => 'post',
         'has_archive'        => true,
         'hierarchical'       => false,
-        'menu_position'      => 6,
+        'menu_position'      => 19,
         'supports'           => array( 'title','thumbnail'),
         'menu_icon'          => 'dashicons-format-gallery'
     );

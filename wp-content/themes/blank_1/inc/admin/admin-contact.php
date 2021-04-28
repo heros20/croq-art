@@ -5,7 +5,7 @@
 function wpdocs_register_my_custom_contact_page(){
     add_menu_page( 
         __( 'Contact', 'textdomain' ),
-        'contact menu',
+        'Message reçu',
         'manage_options',
         'custompage_contact',
         'my_custom_menu_page_contact',
@@ -29,7 +29,6 @@ function my_custom_menu_page_contact(){
     ON m.id_client = c.id
     ORDER BY m.created_at DESC";
     $contacts = $wpdb->get_results($sdl, ARRAY_A);
-    debug($contacts);
     ?>
     <div class="wrap contact-wrap">
         <h1 class="wp-heading-inline">Contact</h1>

@@ -8,10 +8,10 @@
 function wpdocs_codex_presentation_init()
 {
     $labels = array(
-        'name'                  => _x('presentation', 'Post type general name', 'blank_1'),
-        'singular_name'         => _x('presentation', 'Post type singular name', 'blank_1'),
-        'menu_name'             => _x('presentation', 'Admin Menu text', 'blank_1'),
-        'name_admin_bar'        => _x('presentation', 'Add New on Toolbar', 'blank_1'),
+        'name'                  => _x('page presentation', 'Post type general name', 'blank_1'),
+        'singular_name'         => _x('page presentation', 'Post type singular name', 'blank_1'),
+        'menu_name'             => _x('page presentation', 'Admin Menu text', 'blank_1'),
+        'name_admin_bar'        => _x('page presentation', 'Add New on Toolbar', 'blank_1'),
         'add_new'               => __('Ajouter un nouveau', 'blank_1'),
         'add_new_item'          => __('Ajouter une nouvelle presentation', 'blank_1'),
         'new_item'              => __('Nouvelle presentation', 'blank_1'),
@@ -45,7 +45,7 @@ function wpdocs_codex_presentation_init()
         'capability_type'    => 'post',
         'has_archive'        => true,
         'hierarchical'       => false,
-        'menu_position'      => 10,
+        'menu_position'      => 17,
         'supports'           => array('title', 'editor','excerpt' ),
         'menu_icon'          => 'dashicons-universal-access'
     );

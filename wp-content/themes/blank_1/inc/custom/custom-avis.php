@@ -43,7 +43,7 @@ function wpdocs_codex_avis_init() {
         'capability_type'    => 'post',
         'has_archive'        => true,
         'hierarchical'       => false,
-        'menu_position'      => 9,
+        'menu_position'      => 16,
         'supports'           => array( 'title', 'editor', ),
         'menu_icon'          => 'dashicons-google'
     );

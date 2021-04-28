@@ -6,10 +6,10 @@
  */
 function wpdocs_codex_menu_init() {
     $labels = array(
-        'name'                  => _x( 'menu', 'Post type general name', 'blank_1' ),
-        'singular_name'         => _x( 'menu', 'Post type singular name', 'blank_1' ),
-        'menu_name'             => _x( 'menu', 'Admin Menu text', 'blank_1' ),
-        'name_admin_bar'        => _x( 'menu', 'Add New on Toolbar', 'blank_1' ),
+        'name'                  => _x( 'menu du jour', 'Post type general name', 'blank_1' ),
+        'singular_name'         => _x( 'menu du jour', 'Post type singular name', 'blank_1' ),
+        'menu_name'             => _x( 'menu du jour', 'Admin Menu text', 'blank_1' ),
+        'name_admin_bar'        => _x( 'menu du jour', 'Add New on Toolbar', 'blank_1' ),
         'add_new'               => __( 'Ajouter un nouveau menu', 'blank_1' ),
         'add_new_item'          => __('Ajouter un nouveau menu', 'blank_1' ),
         'new_item'              => __('Nouveau menu', 'blank_1' ),
@@ -43,7 +43,7 @@ function wpdocs_codex_menu_init() {
         'capability_type'    => 'post',
         'has_archive'        => true,
         'hierarchical'       => false,
-        'menu_position'      => 4,
+        'menu_position'      => 10,
         'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
         'menu_icon'          => 'dashicons-food'
     );

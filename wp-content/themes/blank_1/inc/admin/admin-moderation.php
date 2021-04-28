@@ -18,9 +18,17 @@ function my_custom_menu_page_moderation(){
     if(!empty($_GET['id'])){
         $id = $_GET['id'];
         global $wpdb;
+        
+    
+
         $table = $wpdb->prefix.'reservation';
+        $table2 = $wpdb->prefix.'client';
         $sdl =  "SELECT * FROM $table WHERE id = $id ";
         $reservations = $wpdb->get_results($sdl, ARRAY_A);
+
+        $id_client = $reservations[0]['id_client'];
+        $sql =  "SELECT * FROM $table2 WHERE id = $id_client ";
+        $clients = $wpdb->get_results($sql, ARRAY_A);
         $adminUrl = admin_url().'admin.php?page=custompage_moderation&id='.$id;
         $errors = array();
         $success = false;
@@ -35,11 +43,15 @@ function my_custom_menu_page_moderation(){
                         WHERE id = $id",
                         $valid
                     ) ); 
+                     $messageClient = "Votre reservation est valider";
+                     mail($clients[0]['email'], 'Reservation Croq art cafe', $messageClient);
                     if ( false === $sql ) { ?>
                         <p>La modification a echouée</p>
                     <?php }
                 }elseif ($_POST['valid'] === 'refusé') {
                     $wpdb->delete( $table, array( 'id' => $id ) );
+                    $messageClient = "Votre reservation est refuser, le restaurant doit afficher complet";
+                    mail($clients[0]['email'], 'Reservation Croq art cafe', $messageClient);
                 }
                 
                 $success = true;

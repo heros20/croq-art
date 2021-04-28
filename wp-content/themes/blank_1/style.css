@@ -332,19 +332,26 @@ body {
 /* Fin Footer */
 
 /* CSS WOOCOMMERCE */
+#primary{
+  max-width: 1440px;
+  width: 100%;
+  margin: 20px auto;
+  padding: 0 15px;
+}
 article{
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
 }
-.entry-title{
+.page-title{
   margin: 20px 0;
   font-size: 2em;
   text-align: center;
   background-color: #838080;
   color: burlywood;
 }
+
 .term-description{
   text-align: center;
   font-size: 1.8em;
@@ -357,13 +364,6 @@ article{
   font-weight: bold;
   padding: 5px;
   border-radius: 2px;
-}
-.columns-4{
-  font-size: 1em;
-  max-width: 1440px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 15px;
 }
 .woocommerce img{
   border-radius: 10px;
@@ -432,7 +432,29 @@ address{
   display: flex;
   justify-content: space-around
 }
-/* .woocommerce-LoopProduct-link{pointer-events:none;} */
+.woocommerce div.product div.images .woocommerce-product-gallery__image--placeholder{
+  border: none;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+#product-192{
+  margin-top: 20px;
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+}
+#tab-description h2{
+  display: none;
+}
+#tab-description{
+  font-family: "Annabelle JF Regular";
+  font-size: 1.7em;
+  font-weight: bold;
+}
+#tab-description p{
+  padding-left: 50px;
+}
 /* FIN CSS WOOCOMMERCE */
 
 /* page 404 */
