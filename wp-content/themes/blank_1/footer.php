@@ -7,6 +7,7 @@ $adresse = array(
     'order' => 'ASC'
 );
 ?>
+<div class="clear" style="margin-top:400px"></div>
 <footer id="colophon" class="site-footer">
 	<div class="grandFooter">
 		<div class="site-info">

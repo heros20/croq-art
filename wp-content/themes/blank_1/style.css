@@ -454,7 +454,40 @@ address{
 }
 #tab-description p{
   padding-left: 50px;
+  border-bottom: 1px solid #000;
 }
+.woocommerce ul.products{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.related{
+  margin-top: 500px;
+}
+.woocommerce #content div.product .woocommerce-tabs, .woocommerce div.product .woocommerce-tabs, .woocommerce-page #content div.product .woocommerce-tabs, .woocommerce-page div.product .woocommerce-tabs {
+  margin-bottom: -400px;
+}
+.related h2{
+  padding-left: 50px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #000;
+}
+.woocommerce ul.products{
+  margin-bottom: -400px;
+}
+.woocommerce div.product{
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+}
+.woocommerce-product-gallery__image{
+  height: 250px;
+  width: 250px;
+}
+.woocommerce-product-gallery__image a img{
+  height: 100%;
+}
+
 /* FIN CSS WOOCOMMERCE */
 
 /* page 404 */
