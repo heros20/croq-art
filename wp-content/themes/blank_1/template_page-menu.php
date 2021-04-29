@@ -869,7 +869,7 @@ get_header();
                 
             </div>
         </div>
-</div> <!-- .B -->
+</div>
 
 
 <?php

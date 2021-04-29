@@ -1,7 +1,4 @@
 <?php
-/** 
- * Register a custom menu page.
- */
 function wpdocs_register_my_custom_reservation_page(){
     add_menu_page( 
         __( 'reservation', 'textdomain' ),
@@ -10,15 +7,10 @@ function wpdocs_register_my_custom_reservation_page(){
         'custompage_reservation',
         'my_custom_menu_page_reservation',
         'dashicons-groups',
-        // plugins_url( 'myplugin/images/icon.png' ),
         2
     ); 
 }
 add_action( 'admin_menu', 'wpdocs_register_my_custom_reservation_page' );
- 
-/** 
- * Display a custom menu page
- */
 function my_custom_menu_page_reservation(){ 
     $adminUrl = admin_url().'admin.php?page=custompage_reservation';
     global $wpdb;
@@ -65,40 +57,35 @@ function my_custom_menu_page_reservation(){
             <?php } ?>
             <div class="box" style="margin:100px"></div>
             <table class="wp-list-table widefat fixed striped table-view-list posts">
-                        <tr>
-                            <th>id</th>
-                            <th>nom</th>
-                            <th>numero de telephone</th>
-                            <th>Email</th>
-                            <th>date et heure de reservation</th>
-                            <th>nombre de couverts</th>
-                            <th>reservation enregistrer le</th>
-                            <th>status</th>
-                            <th>action</th>
-                        </tr>
+                <tr>
+                    <th>id</th>
+                    <th>nom</th>
+                    <th>numero de telephone</th>
+                    <th>Email</th>
+                    <th>date et heure de reservation</th>
+                    <th>nombre de couverts</th>
+                    <th>reservation enregistrer le</th>
+                    <th>status</th>
+                    <th>action</th>
+                </tr>
             <?php
             foreach ($reservations as $reservation ) {
                  if ($reservation['status'] == 'validé') { ?>
-                        <tr>
-                            <td><?= $reservation['id'] ?></td>
-                            <td><?= $reservation['nom'] ?></td>
-                            <td><?= $reservation['numero'] ?></td>
-                            <td><?= $reservation['email'] ?></td>
-                            <td><?= date('d/m/Y à H:i',strtotime($reservation['hours'])) ?></td>
-                            <td><?= $reservation['nbrecouvert'] ?></td>
-                            <td><?= date('d/m/Y à H:i',strtotime($reservation['created_at'])) ?></td>
-                            <td>Validé</td>
-                            <td><a href="admin.php?page=custompage_moderation&id=<?= $reservation['id'] ?>">Supprimer</a></td>
-                        </tr>
+                    <tr>
+                        <td><?= $reservation['id'] ?></td>
+                        <td><?= $reservation['nom'] ?></td>
+                        <td><?= $reservation['numero'] ?></td>
+                        <td><?= $reservation['email'] ?></td>
+                        <td><?= date('d/m/Y à H:i',strtotime($reservation['hours'])) ?></td>
+                        <td><?= $reservation['nbrecouvert'] ?></td>
+                        <td><?= date('d/m/Y à H:i',strtotime($reservation['created_at'])) ?></td>
+                        <td>Validé</td>
+                        <td><a href="admin.php?page=custompage_moderation&id=<?= $reservation['id'] ?>">Supprimer</a></td>
+                    </tr>
                 <?php 
                 }
             } ?>
             </table>
-        
     </div>
-   
 <?php 
 } 
-
-?>
-

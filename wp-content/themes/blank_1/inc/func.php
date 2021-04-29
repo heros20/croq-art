@@ -15,11 +15,9 @@ function showJson($data)
         die('error in json encoding');
     }
 }
-
 function failleXSS($clean){
   return trim(strip_tags($_POST[$clean]));
 }
-
 function validForm($errors,$data,$key,$min =2,$max = 255)
 {
     if(!empty($data)) {
@@ -33,9 +31,7 @@ function validForm($errors,$data,$key,$min =2,$max = 255)
     }
     return $errors;
 }
-
 function validEmail($errors,$data,$key){
-
   if(!empty($data)) {
 
       if(filter_var($data, FILTER_VALIDATE_EMAIL) == false){ 
@@ -46,11 +42,9 @@ function validEmail($errors,$data,$key){
   }
   return $errors;
 }
-
 function validPhone($errors, $data, $key)
 {
     if (!empty($data)) {
-        // Renseigner
         if (!filter_var($data, FILTER_VALIDATE_INT) === false ) {
             $errors[$key] = 'Veuillez mettre un nombre valide';
         } elseif ($data <= 0) {
@@ -59,13 +53,10 @@ function validPhone($errors, $data, $key)
             $errors[$key] = 'numéro incorrect';
         }
     } else {
-        // Pas afficher
         $errors[$key] = 'Veuillez renseigner ce champ';
     }
-
     return $errors;
 }
-
 function validDate($errors,$data,$key)
 {
     if(empty($data)) {
@@ -75,29 +66,20 @@ function validDate($errors,$data,$key)
 }
 function validNumber($errors,$data,$key){
     if(!empty($data)){
-        // Renseigner
         if(!filter_var($data, FILTER_VALIDATE_INT)){
             $errors[$key] = 'Veuillez mettre un nombre valide';
         }elseif($data <=0){
             $errors[$key] = 'Veuillez renseigner un entier positif';
         }
-        // elseif($data > 10){
-        //     $errors[$key] = 'Nous sommes désolé, mais nous ne prenons pas de reservation au dela de 10 couverts';
-        // }
     }else{
-            // Pas afficher
             $errors[$key] = 'Veuillez renseigner ce champ';
     }
 
     return $errors;
 }
-
 function validSelect($errors,$val) {
 	if ($_POST[$val] === '') {
 		$errors[$val] ='Veuillez renseigner ce champ';
-
 	}
 	return $errors;
 }
-
-  

@@ -1,5 +1,4 @@
 <?php
-
 function wpdocs_register_my_custom_moderation_page(){
     add_menu_page( 
         __( 'moderation', 'textdomain' ),
@@ -8,24 +7,18 @@ function wpdocs_register_my_custom_moderation_page(){
         'custompage_moderation',
         'my_custom_menu_page_moderation',
         '',
-        // plugins_url( 'myplugin/images/icon.png' ),
         100
     ); 
 }
 add_action( 'admin_menu', 'wpdocs_register_my_custom_moderation_page' );
- 
 function my_custom_menu_page_moderation(){ 
     if(!empty($_GET['id'])){
         $id = $_GET['id'];
         global $wpdb;
-        
-    
-
         $table = $wpdb->prefix.'reservation';
         $table2 = $wpdb->prefix.'client';
         $sdl =  "SELECT * FROM $table WHERE id = $id ";
         $reservations = $wpdb->get_results($sdl, ARRAY_A);
-
         $id_client = $reservations[0]['id_client'];
         $sql =  "SELECT * FROM $table2 WHERE id = $id_client ";
         $clients = $wpdb->get_results($sql, ARRAY_A);
@@ -53,7 +46,6 @@ function my_custom_menu_page_moderation(){
                     $messageClient = "Votre reservation est refuser, le restaurant doit afficher complet";
                     mail($clients[0]['email'], 'Reservation Croq art cafe', $messageClient);
                 }
-                
                 $success = true;
                 wp_safe_redirect('admin.php?page=custompage_reservation');
             }
