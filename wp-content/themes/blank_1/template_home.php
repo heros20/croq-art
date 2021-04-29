@@ -28,21 +28,23 @@ get_header();
 </div>
 <div class="B">
     <div class="B2">
-        <ul>
-            <?php
-            $the_query = new WP_Query($presentation);
-            // The Loop
-            if ($the_query->have_posts()) { ?>
-                <?php while ($the_query->have_posts()) {
-                    $the_query->the_post(); ?>
-                    <li>
-                        <div>
-                            <p> <?= nl2br(get_the_excerpt()) ?> </p>
-                        </div>
-                    </li>
-                <?php  } ?>
-            <?php } ?>
-        </ul>
+        <div class="B3">
+            <ul>
+                <?php
+                $the_query = new WP_Query($presentation);
+                // The Loop
+                if ($the_query->have_posts()) { ?>
+                    <?php while ($the_query->have_posts()) {
+                        $the_query->the_post(); ?>
+                        <li>
+                            <div>
+                                <p> <?= nl2br(get_the_excerpt()) ?> </p>
+                            </div>
+                        </li>
+                    <?php  } ?>
+                <?php } ?>
+            </ul>
+        </div>
     </div>
     <div class="flexslider">
         <ul class="slides">

@@ -9,7 +9,7 @@ $presentation = array(
 );
 get_header();
 ?>
-<div class="B wrap2">
+<div class="B wrap2 presentation">
 
     <!-- <div class="cafe"><img src="<?= get_template_directory_uri(); ?>/assets/images/café.jpg" alt="café"></div> -->
     <ul class="contact2">

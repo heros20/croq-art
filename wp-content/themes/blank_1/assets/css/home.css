@@ -10,12 +10,18 @@
     text-align: center;
 }
 .B2{
+    display: flex;
+    justify-content: center;
+}
+.B3{
     font-family: "Annabelle JF Regular", sans-serif;
-    margin: 20px 0;
-    margin-right: 400px;
+    margin: 20px 600px;
+    padding: 10px;
     font-weight: bold;
     font-size: 2.1em;
     width: 100%;
+    background-color: rgb(207, 204, 204);
+    border-radius: 10px;
 }
 .flexslider{
     margin-right: 400px;
