@@ -17,7 +17,7 @@
     font-size: 2.1em;
     width: 100%;
     background-color: rgb(246, 212, 179);
-    border-radius: 10px;
+    border-radius: 100px 20px 100px 20px;
 }
 .flexslider{
     margin-right: 400px;
