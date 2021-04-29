@@ -52,10 +52,40 @@ get_header();
 if ($success == true) { ?>
     <div id="formincription">
         <p>Votre message a bien été transmis, nous vous recontacterons dans les plus bref délais</p>
-        <?php $message = "Nouveau message \r\n de : ".$_POST['nom']."\r\n telephone : ".$_POST['phone']." \r\n email : ".$_POST['email']."\r\n message :\r\n ".$_POST['message'];
-        mail('heros40@hotmail.fr', 'Message Croq art cafe', $message);
-        $messageClient = "Votre message a bien ete transmis au restaurant";
-        mail($_POST['email'], 'Message Croq art cafe', $messageClient);
+        <?php 
+        $entete  = 'MIME-Version: 1.0' . "\r\n";
+        $entete .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+        $entete .= 'From: ' . $_POST['email'] . "\r\n";
+
+        $message = 
+        '<div style="background-color: #5f5e5e;color: burlywood;padding:15px;border-radius:5px;">
+        <h1 style="text-align:center">Message envoyé depuis la page Contact du Croq\'Art Café</h1>
+        <h2 style="text-align:center">NOUVEAU MESSAGE :</h2>
+        <p style="text-align:center;margin-bottom:5px"><b>Nom : </b>' . $_POST['nom'] . '<br>
+        <b style="text-align:center;margin-bottom:5px">Email : </b>' . $_POST['email'] . '<br>
+        <b style="text-align:center;margin-bottom:5px">téléphone : </b>' . $_POST['phone'] . '<br>
+        <b style="text-align:center;margin-bottom:5px">message : </b>' . $_POST['message'] . '</p>
+        <p style="text-align:center;margin-bottom:10px">'.date('Y').'© Le Croq\'Art Café</p>
+        </div>';
+
+        $retour = mail('herosqwerty@gmail.com', 'Envoi depuis page Reservation', $message, $entete);
+        
+        $entete2  = 'MIME-Version: 1.0' . "\r\n";
+        $entete2 .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+        $entete2 .= 'From: le Croq\'Art Café';
+
+        $messageClient = 
+        '<div style="background-color: #5f5e5e;color: burlywood;padding:15px;border-radius:5px;">
+        <h1 style="text-align:center">Le Croq\'Art Café</h1>
+        <h2 style="text-align:center">Votre message a bien été transmis :</h2>
+        <p style="text-align:center;margin-bottom:5px"><b>Nom : </b>' . $_POST['nom'] . '<br>
+        <b style="text-align:center;margin-bottom:5px">Email : </b>' . $_POST['email'] . '<br>
+        <b style="text-align:center;margin-bottom:5px">téléphone : </b>' . $_POST['phone'] . '<br>
+        <b style="text-align:center;margin-bottom:5px">message : </b>' . $_POST['message'] . '</p>
+        <p style="text-align:center;margin-bottom:10px">'.date('Y').'© Le Croq\'Art Café</p>
+        </div>';
+    
+        $retour2 = mail($_POST['email'], 'Le Croq\'Art Café', $messageClient, $entete2);
     ?>
     </div>
 <?php } else { ?>
