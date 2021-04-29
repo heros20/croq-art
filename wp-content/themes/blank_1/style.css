@@ -12,87 +12,10 @@ License URI: LICENSE
 Text Domain: blank_1
 */
 
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,
+img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,
+caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,
+output,ruby,section,summary,time,mark,audio,video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -100,35 +23,19 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
   display: block;
 }
 body {
   line-height: 1;
 }
-ol,
-ul {
+ol,ul {
   list-style: none;
 }
-blockquote,
-q {
+blockquote,q {
   quotes: none;
 }
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+blockquote:before,blockquote:after,q:before,q:after {
   content: "";
   content: none;
 }
@@ -140,15 +47,12 @@ table {
     il faudra le faire lors de la mise en production
     https://autoprefixer.github.io/
 */
-*,
-*:after,
-*:before {
+*,*:after,*:before {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
-/* clear */
 .clear:before,
 .clear:after {
   content: " ";
@@ -160,7 +64,6 @@ table {
 .clear {
   *zoom: 1;
 }
-
 html {
   font-size: 100%;
 }
@@ -175,7 +78,7 @@ body {
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
-} /* permet de centrer  les grandes div pour preparer le responsive */
+} 
 .wrap2 {
   max-width: 1324px;
   width: 100%;
@@ -196,7 +99,7 @@ body {
 }
 .fontAlfa {
   font-family: "Alfa Slab One", cursive;
-} /* permet d'ajouter cette police d'écriture */
+} 
 .fontBebas {
   font-family: "Bebas Neue", cursive;
 }
@@ -217,16 +120,12 @@ body {
   font-family:Arial, Helvetica, sans-serif;
   background-color: burlywood;
 }
-
-
 .bigflex {
   margin: 50px 0;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
-
-/* Header */
 #page .nav {
   font-family: "Annabelle JF Regular", sans-serif;
   margin: 0 auto;
@@ -269,16 +168,10 @@ body {
 #masthead .main-navigation a:hover {
   color: #AD9677;
 }
-/* Fin Header */
-
-/* Content */
 .B {
   text-align: center;
   margin-bottom: -380px;
 }
-/* Fin  Content */
-
-/* Footer */
 #colophon {
   text-align: center;
   font-family: "Annabelle JF Regular", sans-serif;
@@ -330,9 +223,6 @@ body {
   font-weight: bold;
   font-size: 1.7em
 }
-/* Fin Footer */
-
-/* CSS WOOCOMMERCE */
 #primary{
   max-width: 1440px;
   width: 100%;
@@ -352,7 +242,6 @@ article{
   background-color: #838080;
   color: burlywood;
 }
-
 .term-description{
   text-align: center;
   font-size: 1.8em;
@@ -499,6 +388,7 @@ address{
 .cart-collaterals,#order_review,.woocommerce-order{
   margin-bottom: -380px;
 }
+<<<<<<< HEAD
 .product_meta{
    background-color: #838080;
    color: burlywood;
@@ -520,6 +410,8 @@ address{
 /* FIN CSS WOOCOMMERCE */
 
 /* page 404 */
+=======
+>>>>>>> 5de145d05eb0a8ea769d805884641f15cc95b199
 .b {
   text-align: center;
 }
@@ -547,12 +439,3 @@ address{
 .error img{
   width: 100%;
 }
-/* fin page 404 */
-
-/* page email */
-.email{
-  text-align: center;
-  background-color: #5f5e5e;
-  color: burlywood;
-}
-

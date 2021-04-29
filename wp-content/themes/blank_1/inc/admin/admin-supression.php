@@ -10,9 +10,4 @@ if(!empty($_GET['id'])){
     $sql =  "SELECT * FROM $table2 WHERE id = $id_client ";
     $clients = $wpdb->get_results($sql, ARRAY_A);
     $adminUrl = admin_url().'admin.php?page=delete&id='.$id;
-
-    debug($messages);
-    debug($clients);
-    
-// <?php 
 }

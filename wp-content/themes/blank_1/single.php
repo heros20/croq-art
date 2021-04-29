@@ -6,14 +6,8 @@
  *
  * @package blank_1
  */
-
 get_header();
-
 wp_redirect('404.php');
 ?>
-
-
-
 <?php
-// get_sidebar();
 get_footer();

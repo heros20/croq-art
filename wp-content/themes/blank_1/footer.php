@@ -17,7 +17,6 @@ $adresse = array(
 			<div class="contact">
 			<?php
             $the_query = new WP_Query($adresse);
-            // The Loop
             if ($the_query->have_posts()) { ?>
                 <?php while ($the_query->have_posts()) {
                     $the_query->the_post(); ?>
@@ -31,9 +30,8 @@ $adresse = array(
 				<a target="_blank" href="https://actu.fr/normandie/cormeilles_27170/le-croq-art-cafe-a-ouvert-rue-de-l-abbaye-a-cormeilles_35556865.html"><i class="far fa-newspaper"></i></a>
 				<a target="_blank" href="https://www.instagram.com/lecroqartcafe/"><i class="fab fa-instagram"></i></a>
 			</div>
-		</div><!-- .site-info -->
-	</div><!-- .grandFooter -->
-
+		</div>
+	</div>
 	<div class="copyright">
 		<div class="accueil">
 			<p><a href="<?= esc_url(home_url('/')) ?>">Accueil</a></p>
@@ -44,13 +42,9 @@ $adresse = array(
 		<div class="">
 			<p><a href="<?= esc_url(home_url('politique')) ?>">Politique de confidentialité</a></p>
 		</div>
-	</div><!-- .copyright -->
-
-</footer><!-- #colophon -->
-</div><!-- #page -->
-
+	</div>
+</footer>
+</div>
 <?php wp_footer(); ?>
-
 </body>
-
 </html>
