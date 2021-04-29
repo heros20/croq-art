@@ -31,7 +31,6 @@ get_header();
         <ul>
             <?php
             $the_query = new WP_Query($presentation);
-            // The Loop
             if ($the_query->have_posts()) { ?>
                 <?php while ($the_query->have_posts()) {
                     $the_query->the_post(); ?>
@@ -48,7 +47,6 @@ get_header();
         <ul class="slides">
             <?php
             $the_query = new WP_Query($slider);
-            // The Loop
             if ($the_query->have_posts()) { ?>
                 <?php while ($the_query->have_posts()) {
                     $the_query->the_post(); ?>
@@ -67,7 +65,6 @@ get_header();
         <div class="after wrap4">
         <?php
             $the_query = new WP_Query($slider2);
-            // The Loop
             if ($the_query->have_posts()) { ?>
                 <?php while ($the_query->have_posts()) {
                     $the_query->the_post(); ?>
@@ -79,8 +76,6 @@ get_header();
         </div>
     </div>
     <div class="clear"></div>
-    
 </div>
-
 <?php
 get_footer();
