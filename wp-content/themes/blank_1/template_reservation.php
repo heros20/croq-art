@@ -9,24 +9,17 @@ $contact = array(
 );
 $errors = array();
 $success = false;
-
 if (!empty($_POST['submitted'])) {
-    // FAILLE XSS
-
     $nom = failleXSS('nom');
     $email = failleXSS('email');
     $nbrecouvert = failleXSS('nbrecouvert');
     $date = failleXSS('date');
     $phone = failleXSS('phone');
-
-    // fonction pour afficher les erreurs eventuelles
     $errors = validForm($errors, $nom, 'nom');
     $errors = validEmail($errors, $email, 'email', 2, 50);
     $errors = validNumber($errors, $nbrecouvert, 'nbrecouvert');
     $errors = validDate($errors, $date, 'date');
     $errors = validPhone($errors, $phone, 'phone');
-    
-
     if (count($errors) == 0) {
         global $wpdb;
         $table = $wpdb->prefix .'reservation';
@@ -58,7 +51,6 @@ if (!empty($_POST['submitted'])) {
         $success = true;
     }
 }
-
 get_header();
 if($success == true){ ?>
     <div id="formincription">
@@ -169,7 +161,6 @@ if($success == true){ ?>
     <ul class="contact2">
         <?php
         $the_query = new WP_Query($contact);
-        // The Loop
         if ($the_query->have_posts()) { ?>
             <?php while ($the_query->have_posts()) {
                 $the_query->the_post(); ?>
@@ -184,8 +175,5 @@ if($success == true){ ?>
         <?php } ?>
     </ul>
 </div>
-
-
 <?php
-
 get_footer();

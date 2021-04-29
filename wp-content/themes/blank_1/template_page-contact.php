@@ -1,6 +1,5 @@
 <?php
 /* Template Name: page-contact  */
-
 $contact = array(
     'post_type' => 'contact',
     'post_status' => 'publish',
@@ -8,26 +7,17 @@ $contact = array(
     'orderby' => 'date',
     'order' => 'ASC'
 );
-
-
 $errors = array();
 $success = false;
-
-
 if (!empty($_POST['submitted'])) {
-    // FAILLE XSS
-
     $nom = failleXSS('nom');
     $email = failleXSS('email');
     $phone = failleXSS('phone');
     $message = failleXSS('message');
-
-    // fonction pour afficher les erreurs eventuelles
     $errors = validForm($errors, $nom, 'nom', 2, 50);
     $errors = validEmail($errors, $email, 'email', 2, 50);
     $errors = validPhone($errors, $phone, 'phone');
     $errors = validForm($errors, $message, 'message', 2, 1000);
-
     if (count($errors) == 0) {
         global $wpdb;
         $table = $wpdb->prefix .'message';
@@ -98,7 +88,6 @@ if ($success == true) { ?>
         $retour2 = mail($_POST['email'], 'Le Croq\'Art Café', $messageClient, $entete2);
     ?>
     </div>
-
 <?php } else { ?>
 <div class="contact1">
     <p>Si vous souhaitez des renseignements,</p>
@@ -108,7 +97,6 @@ if ($success == true) { ?>
     <p>02 77 73 01 74</p>
 </div>
     <form action="" id="formincription" method="POST" novalidate>
-
         <label for="nom">Nom*</label>
         <input type="text" id="nom" name="nom" placeholder="Votre nom..." value="<?php if (!empty($_POST['nom'])) {
                                                                                         echo $_POST['nom'];
@@ -153,16 +141,13 @@ if ($success == true) { ?>
 
     </form>
 <?php } ?>
-
 <div class="google">
    <iframe classe="googleMaps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2604.5322446900996!2d0.3758619156881919!3d49.24735697932747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e1b71b8c7574f9%3A0xb9603141872afd40!2sLe%20Croq&#39;Art%20Caf%C3%A9!5e0!3m2!1sfr!2sfr!4v1617363592164!5m2!1sfr!2sfr" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 </div>
-
 <div>
     <ul class="contact2">
         <?php
         $the_query = new WP_Query($contact);
-        // The Loop
         if ($the_query->have_posts()) { ?>
             <?php while ($the_query->have_posts()) {
                 $the_query->the_post(); ?>
@@ -177,7 +162,5 @@ if ($success == true) { ?>
         <?php } ?>
     </ul>
 </div>
-
 <?php
-
 get_footer();

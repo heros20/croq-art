@@ -13,12 +13,10 @@ get_header();
     <h2>Bienvenue dans la galerie</h2>
     <p>retrouver ici nos photos publiées</p>
 </div>
-
 <div class="B">
     <ul class="gallery">
         <?php
         $the_query = new WP_Query($gallery);
-        // The Loop
         if ($the_query->have_posts()) { ?>
             <?php while ($the_query->have_posts()) {
                 $the_query->the_post(); ?>
@@ -32,6 +30,5 @@ get_header();
         <?php } ?>
     </ul>
 </div>
-
 <?php
 get_footer();
