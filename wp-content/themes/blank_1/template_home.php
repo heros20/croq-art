@@ -28,22 +28,20 @@ get_header();
 </div>
 <div class="B">
     <div class="B2">
-        <div class="B3">
-            <ul>
-                <?php
-                $the_query = new WP_Query($presentation);
-                if ($the_query->have_posts()) { ?>
-                    <?php while ($the_query->have_posts()) {
-                        $the_query->the_post(); ?>
-                        <li>
-                            <div>
-                                <p> <?= nl2br(get_the_excerpt()) ?> </p>
-                            </div>
-                        </li>
-                    <?php  } ?>
-                <?php } ?>
-            </ul>
-        </div>
+        <ul>
+            <?php
+            $the_query = new WP_Query($presentation);
+            if ($the_query->have_posts()) { ?>
+                <?php while ($the_query->have_posts()) {
+                    $the_query->the_post(); ?>
+                    <li>
+                        <div>
+                            <p> <?= nl2br(get_the_excerpt()) ?> </p>
+                        </div>
+                    </li>
+                <?php  } ?>
+            <?php } ?>
+        </ul>
     </div>
     <div class="flexslider">
         <ul class="slides">
@@ -78,6 +76,8 @@ get_header();
         </div>
     </div>
     <div class="clear"></div>
+    
 </div>
+
 <?php
 get_footer();
