@@ -87,11 +87,9 @@ if ($success == true) { ?>
         $messageClient = 
         '<div style="background-color: #5f5e5e;color: burlywood;padding:15px;border-radius:5px;">
         <h1 style="text-align:center">Le Croq\'Art Café</h1>
-        <h2 style="text-align:center">Votre message :</h2>
-        <p style="text-align:center;margin-bottom:5px">Votre message a bien été transmis<br>
+        <h2 style="text-align:center">Votre message a bien été transmis :</h2>
         <p style="text-align:center;margin-bottom:5px"><b>Nom : </b>' . $_POST['nom'] . '<br>
         <b style="text-align:center;margin-bottom:5px">Email : </b>' . $_POST['email'] . '<br>
-        <b style="text-align:center;margin-bottom:5px">téléphone : </b>' . $_POST['phone'] . '<br>
         <b style="text-align:center;margin-bottom:5px">téléphone : </b>' . $_POST['phone'] . '<br>
         <b style="text-align:center;margin-bottom:5px">message : </b>' . $_POST['message'] . '</p>
         <p style="text-align:center;margin-bottom:10px">'.date('Y').'© Le Croq\'Art Café</p>
