@@ -403,7 +403,7 @@ bdi{
   margin: 0 auto;
   padding: 25px;
 }
-#order_review_heading{
+#order_review_heading, .entry-header .entry-title{
   text-align: center;
   padding: 10px;
   font-weight: bold;
@@ -415,6 +415,7 @@ bdi{
   margin: auto;
   margin-top: 20px;
   border-radius: 3px;
+  margin-bottom: 20px;
 }
 .woocommerce-order{
   background-color: #838080;
@@ -489,14 +490,32 @@ address{
 .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt{
   margin-bottom: 50px;
 }
-.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button{
-  margin-bottom: 20px;
+.woocommerce a.continue{
+  margin-left: 20px;
 }
 .post-edit-link{
   display: none;
 }
 .cart-collaterals,#order_review,.woocommerce-order{
   margin-bottom: -380px;
+}
+.product_meta{
+   background-color: #838080;
+   color: burlywood;
+   width: 150px;
+   border-radius: 5px;
+   padding: 5px;
+}
+.product_meta a{
+  color: burlywood;
+  font-size: 1.4em;
+}
+.product_meta a:hover{
+  transition: all .4s;
+  opacity: .6;
+}
+.woocommerce a.wpm-shopping-button{
+  margin-bottom: 20px;
 }
 /* FIN CSS WOOCOMMERCE */
 
@@ -514,6 +533,7 @@ address{
   padding: 25px;
   border-radius: 15px;
   font-size: 1.5em;
+  margin-bottom: -380px;
 }
 .errorImg{
   margin-top: 20px;
@@ -528,3 +548,11 @@ address{
   width: 100%;
 }
 /* fin page 404 */
+
+/* page email */
+.email{
+  text-align: center;
+  background-color: #5f5e5e;
+  color: burlywood;
+}
+

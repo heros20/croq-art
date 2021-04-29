@@ -64,13 +64,45 @@ if($success == true){ ?>
     <div id="formincription">
          <p>Merci d'avoir réservé, nous vous confirmerons celle-ci dans les plus brefs délais</p>
     </div>
-    <?php $message = "Nouvelle reservation \r\n au nom de : ".$_POST['nom']."\r\n nombre de couvert : ".$_POST['nbrecouvert']."\r\n reservation le : ".date('d/m/Y  H:i',strtotime($_POST['date']));
-        mail('herosqwerty@gmail.com', 'Reservation Croq art cafe', $message);
-        $messageClient = "Votre reservation a bien ete transmise au restaurant";
-        mail($_POST['email'], 'Reservation Croq art cafe', $messageClient);
-    ?>
+    <?php 
+        $entete  = 'MIME-Version: 1.0' . "\r\n";
+        $entete .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+        $entete .= 'From: ' . $_POST['email'] . "\r\n";
+
+        $message = 
+        '<div style="background-color: #5f5e5e;color: burlywood;padding:15px;border-radius:5px;">
+        <h1 style="text-align:center">Message envoyé depuis la page réservation du Croq\'Art Café</h1>
+        <h2 style="text-align:center">NOUVELLE RESERVATION :</h2>
+        <p style="text-align:center;margin-bottom:5px"><b>Nom : </b>' . $_POST['nom'] . '<br>
+        <b style="text-align:center;margin-bottom:5px">Email : </b>' . $_POST['email'] . '<br>
+        <b style="text-align:center;margin-bottom:5px">téléphone : </b>' . $_POST['phone'] . '<br>
+        <b style="text-align:center;margin-bottom:5px">réservé pour le : </b>' . date('d/m/Y à H:i',strtotime($_POST['date'])) . '<br>
+        <b style="text-align:center;margin-bottom:5px">nombres de couverts : </b>' . $_POST['nbrecouvert'] . '</p>
+        <p style="text-align:center;margin-bottom:10px">'.date('Y').'© Le Croq\'Art Café</p>
+        </div>';
+
+        $retour = mail('herosqwerty@gmail.com', 'Envoi depuis page Reservation', $message, $entete);
+        
+        $entete2  = 'MIME-Version: 1.0' . "\r\n";
+        $entete2 .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+        $entete2 .= 'From: le Croq\'Art Café';
+
+        $messageClient = 
+        '<div style="background-color: #5f5e5e;color: burlywood;padding:15px;border-radius:5px;">
+        <h1 style="text-align:center">Le Croq\'Art Café</h1>
+        <h2 style="text-align:center">VOTRE RESERVATION :</h2>
+        <p style="text-align:center;margin-bottom:5px">Votre demande de réservation a bien été enregistré, elle sera confirmée sous peu<br>
+        <p style="text-align:center;margin-bottom:5px"><b>Nom : </b>' . $_POST['nom'] . '<br>
+        <b style="text-align:center;margin-bottom:5px">Email : </b>' . $_POST['email'] . '<br>
+        <b style="text-align:center;margin-bottom:5px">téléphone : </b>' . $_POST['phone'] . '<br>
+        <b style="text-align:center;margin-bottom:5px">réservé pour le : </b>' . date('d/m/Y à H:i',strtotime($_POST['date'])) . '<br>
+        <b style="text-align:center;margin-bottom:5px">nombres de couverts : </b>' . $_POST['nbrecouvert'] . '</p>
+        <p style="text-align:center;margin-bottom:10px">'.date('Y').'© Le Croq\'Art Café</p>
+        </div>';
     
-<?php } else { ?>
+        $retour2 = mail($_POST['email'], 'Le Croq\'Art Café', $messageClient, $entete2);
+
+} else { ?>
 <div class="reservation">
     <p>Afin de réserver une table dans notre restaurant,</p>
     <p>Merci de remplir le formulaire ci-dessous</p>
