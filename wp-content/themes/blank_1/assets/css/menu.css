@@ -17,6 +17,12 @@ h3 {
     font-size: 1.9em;
     text-transform: uppercase;
 }
+.h3{
+    background-color: #838080;
+    color: burlywood;
+    margin: 10px;
+    border-radius: 50px;;
+}
 h4 {
     font-size: 1.3em;
 }
@@ -72,14 +78,21 @@ table {
 
 }
 .menu_admin {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    background-color: rgb(246, 212, 179);
+    border-radius: 50px;
 }
 .menu_admin .section {
     padding: 0 20px;
+     font-size: .5em;
+}
+.menu_admin .section h4{
+    padding: 0 20px;
+     font-size: 1.5em;
 }
 .menu_admin .section h3 {
     padding: 0 10px;

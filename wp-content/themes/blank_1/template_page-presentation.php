@@ -9,7 +9,7 @@ $presentation = array(
 );
 get_header();
 ?>
-<div class="B wrap2 presentation">
+<div class="B wrap2 page-presentation">
     <ul class="contact2">
         <?php
         $the_query = new WP_Query($presentation);

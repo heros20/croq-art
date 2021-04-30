@@ -15,6 +15,30 @@
 <head>
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Le Croq'Art Café</title>
+	<meta name="Content-Type" content="UTF-8">
+	<meta name="Content-Language" content="fr">
+	<meta name="Description" content="Le Croq'Art Café Cormeilles
+		Restaurant / Salon de Thé
+		un lieu de partage et de convivialité au look vintage...">
+	<meta name="Keywords" content="Croq, 
+		art, 
+		café, 
+		le croq'art cafe, 
+		le croq'art, 
+		Le Croq'Art Café, 
+		restaurant, 
+		click and collect">
+	<meta name="Copyright" content="kevin bezard">
+	<meta name="Author" content="Le Croq'Art Café">
+	<meta name="Identifier-Url" content="https://www.bay-key.fr">
+	<meta name="Revisit-After" content="15 days">
+	<meta name="Robots" content="all">
+	<meta name="Rating" content="general">
+	<meta name="Distribution" content="global">
+	<meta name="Geography" content="Cormeille, France, 27260">
+	<meta name="Category" content="internet">
+	<meta name="robots" content="index"/>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Palanquin:wght@700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">

@@ -499,7 +499,7 @@ get_header();
 ?>
 <div class="B">
     <div class="admin">
-        <h3>Notre Menu</h3>
+        <h3 class="h3">menu du jour</h3>
         <div class="menus_admin">
             <?php if ($the_query->have_posts()) { 
                 while ($the_query->have_posts()) {
@@ -511,7 +511,7 @@ get_header();
             <?php } ?>
         </div>
     </div>
-    
+    <h3 class="h3">Notre Carte</h3>
     <div class="page_menu">
             <div class="section_menus blanc blanc1">
                 <div class="marge_grullo marge_grullo1">
