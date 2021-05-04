@@ -590,7 +590,7 @@ get_header();
                 <div class="marge_blanc marge_blanc1">
                     <div class="menus">
                         <div class="plats">
-                            <div class="titres_plats1">
+                            <div class="titres_plats1 titre_img">
                                 <h3><img src="<?= get_template_directory_uri(); ?>/assets/images/banderole-removebg-preview.png" alt="<?= get_the_title(); ?>"></h3>
                             </div>
                             <table>
