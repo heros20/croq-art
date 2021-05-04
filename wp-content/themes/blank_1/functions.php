@@ -25,8 +25,8 @@ function woocommerce_support() {
 } 
 function woocommercefunction() {
 	 if (is_product_category()){
-      echo '<a class="button continue" href="https://bay-key.fr/shop/" >Retour à la boutique</a>';
-      echo '<a class="button continue" href="https://bay-key.fr/panier/" >Votre panier</a>';
+      echo '<a class="button continue" href="https://lecroqartcafe.fr/shop/" >Retour à la boutique</a>';
+      echo '<a class="button continue" href="https://lecroqartcafe.fr/panier/" >Votre panier</a>';
 	}
  }
 add_action( 'woocommerce_before_shop_loop', 'woocommercefunction');

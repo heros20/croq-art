@@ -68,7 +68,7 @@ if ($success == true) { ?>
         <p style="text-align:center;margin-bottom:10px">'.date('Y').'© Le Croq\'Art Café</p>
         </div>';
 
-        $retour = mail('herosqwerty@gmail.com', 'Envoi depuis page Reservation', $message, $entete);
+        $retour = mail('lecroquartcafe@gmail.com', 'Envoi depuis page Reservation', $message, $entete);
         
         $entete2  = 'MIME-Version: 1.0' . "\r\n";
         $entete2 .= 'Content-type: text/html; charset=utf-8' . "\r\n";

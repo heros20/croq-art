@@ -36,15 +36,48 @@ function my_custom_menu_page_moderation(){
                         WHERE id = $id",
                         $valid
                     ) ); 
-                     $messageClient = "Votre reservation est valider";
-                     mail($clients[0]['email'], 'Reservation Croq art cafe', $messageClient);
-                    if ( false === $sql ) { ?>
+                      $entete  = 'MIME-Version: 1.0' . "\r\n";
+                      $entete .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+                      $entete .= 'From: le Croq\'Art Café';
+
+                      $messageClient = 
+                        '<div style="background-color: #5f5e5e;color: burlywood;padding:15px;border-radius:5px;">
+                        <h1 style="text-align:center">Le Croq\'Art Café</h1>
+                        <p style="text-align:center;margin-bottom:5px">Votre demande de réservation a été confirmée<br>
+                        <h2 style="text-align:center">VOTRE RESERVATION :</h2>
+                        <p style="text-align:center;margin-bottom:5px"><b>Nom : </b>' . $clients[0]['nom'] . '<br>
+                        <b style="text-align:center;margin-bottom:5px">Email : </b>' . $clients[0]['email'] . '<br>
+                        <b style="text-align:center;margin-bottom:5px">téléphone : </b>' . $clients[0]['numero'] . '<br>
+                        <b style="text-align:center;margin-bottom:5px">réservé pour le : </b>' . date('d/m/Y à H:i',strtotime($reservations[0]['hours'])) . '<br>
+                        <b style="text-align:center;margin-bottom:5px">nombres de couverts : </b>' . $reservations[0]['nbrecouvert'] . '</p>
+                        <p style="text-align:center;margin-bottom:10px">'.date('Y').'© Le Croq\'Art Café</p>
+                        </div>';
+                    
+                      $retour = mail($clients[0]['email'], 'Le Croq\'Art Café', $messageClient, $entete);
+                      if ( false === $sql ) { ?>
                         <p>La modification a echouée</p>
                     <?php }
                 }elseif ($_POST['valid'] === 'refusé') {
                     $wpdb->delete( $table, array( 'id' => $id ) );
-                    $messageClient = "Votre reservation est refuser, le restaurant doit afficher complet";
-                    mail($clients[0]['email'], 'Reservation Croq art cafe', $messageClient);
+                    $entete2  = 'MIME-Version: 1.0' . "\r\n";
+                    $entete2 .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+                    $entete2 .= 'From: le Croq\'Art Café';
+
+                    $messageClient = 
+                    '<div style="background-color: #5f5e5e;color: burlywood;padding:15px;border-radius:5px;">
+                    <h1 style="text-align:center">Le Croq\'Art Café</h1>
+                    <h2 style="text-align:center">VOTRE RESERVATION :</h2>
+                    <p style="text-align:center;margin-bottom:5px">votre réservation a malheureusement été refusée<br>
+                    <p style="text-align:center;margin-bottom:5px">le restaurant doit certainement afficher complet ou doit etre fermer<br>
+                    <p style="text-align:center;margin-bottom:5px"><b>Nom : </b>' . $clients[0]['nom'] . '<br>
+                    <b style="text-align:center;margin-bottom:5px">Email : </b>' . $clients[0]['email'] . '<br>
+                    <b style="text-align:center;margin-bottom:5px">téléphone : </b>' . $clients[0]['numero'] . '<br>
+                    <b style="text-align:center;margin-bottom:5px">réservé pour le : </b>' . date('d/m/Y à H:i',strtotime($reservations[0]['hours'])) . '<br>
+                    <b style="text-align:center;margin-bottom:5px">nombres de couverts : </b>' . $reservations[0]['nbrecouvert'] . '</p>
+                    <p style="text-align:center;margin-bottom:10px">'.date('Y').'© Le Croq\'Art Café</p>
+                    </div>';
+                
+                    $retour2 = mail($clients[0]['email'], 'Le Croq\'Art Café', $messageClient, $entete2);
                 }
                 $success = true;
                 wp_safe_redirect('admin.php?page=custompage_reservation');

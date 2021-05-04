@@ -353,7 +353,7 @@ address{
 .related{
   margin-top: 500px;
 }
-.woocommerce #content div.product .woocommerce-tabs, .woocommerce div.product .woocommerce-tabs, .woocommerce-page #content div.product .woocommerce-tabs, .woocommerce-page div.product .woocommerce-tabs {
+.woocommerce #content div.product .woocommerce-tabs, .woocommerce div.product .woocommerce-tabs, .woocommerce-page #content div.product .woocommerce-tabs, .woocommerce-page div.product .woocommerce-tabs, .mentions {
   margin-bottom: -400px;
 }
 .related h2{
@@ -385,8 +385,11 @@ address{
 .post-edit-link{
   display: none;
 }
-.cart-collaterals,#order_review,.woocommerce-order{
+.cart-collaterals,#order_review,.woocommerce-order,.mentions{
   margin-bottom: -380px;
+}
+.mentions{
+  margin-top: 20px;
 }
 .b {
   text-align: center;

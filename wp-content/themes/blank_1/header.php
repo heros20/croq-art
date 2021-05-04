@@ -28,7 +28,9 @@
 		le croq'art, 
 		Le Croq'Art Café, 
 		restaurant, 
-		click and collect">
+		click and collect,
+		cormeille,
+		Cormeille">
 	<meta name="Copyright" content="kevin bezard">
 	<meta name="Author" content="Le Croq'Art Café">
 	<meta name="Identifier-Url" content="https://www.bay-key.fr">

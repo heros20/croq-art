@@ -37,7 +37,7 @@ $adresse = array(
 			<p><a href="<?= esc_url(home_url('/')) ?>">Accueil</a></p>
 		</div>
 		<div class="mention">
-			<p><a href="<?= esc_url(home_url('mentions-legal')) ?>">Mention légal</a></p>
+			<p><a href="<?= esc_url(home_url('mentions-legal')) ?>">Mentions légales</a></p>
 		</div>
 		<div class="">
 			<p><a href="<?= esc_url(home_url('politique')) ?>">Politique de confidentialité</a></p>
