@@ -149,9 +149,9 @@ body {
   width: 100%;
 }
 #masthead .main-navigation ul {
-    width: 100%;
     display: flex;
     flex-flow: wrap row;
+    justify-content: center;
 }
 #masthead .main-navigation li {
     border-left: 1px dashed #fff;

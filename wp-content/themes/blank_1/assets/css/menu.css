@@ -249,4 +249,17 @@ table {
     .marge_blanc {
         border: 30px solid #FFF;
     }
+    body {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 400px){
+    body {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .titre_img {
+        display: none;
+    }
 }
