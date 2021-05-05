@@ -229,8 +229,11 @@ table {
 .notes_sup {
     color: #FFF;
 }
-@media screen and (max-width: 900px)
-{
+@media screen and (max-width: 900px){
+    body {
+        width: 100%;
+        margin: 0 auto;
+    }
     .page_menu{
          flex-direction: column;
     }
@@ -249,17 +252,49 @@ table {
     .marge_blanc {
         border: 30px solid #FFF;
     }
-    body {
+    .boisson_chaudes table {
+        max-width: 300px;
         width: 100%;
         margin: 0 auto;
     }
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 500px){
     body {
         width: 100%;
         margin: 0 auto;
     }
+    .page_menu {
+        font-size: .8em;
+    }
     .titre_img {
         display: none;
+    }
+    .section9 th ,.section9 td {
+        max-width: 50px;
+        width: 100%;
+        margin: 5px;
+    }
+    .section9 h4 {
+        font-size: 1em;
+    }
+    .boisson_chaudes {
+        font-size: 1.1em;
+    }
+    .separateur {
+        width: 50px;
+    }
+}
+@media screen and (max-width: 400px){
+    .page_menu {
+        font-size: .8em;
+    }
+    .section9 {
+        font-size: .8em;
+    }
+    .boisson_chaudes {
+        font-size: .8em;
+    }
+    .boisson_chaudes h3 {
+        font-size: 1.4em;
     }
 }
