@@ -263,19 +263,41 @@ article{
 }
 .woocommerce img{
   border-radius: 10px;
+  display: none;
 }
-.woocommerce-loop-category__title,.woocommerce-loop-product__title{
+.woocommerce-loop-category__title{
+  background-color: bisque;
+  color: #838080;
+  border-radius: 4px;
+  text-align: center;
+}
+.woocommerce-loop-product__title{
   background-color: #838080;
   color: burlywood;
   border-radius: 4px;
   text-align: center;
 }
+.woocommerce ul.products li.product a img,.woocommerce div.product div.images img{
+  display: none;
+}
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product{
+  background-color: bisque;
+  border-radius: 5px;
+}
 .product-category{
   text-align: center;
 }
 .count{
+  background-color: bisque;
+  color: #838080;
+}
+.woocommerce div.product .product_title{
   background-color: #838080;
   color: burlywood;
+  font-weight: bold;
+  font-size: 1.7em;
+  padding: 5px;
+  border-radius: 2px;
 }
 bdi{
   font-size: 1.4em;
@@ -424,6 +446,7 @@ address{
 .error img{
   width: 100%;
 }
+
 
 @media screen and (max-width: 550px)
 {
