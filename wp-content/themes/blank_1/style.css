@@ -263,7 +263,6 @@ article{
 }
 .woocommerce img{
   border-radius: 10px;
-  display: none;
 }
 .woocommerce-loop-category__title{
   background-color: bisque;
@@ -408,7 +407,7 @@ address{
   margin-bottom: 50px;
 }
 .woocommerce a.continue{
-  margin-left: 20px;
+  margin: 0 0 20px 20px;
 }
 .post-edit-link{
   display: none;
@@ -416,6 +415,14 @@ address{
 .cart-collaterals,#order_review,.woocommerce-order,.mentions{
   margin-bottom: -380px;
 }
+#primary {
+position: relative;
+}
+.woocommerce nav.woocommerce-pagination{
+  position: absolute;
+  top: 95%;
+}
+
 .mentions{
   margin-top: 20px;
 }
@@ -448,6 +455,12 @@ address{
 }
 
 
+@media screen and (max-width: 770px)
+{
+  .woocommerce nav.woocommerce-pagination{
+     top: 97.5%;
+  }
+}
 @media screen and (max-width: 550px)
 {
   #masthead .site-branding {
@@ -460,15 +473,14 @@ address{
      display: none;
    }
    #masthead .main-burger-navigation{
-     display: block;
+     z-index: 100;
      color: #838080;
      background-color: burlywood;
      padding: 10px;
      border-radius: 5px;
      position: absolute;
-     right: -500px;
-     top: 0%;
-     transition: all .7s;
+     right: -3%;
+     top: -10%;
    }
     #masthead .main-burger-navigation ul li{
       border-bottom: 1px solid #000;
