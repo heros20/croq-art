@@ -1,10 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
-
 /*!
 Theme Name: blank_1
 Theme URI: http://underscores.me/
@@ -55,8 +48,8 @@ table {
     https://autoprefixer.github.io/
 */
 *,*:after,*:before {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -129,13 +122,9 @@ body {
 }
 .bigflex {
   margin: 50px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 #page .nav {
   font-family: "Annabelle JF Regular", sans-serif;
@@ -144,18 +133,10 @@ body {
   background-color: #434343;
 }
 #masthead {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: wrap row;
-          flex-flow: wrap row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: wrap row;
+  justify-content: space-around;
+  align-items: center;
   padding: 20px;
   margin: 0 auto;
   border-radius: 5px;
@@ -168,16 +149,9 @@ body {
   width: 100%;
 }
 #masthead .main-navigation ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: wrap row;
-            flex-flow: wrap row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-flow: wrap row;
+    justify-content: center;
 }
 #masthead .main-navigation li {
     border-left: 1px dashed #fff;
@@ -215,14 +189,9 @@ body {
     width: 100%;
 }
 .grandFooter .site-info{
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: space-around;
+    align-items: center;
     padding: 40px;
     font-size: 1.5em;
     background-color: #434343;
@@ -232,13 +201,8 @@ body {
     padding: 10px;
 }
 .grandFooter .site-info .reseau{
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
 }
 .grandFooter .site-info .reseau .fab,.far{
     color: #AD9677;
@@ -247,16 +211,11 @@ body {
 }
 .grandFooter .site-info .reseau .fab:hover,.far:hover{
     color: #567dbd;
-    -webkit-transition: all .4s;
-    -o-transition: all .4s;
     transition: all .4s;
 }
 .copyright{
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
     background-color: #AD9677;
     font-size: 1.4em;
 }
@@ -414,13 +373,9 @@ address{
   border-bottom: 1px solid #000;
 }
 .woocommerce ul.products{
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 .related{
   margin-top: 500px;

@@ -1,10 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
-
 body{
     background-color: burlywood;
 }
@@ -15,8 +8,7 @@ body{
     padding: 15px;
     color: rgb(184, 184, 184);
     background-color: #434343;
-    -webkit-box-shadow: 3px 3px 3px grey;
-            box-shadow: 3px 3px 3px grey;
+    box-shadow: 3px 3px 3px grey;
     border-radius: 20px;
     padding: 20px 0 80px;
 }
@@ -38,8 +30,6 @@ input,textarea{
     border-radius: 5px;
     width:70%;
     border: 1px solid black;
-    -webkit-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
     padding:4px 0 4px 10px;
     display: block;
@@ -55,24 +45,10 @@ input[type='submit']{
     background-color: rgb(209, 209, 209);
     margin-top: 40px;
     border: 1px solid black;
-    -webkit-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
     cursor: pointer;
     margin:20px auto;
     max-width: 200px;
-}
-::-webkit-input-placeholder{
-    color: rgb(0, 0, 0);
-}
-::-moz-placeholder{
-    color: rgb(0, 0, 0);
-}
-:-ms-input-placeholder{
-    color: rgb(0, 0, 0);
-}
-::-ms-input-placeholder{
-    color: rgb(0, 0, 0);
 }
 ::placeholder{
     color: rgb(0, 0, 0);
@@ -91,43 +67,24 @@ label {
     padding: 10px 0;
     text-align: center;
 }
-
-.google{
+.reservation{
     text-align: center;
-    margin: 50px 0;
-}
-.contact1{
-    text-align: center;
-    margin-top: 50px;
-    font-size: 2em;
+    font-size: 1.8em;
+    margin-top: 20px;
     padding: 10px;
     background-color: #838080;
     color: burlywood;
 }
 .contact2{
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
+    justify-content: space-around;
+    align-items: baseline;
     font-size: 1.7em;
     margin-bottom: 50px;
     padding: 10px;
     background-color: #838080;
     color: burlywood;
-}
-.contact2 h3{
-    margin-bottom: 20px;
-}
-.google iframe{
-   width: 1000px; 
-   height: 450px; 
-}
-.contact2{
-  margin-bottom: -380px;
+    margin-bottom: -380px;
 }
 @media screen and (max-width: 900px)
 {
@@ -138,19 +95,5 @@ label {
     .trait{
         height: 1px;
         background-color: burlywood;
-    }
-}
-@media screen and (max-width: 700px)
-{
-    .google iframe{
-         width: 500px; 
-         height: 300px; 
-    }
-}
-@media screen and (max-width: 500px)
-{
-    .google iframe{
-         width: 300px; 
-         height: 200px; 
     }
 }

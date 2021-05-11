@@ -516,7 +516,7 @@ get_header();
             <div class="section_menus blanc blanc1">
                 <div class="marge_grullo marge_grullo1">
                     <div class="logo">
-                        <img src="<?= get_template_directory_uri(); ?>/assets/images/Plan_de_travail.png" alt="">
+                        <img src="<?= get_template_directory_uri(); ?>/assets/images/Plan_de_travail.png" alt="<?= get_the_title() ?>">
                     </div>  
                     <div class="menus">
                         <div class="section section1">

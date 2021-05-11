@@ -17,6 +17,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="Content-Type" content="UTF-8">
 	<meta name="Content-Language" content="fr">
+	<title>Le Croq'Art Café</title>
 	<meta name="Description" content="Le Croq'Art Café Cormeilles
 		Restaurant / Salon de Thé
 		un lieu de partage et de convivialité au look vintage...">
@@ -32,7 +33,7 @@
 		Cormeille">
 	<meta name="Copyright" content="kevin bezard">
 	<meta name="Author" content="Le Croq'Art Café">
-	<meta name="Identifier-Url" content="https://www.bay-key.fr">
+	<meta name="Identifier-Url" content="https://lecroqartcafe.fr/">
 	<meta name="Revisit-After" content="15 days">
 	<meta name="Robots" content="all">
 	<meta name="Rating" content="general">
