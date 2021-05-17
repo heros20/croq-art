@@ -12,7 +12,7 @@ $adresse = array(
 	<div class="grandFooter">
 		<div class="site-info">
 			<div class="logoFooter">
-				<img src="<?= get_template_directory_uri(); ?>/assets/images/Plan_de_travail.png" alt="logo du site">
+				<img src="<?= get_template_directory_uri(); ?>/assets/images/Plan_de_travail.png" title="Le Croq Art Cafe" alt="logo du site">
 			</div>
 			<div class="contact">
 			<?php

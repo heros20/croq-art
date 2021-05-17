@@ -35,7 +35,7 @@ get_header();
         </div>
     </div>
     <div class="laisserUnAvis">
-        <p><a target="blank_" href="https://www.google.com/search?q=le+croq+art+cafe+cormeilles&rlz=1C1VDKB_frFR936FR936&oq=le&aqs=chrome.0.69i59j69i57j69i59j69i60l3j69i65l2.593j0j4&sourceid=chrome&ie=UTF-8">laisser vous aussi un avis !</a></p>
+        <p><a target="blank_" href="https://search.google.com/local/reviews?placeid=ChIJ-XR1jBu34UcRQP0qh0ExYLk&amp;q=Le+Croq'Art+Caf%C3%A9&amp;hl=fr&amp;gl=FR"> laisser votre avis ici</a></p>
     </div>
 </div>
 

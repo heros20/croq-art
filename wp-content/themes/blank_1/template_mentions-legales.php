@@ -1,5 +1,5 @@
 <?php
-/* Template Name: mentions-legal  */
+/* Template Name: mentions-legales  */
 
 
 get_header();
@@ -25,11 +25,9 @@ get_header();
                 <p>En vertu de l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique, il est précisé aux utilisateurs du site internet <a href="https://lecroqartcafe.fr/">https://lecroqartcafe.fr/</a> l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi:
                 </p><p><strong>Propriétaire</strong> :  SARL Le Croq'Art Café   – 29 rue de l'abbaye 27260 Cormeille<br>
                               
-                <strong>Responsable publication</strong> : heros40@hotmail.fr – heros40@hotmail.fr<br>
                 Le responsable publication est une personne physique ou une personne morale.<br>
-                <strong>Webmaster</strong> : kevin quillet – heros40@hotmail.fr<br>
+                <strong>Webmaster</strong> : Kevin Quillet – Stella Zenon<br>
                 <strong>Hébergeur</strong> : ovh – 2 rue Kellermann 59100 Roubaix 1007<br>
-                <strong>Délégué à la protection des données</strong> : a definir – adefinir@hotmail.fr<br>
                 </p>
 
                 <div ng-bind-html="linkHTML"><p>Ces mentions légales RGPD sont issues du <a href="https://fr.orson.io/1371/generateur-mentions-legales" title="générateur de mentions légales RGPD d">générateur de mentions légales RGPD d'Orson.io</a></p></div>
@@ -134,7 +132,7 @@ get_header();
                  
                 <p>Si l’Utilisateur souhaite savoir comment <a href="https://lecroqartcafe.fr/">https://lecroqartcafe.fr/</a> utilise ses Données Personnelles, demander à les rectifier ou s’oppose à leur traitement, l’Utilisateur peut contacter <a href="https://lecroqartcafe.fr/">https://lecroqartcafe.fr/</a> par écrit à l’adresse suivante : </p>
                  
-                Le Croq'Art Café – DPO, a definir <br>
+                Le Croq'Art Café – DPO, à definir <br>
                 29 rue de l'abbaye 27260 Cormeille.
                  
                 <p>Dans ce cas, l’Utilisateur doit indiquer les Données Personnelles qu’il souhaiterait que <a href="https://lecroqartcafe.fr/">https://lecroqartcafe.fr/</a> corrige, mette à jour ou supprime, en s’identifiant précisément avec une copie d’une pièce d’identité (carte d’identité ou passeport). </p>
