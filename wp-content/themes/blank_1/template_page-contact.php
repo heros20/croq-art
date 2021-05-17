@@ -90,6 +90,7 @@ if ($success == true) { ?>
     </div>
 <?php } else { ?>
 <div class="contact1">
+    <h1>Pour prendre contact</h1>
     <p>Si vous souhaitez des renseignements,</p>
     <p>où tout autre demande, nous vous invitons</p>
     <p>à nous laisser un message via ce formulaire</p>

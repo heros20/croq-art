@@ -24,7 +24,7 @@ $presentation = array(
 get_header();
 ?>
 <div class="bienvenue">
-    <h1>Bienvenue au Croq'Art Café</h1>
+    <h1>Bienvenue au Croq'Art Café</h2>
 </div>
 <div class="B">
     <div class="B2">

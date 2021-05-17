@@ -498,6 +498,7 @@ $the_query = new WP_Query($args);
 get_header();
 ?>
 <div class="B">
+    <h1>Notre menu</h1>
     <div class="admin">
         <h3 class="h3">menu du jour</h3>
         <div class="menus_admin">

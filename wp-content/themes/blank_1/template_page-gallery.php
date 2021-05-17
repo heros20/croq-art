@@ -10,7 +10,7 @@ $gallery = array(
 get_header();
 ?>
 <div class="bienvenue">
-    <h2>Bienvenue dans la galerie</h2>
+    <h1>Bienvenue dans la galerie</h2>
     <p>retrouver ici nos photos publiées</p>
 </div>
 <div class="B">
