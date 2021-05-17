@@ -18,7 +18,7 @@ get_header();
                 $the_query->the_post(); ?>
                 <li>
                     <div class="coordonnée">
-                    <h1>Notre présentation</h1>
+                    <h1>Présentation du restaurant :</h1>
                         <p> <?= nl2br(get_the_content()) ?> </p>
                     </div>
                 </li>

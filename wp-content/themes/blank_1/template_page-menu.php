@@ -498,9 +498,8 @@ $the_query = new WP_Query($args);
 get_header();
 ?>
 <div class="B">
-    <h1>Notre menu</h1>
     <div class="admin">
-        <h3 class="h3">menu du jour</h3>
+        <h1 class="h3">menu du jour</h1>
         <div class="menus_admin">
             <?php if ($the_query->have_posts()) { 
                 while ($the_query->have_posts()) {

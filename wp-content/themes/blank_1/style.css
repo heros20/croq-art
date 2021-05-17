@@ -115,6 +115,9 @@ a {
   color: black;
   font-weight: bold;
 }
+h1 {
+  font-size: 1.5em;
+}
 @font-face {
   font-family: "Annabelle JF Regular";
   src: url("assets/font/Annabelle-JF-Regular.ttf") format("truetype");
