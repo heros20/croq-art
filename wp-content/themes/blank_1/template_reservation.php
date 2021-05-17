@@ -96,6 +96,7 @@ if($success == true){ ?>
 
 } else { ?>
 <div class="reservation">
+    <h1>Pour faire une réservation</h1>
     <p>Afin de réserver une table dans notre restaurant,</p>
     <p>Merci de remplir le formulaire ci-dessous</p>
     <p>ou contactez-nous directement par téléphone au :</p>
