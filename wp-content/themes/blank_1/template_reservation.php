@@ -15,11 +15,13 @@ if (!empty($_POST['submitted'])) {
     $nbrecouvert = failleXSS('nbrecouvert');
     $date = failleXSS('date');
     $phone = failleXSS('phone');
+    $accept = failleXSS('accept');
     $errors = validForm($errors, $nom, 'nom');
     $errors = validEmail($errors, $email, 'email', 2, 50);
     $errors = validNumber($errors, $nbrecouvert, 'nbrecouvert');
     $errors = validDate($errors, $date, 'date');
     $errors = validPhone($errors, $phone, 'phone');
+    $errors = validCheckbox($errors, $accept, 'accept');
     if (count($errors) == 0) {
         global $wpdb;
         $table = $wpdb->prefix .'reservation';
@@ -151,6 +153,18 @@ if($success == true){ ?>
                                         echo $errors['phone'];
                                     } ?><span></p>
         </div>
+        <div>
+            <p class="acceptation"> En cochant cette case, j’accepte que mon numéro de téléphone et mon adresse mail soient réutilisées dans le but de confirmer ou d’infirmer ma commande ou ma réservation en restaurant. Ces données ne seront pas collectées ni vendues à des fins de prospection ou des fins commerciales.
+            </p>
+            <p><input type="radio" name="accept" id="accept" value="accept">J'accepte</p>
+            <p><input type="radio" name="accept" id="accept" value="refuse">Je refuse</p>
+            <p><span class="error"><?php if (!empty($errors['accept'])) {
+                                        echo $errors['accept'];
+                                    } ?><span></p>
+            <p class="acceptation"> 
+                Ces données sont évidemment vos données et vous êtes libre de consentir, opposer, rectifier ou supprimer en vertu de la Règlementation Générale sur la Protection des Données en date du 25 mai 2018. Reportez-vous à notre <a href="<?= esc_url(home_url('politique')) ?>">politique de confidentialité</a> des données pour en connaître les modalités. Contactez notre Data Protection Officer à dpo@lecroqartcafe.fr afin de faire part de votre consentement.
+            </p>
+        </div>
         
 
         <input type="submit" id="btn_submit" name="submitted" value="Envoyer">
@@ -176,5 +190,19 @@ if($success == true){ ?>
         <?php } ?>
     </ul>
 </div>
+<script type="text/javascript">
+
+function verif()
+{
+    if (document.getElementById('accept').checked)
+        {return true;}
+    else
+    {
+        alert ('Veuillez cocher la case pour vous inscrire');
+        return false;
+    }
+}
+
+</script>
 <?php
 get_footer();

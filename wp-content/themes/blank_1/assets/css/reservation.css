@@ -22,7 +22,6 @@ body{
 }
 #formincription p{
     text-align: center;
-    font-size: 1.4em;
 }
 #formincription span{
     color: rgb(168, 52, 52);
@@ -114,6 +113,19 @@ label {
     background-color: #838080;
     color: burlywood;
     margin-bottom: -380px;
+}
+#accept{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width:20px;
+    height:20px;
+}
+.acceptation{
+    max-width: 1000px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 15px;
+    font-size: 1em;
 }
 @media screen and (max-width: 900px)
 {

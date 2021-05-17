@@ -64,6 +64,13 @@ function validDate($errors,$data,$key)
     }
     return $errors;
 }
+function validCheckbox($errors,$data,$key)
+{
+    if($data == 'refuse') {
+        $errors[$key] = 'si vous refusez, nous ne pouvons prendre votre réservation via le site internet.';
+    }
+    return $errors;
+}
 function validNumber($errors,$data,$key){
     if(!empty($data)){
         if(!filter_var($data, FILTER_VALIDATE_INT)){

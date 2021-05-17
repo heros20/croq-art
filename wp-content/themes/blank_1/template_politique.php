@@ -40,22 +40,22 @@ get_header();
 <p>Nous pouvons divulguer vos renseignements personnels si la loi nous oblige à le faire ou si vous violez nos Conditions Générales de Vente et d’Utilisation.</p>
 
 
-<h2>ARTICLE 4 – SHOPIFY</h2>
+<h2>ARTICLE 4 – OVH</h2>
 
-<p>Notre boutique est hébergée sur Shopify Inc. Ils nous fournissent la plate-forme e-commerce en ligne qui nous permet de vous vendre nos services et produits.</p>
 
-<p>Vos données sont stockées dans le système de stockage de données et les bases de données de Shopify, et dans l’application générale de Shopify. Vos données sont conservées sur un serveur sécurisé protégé par un pare-feu.</p>
+
+<p>Vos données sont stockées dans le système de stockage de données et les bases de données de OVH, et dans l’application générale de OVH. Vos données sont conservées sur un serveur sécurisé protégé par un pare-feu.</p>
 
 
 <p>Paiement:</p>
 
-<p>Si vous réalisez votre achat par le biais d’une passerelle de paiement direct, dans ce cas Shopify stockera vos renseignements de carte de crédit. Ces renseignements sont chiffrés conformément à la norme de sécurité des données établie par l’industrie des cartes de paiement (norme PCI-DSS). Les renseignements relatifs à votre transaction d’achat sont conservés aussi longtemps que nécessaire pour finaliser votre commande. Une fois votre commande finalisée, les renseignements relatifs à la transaction d’achat sont supprimés.</p>
+<p>Si vous réalisez votre achat par le biais d’une passerelle de paiement direct, dans ce cas OVH stockera vos renseignements de carte de crédit. Ces renseignements sont chiffrés conformément à la norme de sécurité des données établie par l’industrie des cartes de paiement (norme PCI-DSS). Les renseignements relatifs à votre transaction d’achat sont conservés aussi longtemps que nécessaire pour finaliser votre commande. Une fois votre commande finalisée, les renseignements relatifs à la transaction d’achat sont supprimés.</p>
 
 <p>Toutes les passerelles de paiement direct respectent la norme PCI-DSS, gérée par le conseil des normes de sécurité PCI, qui résulte de l’effort conjoint d’entreprises telles que Visa, MasterCard, American Express et Discover.</p>
 
 <p>Les exigences de la norme PCI-DSS permettent d’assurer le traitement sécurisé des données de cartes de crédit par notre boutique et par ses prestataires de services.</p>
 
-<p>Pour plus d’informations, veuillez consulter les Conditions d’Utilisation de Shopify ici ou la Politique de Confidentialité ici.</p>
+<p>Pour plus d’informations, veuillez consulter les Conditions d’Utilisation de OVH ici ou la Politique de Confidentialité ici.</p>
 
 
 <h2>ARTICLE 5 – SERVICES FOURNIS PAR DES TIERS</h2>
@@ -88,11 +88,11 @@ get_header();
 
 <p>Voici une liste de fichiers témoins que nous utilisons. Nous les avons énumérés ici pour que vous ayez la possibilité de choisir si vous souhaitez les autoriser ou non.</p>
 
-<p>_session_id, identificateur unique de session, permet à Shopify de stocker les informations relatives à votre session (référent, page de renvoi, etc.).</p>
+<p>_session_id, identificateur unique de session, permet à OVH de stocker les informations relatives à votre session (référent, page de renvoi, etc.).</p>
 
-<p>_shopify_visit, aucune donnée retenue, persiste pendant 30 minutes depuis la dernière visite. Utilisé par le système interne de suivi des statistiques du fournisseur de notre site web pour enregistrer le nombre de visites.</p>
+<p>_OVH_visit, aucune donnée retenue, persiste pendant 30 minutes depuis la dernière visite. Utilisé par le système interne de suivi des statistiques du fournisseur de notre site web pour enregistrer le nombre de visites.</p>
 
-<p>_shopify_uniq, aucune donnée retenue, expire à minuit (selon l’emplacement du visiteur) le jour suivant. Calcule le nombre de visites d’une boutique par client unique.</p>
+<p>_OVH_uniq, aucune donnée retenue, expire à minuit (selon l’emplacement du visiteur) le jour suivant. Calcule le nombre de visites d’une boutique par client unique.</p>
 
 <p>cart, identificateur unique, persiste pendant 2 semaines, stocke l’information relative à votre panier d’achat.</p>
 
