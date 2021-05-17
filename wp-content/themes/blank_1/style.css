@@ -115,6 +115,9 @@ a {
   color: black;
   font-weight: bold;
 }
+h1 {
+  font-size: 1.5em;
+}
 @font-face {
   font-family: "Annabelle JF Regular";
   src: url("assets/font/Annabelle-JF-Regular.ttf") format("truetype");
@@ -195,6 +198,7 @@ body {
   color: #AD9677;
 }
 #masthead .main-burger-navigation{
+  font-size: 2em;
   display: none;
 }
 #masthead .fa-bars{
@@ -518,15 +522,24 @@ position: relative;
      display: none;
    }
    #masthead .main-burger-navigation{
+     width: 100%;
+     margin: 0 auto;
      z-index: 100;
      color: #838080;
      background-color: burlywood;
-     padding: 10px;
-     border-radius: 5px;
+     padding: 50px 0;
+     /* border-radius: 5px; */
+     display: flex;
+     flex-flow: row wrap;
+     justify-content: center;
      position: absolute;
      right: -3%;
      top: -10%;
    }
+   #masthead .main-burger-navigation .croix {
+     margin-right: 20px;
+   }
+ 
     #masthead .main-burger-navigation ul li{
       border-bottom: 1px solid #000;
       padding: 2px;
